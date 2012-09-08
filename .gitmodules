@@ -10,3 +10,6 @@
 [submodule ".emacs.d/elisp/ddskk"]
 	path = .emacs.d/elisp/ddskk
 	url = https://github.com/hsaito/ddskk.git
+[submodule ".emacs.d/elisp/paredit"]
+	path = .emacs.d/elisp/paredit
+	url = https://github.com/emacsmirror/paredit.git
