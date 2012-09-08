@@ -1,0 +1,5 @@
+.DS_Store
+.emacs.d/anything-c-adaptive-history
+.emacs.d/auto-save-list
+.emacs.d/auto-save-list/**/*
+.skk

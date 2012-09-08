@@ -12,3 +12,5 @@
   ci = commit -v
   st = status -s -b
   br = branch
+[core]
+	excludesfile = /Users/yasuhisa/.gitignore
