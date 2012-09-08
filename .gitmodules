@@ -19,3 +19,15 @@
 [submodule ".emacs.d/elisp/markdown-mode"]
 	path = .emacs.d/elisp/markdown-mode
 	url = git://jblevins.org/git/markdown-mode.git
+[submodule ".emacs.d/elisp/elscreen"]
+	path = .emacs.d/elisp/elscreen
+	url = https://github.com/knu/elscreen.git
+[submodule ".emacs.d/elisp/dabbrev-expand-multiple"]
+	path = .emacs.d/elisp/dabbrev-expand-multiple
+	url = https://github.com/emacsmirror/dabbrev-expand-multiple.git
+[submodule ".emacs.d/elisp/ruby-mode"]
+	path = .emacs.d/elisp/ruby-mode
+	url = https://github.com/jwiegley/ruby-mode.git
+[submodule ".emacs.d/elisp/cperl-mode"]
+	path = .emacs.d/elisp/cperl-mode
+	url = https://github.com/jrockway/cperl-mode.git
