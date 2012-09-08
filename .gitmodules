@@ -7,3 +7,9 @@
 [submodule ".emacs.d/elisp/paredit-mode"]
 	path = .emacs.d/elisp/paredit-mode
 	url = https://github.com/emacsmirror/paredit.git
+[submodule ".emacs.d/elisp/ESS"]
+	path = .emacs.d/elisp/ESS
+	url = https://github.com/emacs-ess/ESS.git
+[submodule ".emacs.d/elisp/ddskk"]
+	path = .emacs.d/elisp/ddskk
+	url = https://github.com/hsaito/ddskk.git
