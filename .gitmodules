@@ -4,9 +4,6 @@
 [submodule ".emacs.d/elisp/clojure-mode"]
 	path = .emacs.d/elisp/clojure-mode
 	url = https://github.com/jochu/clojure-mode.git
-[submodule ".emacs.d/elisp/paredit-mode"]
-	path = .emacs.d/elisp/paredit-mode
-	url = https://github.com/emacsmirror/paredit.git
 [submodule ".emacs.d/elisp/ESS"]
 	path = .emacs.d/elisp/ESS
 	url = https://github.com/emacs-ess/ESS.git
