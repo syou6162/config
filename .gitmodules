@@ -16,3 +16,6 @@
 [submodule ".emacs.d/elisp/nrepl.el"]
 	path = .emacs.d/elisp/nrepl.el
 	url = https://github.com/kingtim/nrepl.el.git
+[submodule ".emacs.d/elisp/markdown-mode"]
+	path = .emacs.d/elisp/markdown-mode
+	url = git://jblevins.org/git/markdown-mode.git
