@@ -1,8 +1,7 @@
 autodetach on
 bind ^x
 defscrollback 10000
-defshell which zsh
-# defshell /bin/zsh
+defshell zsh
 defencoding utf8
 escape ^z^z
 hardstatus on
