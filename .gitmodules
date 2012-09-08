@@ -13,3 +13,6 @@
 [submodule ".emacs.d/elisp/paredit"]
 	path = .emacs.d/elisp/paredit
 	url = https://github.com/emacsmirror/paredit.git
+[submodule ".emacs.d/elisp/nrepl.el"]
+	path = .emacs.d/elisp/nrepl.el
+	url = https://github.com/kingtim/nrepl.el.git
