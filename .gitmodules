@@ -31,3 +31,6 @@
 [submodule ".emacs.d/elisp/cperl-mode"]
 	path = .emacs.d/elisp/cperl-mode
 	url = https://github.com/jrockway/cperl-mode.git
+[submodule ".emacs.d/elisp/skkdic"]
+	path = .emacs.d/elisp/skkdic
+	url = https://github.com/hsaito/skkdic.git
