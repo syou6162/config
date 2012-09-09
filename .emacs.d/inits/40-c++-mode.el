@@ -17,4 +17,4 @@
 	(define-key c++-mode-map "\"" 'insert-double-quotation-region)))
 
 (setq gdb-many-windows t)
-(setq gdb-use-separate-io-buffer false)
+(setq gdb-use-separate-io-buffer nil)
