@@ -112,6 +112,9 @@
 
 (setq truncate-partial-width-windows nil)
 
+;; 保存時に勝手に改行を挿入するのを止める
+(setq require-final-newline nil)
+
 ;; http://d.hatena.ne.jp/hitode909/20090531/1243749340
 ;; システムに装飾キー渡さない
 (setq mac-pass-control-to-system nil)
