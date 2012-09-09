@@ -121,3 +121,8 @@ _update_rprompt () {
         RPROMPT=" [%~ ("$GIT_CURRENT_BRANCH")]"
     fi
 }
+
+alias mean='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(mean(x), fill=TRUE)"'
+alias sd='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(sd(x), fill=TRUE)"'
+alias max='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(max(x), fill=TRUE)"'
+alias min='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(min(x), fill=TRUE)"'
