@@ -34,3 +34,12 @@
 [submodule ".emacs.d/elisp/skkdic"]
 	path = .emacs.d/elisp/skkdic
 	url = https://github.com/hsaito/skkdic.git
+[submodule ".emacs.d/elisp/anything-config"]
+	path = .emacs.d/elisp/anything-config
+	url = git://repo.or.cz/anything-config.git
+[submodule ".emacs.d/elisp/auto-complete"]
+	path = .emacs.d/elisp/auto-complete
+	url = https://github.com/auto-complete/auto-complete.git
+[submodule ".emacs.d/elisp/popup-el"]
+	path = .emacs.d/elisp/popup-el
+	url = https://github.com/auto-complete/popup-el.git
