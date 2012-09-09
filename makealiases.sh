@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # $HOME以下に設定ファイル群へのシンボリックリンクを貼る
-for filename in emacs.d emacs zshrc oh-my-zsh screenrc Rprofile gitconfig gitignore
+for filename in emacs.d zshrc oh-my-zsh screenrc Rprofile gitconfig gitignore
 do
     if [ ! -e $HOME/.$filename ]; then
 	ln -s `pwd`/.$filename $HOME/.$filename
