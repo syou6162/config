@@ -43,3 +43,6 @@
 [submodule ".emacs.d/elisp/popup-el"]
 	path = .emacs.d/elisp/popup-el
 	url = https://github.com/auto-complete/popup-el.git
+[submodule ".emacs.d/elisp/init-loader"]
+	path = .emacs.d/elisp/init-loader
+	url = git://gist.github.com/1021706.git
