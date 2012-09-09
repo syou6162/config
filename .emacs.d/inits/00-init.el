@@ -83,14 +83,14 @@
 		    '(border-color . "black")
 		    '(mouse-color . "white")
 		    '(cursor-color . "white")
-		    '(width . 160)
-		    '(height . 47)
+		    '(width . 100)
+		    '(height . 30)
 		    '(top . 0)
 		    '(left . 10)
 		    '(alpha . (80 60)))    ;;ここ
 		    default-frame-alist))
 
-;; (tool-bar-mode -1)
+(tool-bar-mode -1)
 
 ;;;emacsのkillingの履歴
 (autoload 'kill-summary "kill-summary" nil t)
