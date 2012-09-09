@@ -3,3 +3,9 @@
 .emacs.d/auto-save-list
 .emacs.d/auto-save-list/**/*
 .skk
+swank
+
+# wgetで取得してくるので...
+.emacs.d/elisp/set-perl5lib.el
+
+.emacs.d/ac-comphist.dat
