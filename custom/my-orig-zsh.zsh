@@ -122,7 +122,8 @@ _update_rprompt () {
     fi
 }
 
-alias mean='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(mean(x), fill=TRUE)"'
-alias sd='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(sd(x), fill=TRUE)"'
-alias max='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(max(x), fill=TRUE)"'
-alias min='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat(min(x), fill=TRUE)"'
+# alias for stats functions
+for f in mean sd max min
+do
+    alias $f='R --vanilla --slave -e "x <- scan(\"stdin\", quiet=TRUE); cat($f(x), fill=TRUE)"'
+done
