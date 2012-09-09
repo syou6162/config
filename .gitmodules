@@ -46,3 +46,9 @@
 [submodule ".emacs.d/elisp/init-loader"]
 	path = .emacs.d/elisp/init-loader
 	url = git://gist.github.com/1021706.git
+[submodule ".emacs.d/elisp/emacs-flymake"]
+	path = .emacs.d/elisp/emacs-flymake
+	url = https://github.com/illusori/emacs-flymake.git
+[submodule ".emacs.d/elisp/emacswiki.org"]
+	path = .emacs.d/elisp/emacswiki.org
+	url = https://github.com/emacsmirror/emacswiki.org.git
