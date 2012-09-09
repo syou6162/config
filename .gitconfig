@@ -10,7 +10,7 @@
 [alias]
   co = checkout
   ci = commit -v
-  st = status -s -b
+  st = status -s -b --ignore-submodules=dirty
   br = branch
 [core]
 	excludesfile = /Users/yasuhisa/.gitignore
