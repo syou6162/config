@@ -1,0 +1,11 @@
+(add-hook 'java-mode-hook
+	  '(lambda ()
+	     (setq case-fold-search nil)
+	     (define-key java-mode-map "{" 'insert-braces)
+	     (define-key java-mode-map "(" 'insert-parens)
+	     (define-key java-mode-map "\"" 'insert-double-quotation)
+	     (define-key java-mode-map "[" 'insert-brackets)
+	     (define-key java-mode-map "}" 'insert-braces-region)
+	     (define-key java-mode-map ")" 'insert-parens-region)
+	     (define-key java-mode-map "]" 'insert-brackets-region)
+	     (define-key java-mode-map "\"" 'insert-double-quotation-region)))
