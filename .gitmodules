@@ -52,3 +52,6 @@
 [submodule ".emacs.d/elisp/emacswiki.org"]
 	path = .emacs.d/elisp/emacswiki.org
 	url = https://github.com/emacsmirror/emacswiki.org.git
+[submodule ".emacs.d/elisp/tuareg-mode"]
+	path = .emacs.d/elisp/tuareg-mode
+	url = https://github.com/hayamiz/tuareg-mode.git

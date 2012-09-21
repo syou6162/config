@@ -14,6 +14,7 @@
 	      "~/config/.emacs.d/elisp/cperl-mode"
 	      "~/config/.emacs.d/elisp/dabbrev-expand-multiple"
 	      "~/config/.emacs.d/elisp/markdown-mode"
+	      "~/config/.emacs.d/elisp/tuareg-mode"
 	      "~/config/.emacs.d/elisp/emacs-flymake"
 	      "~/config/.emacs.d/elisp/emacswiki.org"))
        load-path))
