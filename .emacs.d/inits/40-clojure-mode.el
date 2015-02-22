@@ -19,6 +19,7 @@
 
 (setq load-path
       (cons "~/config/.emacs.d/elisp/nrepl.el" load-path))
+(setq slime-net-coding-system 'utf-8-unix)
 
 (require 'nrepl)
 
