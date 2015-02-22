@@ -1,9 +1,3 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".emacs.d/elisp/anything-config"]
-	path = .emacs.d/elisp/anything-config
-	url = git://repo.or.cz/anything-config.git
-[submodule ".emacs.d/elisp/emacs"]
-	path = .emacs.d/elisp/emacs
-	url = git://repo.or.cz/emacs.git
