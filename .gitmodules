@@ -1,57 +1,9 @@
 [submodule ".oh-my-zsh"]
 	path = .oh-my-zsh
 	url = git://github.com/robbyrussell/oh-my-zsh.git
-[submodule ".emacs.d/elisp/clojure-mode"]
-	path = .emacs.d/elisp/clojure-mode
-	url = https://github.com/jochu/clojure-mode.git
-[submodule ".emacs.d/elisp/ESS"]
-	path = .emacs.d/elisp/ESS
-	url = https://github.com/emacs-ess/ESS.git
-[submodule ".emacs.d/elisp/ddskk"]
-	path = .emacs.d/elisp/ddskk
-	url = https://github.com/hsaito/ddskk.git
-[submodule ".emacs.d/elisp/paredit"]
-	path = .emacs.d/elisp/paredit
-	url = https://github.com/emacsmirror/paredit.git
-[submodule ".emacs.d/elisp/nrepl.el"]
-	path = .emacs.d/elisp/nrepl.el
-	url = https://github.com/kingtim/nrepl.el.git
-[submodule ".emacs.d/elisp/markdown-mode"]
-	path = .emacs.d/elisp/markdown-mode
-	url = git://jblevins.org/git/markdown-mode.git
-[submodule ".emacs.d/elisp/elscreen"]
-	path = .emacs.d/elisp/elscreen
-	url = https://github.com/knu/elscreen.git
-[submodule ".emacs.d/elisp/dabbrev-expand-multiple"]
-	path = .emacs.d/elisp/dabbrev-expand-multiple
-	url = https://github.com/emacsmirror/dabbrev-expand-multiple.git
-[submodule ".emacs.d/elisp/ruby-mode"]
-	path = .emacs.d/elisp/ruby-mode
-	url = https://github.com/jwiegley/ruby-mode.git
-[submodule ".emacs.d/elisp/cperl-mode"]
-	path = .emacs.d/elisp/cperl-mode
-	url = https://github.com/jrockway/cperl-mode.git
-[submodule ".emacs.d/elisp/skkdic"]
-	path = .emacs.d/elisp/skkdic
-	url = https://github.com/hsaito/skkdic.git
 [submodule ".emacs.d/elisp/anything-config"]
 	path = .emacs.d/elisp/anything-config
 	url = git://repo.or.cz/anything-config.git
-[submodule ".emacs.d/elisp/auto-complete"]
-	path = .emacs.d/elisp/auto-complete
-	url = https://github.com/auto-complete/auto-complete.git
-[submodule ".emacs.d/elisp/popup-el"]
-	path = .emacs.d/elisp/popup-el
-	url = https://github.com/auto-complete/popup-el.git
-[submodule ".emacs.d/elisp/init-loader"]
-	path = .emacs.d/elisp/init-loader
-	url = git://gist.github.com/1021706.git
-[submodule ".emacs.d/elisp/emacs-flymake"]
-	path = .emacs.d/elisp/emacs-flymake
-	url = https://github.com/illusori/emacs-flymake.git
-[submodule ".emacs.d/elisp/emacswiki.org"]
-	path = .emacs.d/elisp/emacswiki.org
-	url = https://github.com/emacsmirror/emacswiki.org.git
-[submodule ".emacs.d/elisp/tuareg-mode"]
-	path = .emacs.d/elisp/tuareg-mode
-	url = https://github.com/hayamiz/tuareg-mode.git
+[submodule ".emacs.d/elisp/emacs"]
+	path = .emacs.d/elisp/emacs
+	url = git://repo.or.cz/emacs.git
