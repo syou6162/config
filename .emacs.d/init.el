@@ -12,7 +12,6 @@
 
 (el-get-bundle init-loader)
 (el-get-bundle auto-complete)
-(el-get-bundle evil)
 (el-get-bundle session)
 
 (el-get-bundle abbrev-complete)
