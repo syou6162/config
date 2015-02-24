@@ -121,9 +121,8 @@
 (setq mac-pass-command-to-system nil)
 (setq mac-pass-option-to-system nil)
 
-(require 'tramp)
-(setq tramp-default-method "sshx")
-
 (add-to-list 
  'default-frame-alist
  '(font . "-apple-monaco-medium-r-normal--15-120-72-72-m-120-iso10646-1"))
+
+(add-to-list 'exec-path (expand-file-name "~/bin"))

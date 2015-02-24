@@ -2,6 +2,7 @@
   (setq user-emacs-directory (file-name-directory load-file-name)))
 
 (add-to-list 'load-path (locate-user-emacs-file "el-get/el-get"))
+
 (unless (require 'el-get nil 'noerror)
   (with-current-buffer
       (url-retrieve-synchronously
@@ -10,18 +11,17 @@
     (eval-print-last-sexp)))
 
 (el-get-bundle init-loader)
-
 (el-get-bundle auto-complete)
 (el-get-bundle evil)
 (el-get-bundle session)
 
 (el-get-bundle abbrev-complete)
 (el-get-bundle gist:532280b24ad87945a997:dabbrev-expand-multiple)
+
 (el-get-bundle popup)
 
 (el-get-bundle clojure-mode)
 (el-get-bundle paredit)
-(el-get-bundle nrepl)
 
 (el-get-bundle cperl-mode)
 (el-get-bundle set-perl5lib)
@@ -34,6 +34,12 @@
   (with-eval-after-load-feature 'anything
     (define-key anything-map (kbd "M-n") 'anything-next-source)
     (define-key anything-map (kbd "M-p") 'anything-previous-source)))
+
+;; To install inf-clojrue
+(require 'package)
+(setq package-user-dir "~/.emacs.d/elpa/")
+(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
 (setq load-path
       (append
