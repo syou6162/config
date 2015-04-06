@@ -36,6 +36,9 @@
     (define-key anything-map (kbd "M-n") 'anything-next-source)
     (define-key anything-map (kbd "M-p") 'anything-previous-source)))
 
+(el-get-bundle gist:7349439:ginger-rephrase-api)
+(el-get-bundle gist:5457732:ginger-api)
+
 ;; To install inf-clojrue
 (require 'package)
 (setq package-user-dir "~/.emacs.d/elpa/")
