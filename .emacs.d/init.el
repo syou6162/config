@@ -22,6 +22,8 @@
 (el-get-bundle clojure-mode)
 (el-get-bundle paredit)
 
+(el-get-bundle ruby-mode)
+
 (el-get-bundle cperl-mode)
 (el-get-bundle set-perl5lib)
 
