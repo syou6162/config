@@ -13,6 +13,12 @@ Emacs、zsh、screenなどの設定ファイル置き場です。
 
 を実行してください。`$HOME`以下に必要なエイリアスを張ります。
 
+### homebrew
+
+```bash
+cat Brewfile | grep -v "#" | parallel "echo brew {}" | parallel {}
+```
+
 ### submodule
 
 たくさんのsubmoduleに依存しています。

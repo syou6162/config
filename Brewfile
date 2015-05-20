@@ -1,0 +1,17 @@
+install bullet-cmd
+install direnv
+install ghostscript
+install imagemagick
+install jq
+install opam
+install parallel
+install tig
+install zsh
+install nkf
+install pandoc
+install watch
+install logstash
+install gmp
+install gnupg
+install elasticsearch
+install wget
