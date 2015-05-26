@@ -15,3 +15,4 @@ install gmp
 install gnupg
 install elasticsearch
 install wget
+install tmux
