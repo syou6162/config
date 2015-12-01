@@ -32,7 +32,10 @@
 (setenv "PATH"
   (concat "/opt/local/bin:" (getenv "PATH")))
 
-(tool-bar-mode -1)
+;; メニューバーを非表示
+(menu-bar-mode 0)
+;; ツールバーを非表示
+(tool-bar-mode 0)
 
 ;;;emacsのkillingの履歴
 (autoload 'kill-summary "kill-summary" nil t)
