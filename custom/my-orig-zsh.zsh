@@ -129,3 +129,5 @@ do
 done
 
 eval "$(direnv hook zsh)"
+
+source ~/perl5/perlbrew/etc/bashrc
