@@ -85,28 +85,12 @@ case "${TERM}" in
   ;;
 esac
 
-export PATH=/opt/local/bin:$PATH:/opt/local/sbin:/usr/local/bin:$HOME/bin
-export MANPATH=/opt/local/share/man:$MANPATH
-#export C_INCLUDE_PATH=/usr/local/include
-#export CPLUS_INCLUDE_PATH=/usr/local/include
-#export CPLUS_INCLUDE_PATH=/opt/local/include
-#export CPLUS_INCLUDE_PATH=/usr/local/include/boost-1_38
-
-# for gxpc
-export PATH=$HOME/bin/gxp3:$PATH
-export PATH=$HOME/bin/kansit:$PATH
-
-export LIBRARY_PATH=/opt/local/lib:$LIBRARY_PATH
-export LD_LIBRARY_PATH=/opt/local/lib:$LD_LIBRARY_PATH
-export C_INCLUDE_PATH=/opt/local/include:$C_INCLUDE_PATH
-export CPLUS_INCLUDE_PATH=/opt/local/include:$CPLUS_INCLUDE_PATH
-export DYLD_FALLBACK_LIBRARY_PATH=/opt/local/lib
-export BOOST_ROOT=/opt/local/include/boost:$BOOST_ROOT
+export PATH=$HOME/bin:$HOME/perl5/bin:/usr/local/bin:$PATH
+export PERL_CPANM_OPT="--local-lib=~/perl5"
+export PERL5LIB=$HOME/perl5/lib/perl5:$PERL5LIB;
 
 zstyle ':completion:*:default' menu select=1
 alias ls='ls -G'
-
-# export PATH=/opt/local/share/texmf:$PATH
 
 # git branch data
 _set_env_git_current_branch() {
