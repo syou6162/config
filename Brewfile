@@ -16,3 +16,12 @@ install gnupg
 install elasticsearch
 install wget
 install tmux
+install peco
+install pstree
+install go
+install htop-osx
+install coreutils
+install speedtest_cli
+install nkf
+install watch
+install objective-caml
