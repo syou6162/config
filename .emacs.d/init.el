@@ -29,6 +29,8 @@
 
 (el-get-bundle markdown-mode)
 
+(el-get-bundle magit :branch "master")
+
 (el-get-bundle tarao/with-eval-after-load-feature-el)
 (el-get-bundle anything
   (global-set-key (kbd "C-x b") 'anything-for-files)
