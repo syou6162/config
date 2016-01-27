@@ -7,7 +7,6 @@
 (prefer-coding-system 'utf-8)
 (set-locale-environment "utf-8")
 (setenv "LANG" "ja_JP.UTF-8")
-(setenv "CPLUS_INCLUDE_PATH" "/opt/local/include")
 
 ;; Don't show the startup splash screen
 (setq inhibit-startup-message t)
@@ -27,10 +26,6 @@
 ;; see http://homepage.mac.com/zenitani/emacs-e.html for more details
 (when (featurep 'carbon-emacs-package)
   (setq default-input-method "MacOSX"))
-
-(setq exec-path (cons "/opt/local/bin" exec-path))
-(setenv "PATH"
-  (concat "/opt/local/bin:" (getenv "PATH")))
 
 ;; メニューバーを非表示
 (menu-bar-mode 0)
