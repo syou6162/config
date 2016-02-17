@@ -66,3 +66,18 @@
  '(font . "-apple-monaco-medium-r-normal--15-120-72-72-m-120-iso10646-1"))
 
 (add-to-list 'exec-path (expand-file-name "~/bin"))
+
+;; EMACS_BUFFER_NAME_DIR=~/Desktop/work/append-buffer-name-if-modified
+(defun append-buffer-name-if-modified (&optional arg)
+  (interactive)
+  (let ((modtime (visited-file-modtime)))
+    (if (listp modtime)
+        (let ((result-hash (concat "'{\"hostname\": \"" (system-name) "\", "
+                                   "\"last_modified\": \"" (format-time-string "%Y-%m-%d %H:%M:%S +0900" (visited-file-modtime)) "\", "
+                                   "\"buffer_file_name\": \"" (buffer-file-name)
+                                   "\"}'")))
+          (progn
+            (shell-command-to-string (concat "echo " result-hash " >> " (or (getenv "EMACS_BUFFER_NAME_DIR") "~") "/`date +%Y-%m-%d`-`hostname`.json"))
+            nil)))))
+
+(run-with-idle-timer 1 t 'append-buffer-name-if-modified)
