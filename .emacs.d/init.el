@@ -28,6 +28,7 @@
 (el-get-bundle set-perl5lib)
 
 (el-get-bundle markdown-mode)
+(el-get-bundle recentf-ext)
 
 (el-get-bundle magit :branch "master")
 
