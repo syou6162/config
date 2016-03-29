@@ -7,16 +7,6 @@
 (setq cperl-indent-level 4)
 (add-hook 'cperl-mode-hook
 	  (lambda ()
-	    (setq plcmp-use-keymap nil) ; requireより前の段階で設定する
-	    (require 'perl-completion)
-	    (add-to-list 'ac-sources 'ac-source-perl-completion)
-	    (perl-completion-mode t)
-	    ;; plcmp-mode-mapにコマンドを割り当てていく
-	    (define-key plcmp-mode-map (kbd "C-c m") 'plcmp-cmd-menu)
-	    (define-key plcmp-mode-map (kbd "C-c s") 'plcmp-cmd-smart-complete)
-	    (define-key plcmp-mode-map (kbd "C-c d") 'plcmp-cmd-show-doc)
-	    (define-key plcmp-mode-map (kbd "C-c p") 'plcmp-cmd-show-doc-at-point)
-	    (define-key plcmp-mode-map (kbd "C-c c") 'plcmp-cmd-clear-all-cashes)
 	    (define-key cperl-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)
 	    (define-key cperl-mode-map "\C-c\C-v" 'cperl-perldoc)
 	    (define-key cperl-mode-map "{" 'insert-braces)
