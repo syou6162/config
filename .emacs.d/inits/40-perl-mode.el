@@ -55,26 +55,10 @@
               (switch-to-buffer buffer)
             (display-buffer buffer)))))))
 
-(defun perltidy-region ()
-  "Run perltidy on the current region."
-  (interactive)
-  (save-excursion
-    (shell-command-on-region (point) (mark) "perltidy -q" nil t)))
-
-(defun perltidy-defun ()
-  "Run perltidy on the current defun."
-  (interactive)
-  (save-excursion (mark-defun)
-                  (perltidy-region)))
-
 (defun perl-eval (beg end)
   "Run selected region as Perl code"
   (interactive "r")
   (save-excursion
     (shell-command-on-region beg end "perl")))
 
-(autoload 'perltidy "perltidy-mode" nil t)
-(autoload 'perltidy-mode "perltidy-mode" nil t)
-(eval-after-load "cperl-mode"
-  '(add-hook 'cperl-mode-hook 'perltidy-mode))
-
+(require 'perltidy)
