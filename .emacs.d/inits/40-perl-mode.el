@@ -1,6 +1,14 @@
 ;; http://d.hatena.ne.jp/hakutoitoi/20090208/1234069614
 (defalias 'perl-mode 'cperl-mode)
 
+(require 'reply)
+(defun reply-other-window ()
+  "Run reply on other window"
+  (interactive)
+  (switch-to-buffer-other-window
+   (get-buffer-create "*reply*"))
+  (run-reply "reply"))
+
 (setq auto-mode-alist 
       (append '(("\\.\\(pl\\|pm\\|cgi\\|t\\)$" . cperl-mode)) 
 	      auto-mode-alist))
@@ -17,7 +25,9 @@
 	    (define-key cperl-mode-map ")" 'insert-parens-region)
 	    (define-key cperl-mode-map "]" 'insert-brackets-region)
 	    (define-key cperl-mode-map "\"" 'insert-double-quotation-region)
-	    (define-key cperl-mode-map "\'" 'insert-single-quotation-region)))
+	    (define-key cperl-mode-map "\'" 'insert-single-quotation-region)
+	    (define-key cperl-mode-map (kbd "C-c C-r") 'reply-send-region)
+	    (define-key cperl-mode-map (kbd "C-c C-z") 'reply-other-window)))
 
 ;; モジュールソースバッファの場合はその場で、
 ;; その他のバッファの場合は別ウィンドウに開く。
