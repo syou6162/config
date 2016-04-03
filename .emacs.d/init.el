@@ -31,6 +31,7 @@
 
 (el-get-bundle markdown-mode)
 (el-get-bundle recentf-ext)
+(el-get-bundle ddskk)
 
 (el-get-bundle magit :branch "master")
 
