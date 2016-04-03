@@ -15,7 +15,3 @@ do
 	ln -s `pwd`/$file $HOME/.oh-my-zsh/$file
     fi
 done
-
-if [ ! -e $HOME/config/.emacs.d/elisp/set-perl5lib.el ]; then
-    wget http://svn.coderepos.org/share/lang/elisp/set-perl5lib/set-perl5lib.el -O $HOME/config/.emacs.d/elisp/set-perl5lib.el
-fi
