@@ -14,7 +14,7 @@
 (el-get-bundle auto-complete)
 (el-get-bundle session)
 
-(el-get-bundle abbrev-complete)
+(el-get-bundle emacswiki:abbrev-complete)
 (el-get-bundle gist:532280b24ad87945a997:dabbrev-expand-multiple)
 
 (el-get-bundle popup)
@@ -24,8 +24,10 @@
 
 (el-get-bundle ruby-mode)
 
+(el-get-bundle mode-compile
+  :url "http://perso.eei.cena.fr/boubaker/distrib/mode-compile.el")
 (el-get-bundle cperl-mode)
-(el-get-bundle perltidy)
+(el-get-bundle emacswiki:perltidy)
 (el-get-bundle syohex/emacs-reply)
 (el-get-bundle set-perl5lib)
 
