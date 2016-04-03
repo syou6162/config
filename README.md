@@ -3,28 +3,33 @@ Emacs、zsh、screenなどの設定ファイル置き場です。
 
 ## Introduction
 
-### alias
+### oh-my-zshのインストール
 
 初めに
 
 ```sh
-./makealiases.sh
+curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh | sh
 ```
 
-を実行してください。`$HOME`以下に必要なエイリアスを張ります。
+でoh-my-zshをインストールしてください。
+
+### Emacsのインストール
+
+```sh
+brew tap railwaycat/emacsmacport
+brew install emacs-mac --with-modern-icon
+brew linkapps emacs-mac
+```
+
+### aliasの設定
+`$HOME`以下に必要なエイリアスを張ります。
+
+```sh
+./makealiases.sh
+```
 
 ### homebrew
 
 ```bash
 cat Brewfile | grep -v "#" | parallel "echo brew {}" | parallel {}
 ```
-
-### submodule
-
-たくさんのsubmoduleに依存しています。
-
-```sh
-git submodule init && git submodule update
-```
-
-を実行すると依存しているファイルを取得してきます。
