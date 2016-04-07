@@ -114,7 +114,8 @@ done
 
 eval "$(direnv hook zsh)"
 
-source ~/perl5/perlbrew/etc/bashrc
+export PATH="$HOME/.plenv/bin:$PATH"
+eval "$(plenv init -)"
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
