@@ -115,7 +115,7 @@ done
 eval "$(direnv hook zsh)"
 
 export PATH="$HOME/.plenv/bin:$PATH"
-eval "$(plenv init -)"
+if which plenv > /dev/null; then eval "$(plenv init -)"; fi
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
