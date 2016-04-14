@@ -12,9 +12,15 @@
 (setq auto-mode-alist 
       (append '(("\\.\\(pl\\|pm\\|cgi\\|t\\)$" . cperl-mode)) 
 	      auto-mode-alist))
-(setq cperl-indent-level 4)
 (add-hook 'cperl-mode-hook
 	  (lambda ()
+            (setq indent-tabs-mode nil)
+            (setq cperl-close-paren-offset -4)
+            (setq cperl-continued-statement-offset 4)
+            (setq cperl-indent-level 4)
+            (setq cperl-indent-parens-as-block t)
+            (setq cperl-tab-always-indent t)
+            (setq cperl-indent-parens-as-block t)
 	    (define-key cperl-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)
 	    (define-key cperl-mode-map "\C-c\C-v" 'cperl-perldoc)
 	    (define-key cperl-mode-map "{" 'insert-braces)
