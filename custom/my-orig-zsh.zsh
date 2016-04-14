@@ -125,3 +125,5 @@ if which ndenv > /dev/null; then eval "$(ndenv init -)"; fi
 
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
+
+setopt no_global_rcs
