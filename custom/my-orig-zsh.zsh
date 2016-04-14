@@ -141,7 +141,7 @@ function peco-branch () {
   fi
 }
 zle -N peco-branch
-bindkey '^g^b' peco-branch
+bindkey '^x^b' peco-branch
 
 function peco-select-from-git-status(){
   git status --porcelain | \
@@ -157,4 +157,4 @@ function peco-insert-selected-git-files(){
 }
 
 zle -N peco-insert-selected-git-files
-bindkey "^g^s" peco-insert-selected-git-files
+bindkey "^x^s" peco-insert-selected-git-files
