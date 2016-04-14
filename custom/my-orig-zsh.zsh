@@ -127,3 +127,34 @@ export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
 
 setopt no_global_rcs
+
+function peco-branch () {
+  local branch=$(git branch -a | peco | tr -d ' ' | tr -d '*')
+  if [ -n "$branch" ]; then
+    if [ -n "$LBUFFER" ]; then
+      local new_left="${LBUFFER%\ } $branch"
+    else
+      local new_left="$branch"
+    fi
+    BUFFER=${new_left}${RBUFFER}
+    CURSOR=${#new_left}
+  fi
+}
+zle -N peco-branch
+bindkey '^g^b' peco-branch
+
+function peco-select-from-git-status(){
+  git status --porcelain | \
+    peco | \
+    awk -F ' ' '{print $NF}' | \
+    tr '\n' ' '
+}
+
+function peco-insert-selected-git-files(){
+  LBUFFER+=$(peco-select-from-git-status)
+  CURSOR=$#LBUFFER
+  zle reset-prompt
+}
+
+zle -N peco-insert-selected-git-files
+bindkey "^g^s" peco-insert-selected-git-files
