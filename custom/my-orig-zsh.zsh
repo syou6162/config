@@ -85,9 +85,7 @@ case "${TERM}" in
   ;;
 esac
 
-export PATH=$HOME/bin:$HOME/perl5/bin:/usr/local/bin:$PATH
-export PERL_CPANM_OPT="--local-lib=~/perl5"
-export PERL5LIB=$HOME/perl5/lib/perl5:$PERL5LIB;
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 zstyle ':completion:*:default' menu select=1
 alias ls='ls -G'
