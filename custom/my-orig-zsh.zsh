@@ -173,3 +173,11 @@ function peco-select-history() {
 }
 zle -N peco-select-history
 bindkey '^r' peco-select-history
+
+function peco-kill() {
+  kill `ps aux | peco | awk '{print $2}'`
+}
+
+function peco-kill-kill() {
+  kill -KILL `ps aux | peco | awk '{print $2}'`
+}
