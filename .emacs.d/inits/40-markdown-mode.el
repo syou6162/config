@@ -8,4 +8,4 @@
   (interactive)
   (insert (format-time-string "@%H:%M")))
 
-(define-key markdown-mode-map "\C-M" 'markdown-insert-timestamp)
+(define-key markdown-mode-map "\C-c\C-m" 'markdown-insert-timestamp)
