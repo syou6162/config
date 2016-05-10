@@ -8,3 +8,5 @@
 (global-set-key "}" 'insert-braces-region)
 (global-set-key ")" 'insert-parens-region)
 (global-set-key "]" 'insert-brackets-region)
+
+(global-set-key (kbd "C-I") 'insert-timestamp)
