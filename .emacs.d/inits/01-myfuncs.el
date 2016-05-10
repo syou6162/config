@@ -131,7 +131,3 @@
 
 (defun join (sep list)
   (mapconcat 'identity list sep))
-
-(defun insert-timestamp ()
-  (interactive)
-  (insert (format-time-string "@%H:%M")))
