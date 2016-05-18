@@ -29,7 +29,6 @@
 (el-get-bundle cperl-mode)
 (el-get-bundle emacswiki:perltidy)
 (el-get-bundle syohex/emacs-reply)
-(el-get-bundle set-perl5lib)
 
 (el-get-bundle markdown-mode)
 (el-get-bundle recentf-ext)

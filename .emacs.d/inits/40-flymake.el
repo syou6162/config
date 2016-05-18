@@ -66,12 +66,6 @@
 	     (yas/minor-mode t)
 	     (define-key ess-mode-map "\C-cd" 'flymake-display-err-menu-for-current-line)))
 
-;; set-perl5lib
-;; 開いたスクリプトのパスに応じて、@INCにlibを追加してくれる
-;; 以下からダウンロードする必要あり
-;; http://svn.coderepos.org/share/lang/elisp/set-perl5lib/set-perl5lib.el
-(require 'set-perl5lib)
-
 ;; エラー、ウォーニング時のフェイス
 (set-face-background 'flymake-errline "red4")
 (set-face-foreground 'flymake-errline "black")
@@ -95,11 +89,13 @@
           (message "[%s] %s" line text)))
       (setq count (1- count)))))
 
-
 ;; Perl用設定
 ;; http://unknownplace.org/memo/2007/12/21#e001
 (defvar flymake-perl-err-line-patterns
   '(("\\(.*\\) at \\([^ \n]+\\) line \\([0-9]+\\)[,.\n]" 2 3 nil 1)))
+
+(require 'plenv) ;; for guess-plenv-perl-path
+(guess-plenv-perl-path)
 
 (defconst flymake-allowed-perl-file-name-masks
   '(("\\.pl$" flymake-perl-init)
@@ -112,7 +108,7 @@
          (local-file (file-relative-name
                       temp-file
                       (file-name-directory buffer-file-name))))
-    (list "perl" (list "-wc" local-file))))
+    (list (guess-plenv-perl-path) (list "-MProject::Libs" "-wc" local-file))))
 
 (defun flymake-perl-load ()
   (interactive)
@@ -121,7 +117,6 @@
   (ad-activate 'flymake-post-syntax-check)
   (setq flymake-allowed-file-name-masks (append flymake-allowed-file-name-masks flymake-allowed-perl-file-name-masks))
   (setq flymake-err-line-patterns flymake-perl-err-line-patterns)
-  (set-perl5lib)
   (flymake-mode t))
 
 (add-hook 'cperl-mode-hook 'flymake-perl-load)
