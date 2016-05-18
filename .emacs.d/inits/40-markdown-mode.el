@@ -16,3 +16,9 @@
     (shell-command-to-string (concat "open -a Marked\\ 2 " buffer-file-name))
     nil))
 
+(defun markdown-blogsync-push (&optional arg)
+  (interactive)
+  (progn
+    (shell-command-to-string (concat "blogsync push " buffer-file-name))
+    (find-alternate-file buffer-file-name)
+    nil))
