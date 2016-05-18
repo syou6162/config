@@ -37,6 +37,14 @@
 
 (el-get-bundle magit :branch "master")
 
+(el-get-bundle helm)
+(el-get-bundle sigma/gh.el)
+(el-get-bundle sigma/pcache)
+(el-get-bundle sigma/logito)
+(el-get-bundle syohex/emacs-helm-open-github)
+
+(el-get-bundle shibayu36/emacs-open-github-from-here)
+
 (el-get-bundle tarao/with-eval-after-load-feature-el)
 (el-get-bundle anything
   (global-set-key (kbd "C-x b") 'anything-for-files)
