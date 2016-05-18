@@ -94,9 +94,6 @@
 (defvar flymake-perl-err-line-patterns
   '(("\\(.*\\) at \\([^ \n]+\\) line \\([0-9]+\\)[,.\n]" 2 3 nil 1)))
 
-(require 'plenv) ;; for guess-plenv-perl-path
-(guess-plenv-perl-path)
-
 (defconst flymake-allowed-perl-file-name-masks
   '(("\\.pl$" flymake-perl-init)
     ("\\.pm$" flymake-perl-init)
@@ -108,7 +105,7 @@
          (local-file (file-relative-name
                       temp-file
                       (file-name-directory buffer-file-name))))
-    (list (guess-plenv-perl-path) (list "-MProject::Libs" "-wc" local-file))))
+    (list "perl" (list "-MProject::Libs" "-wc" local-file))))
 
 (defun flymake-perl-load ()
   (interactive)
