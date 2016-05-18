@@ -9,3 +9,10 @@
   (insert (format-time-string "@%H:%M")))
 
 (define-key markdown-mode-map "\C-c\C-m" 'markdown-insert-timestamp)
+
+(defun markdown-open-with-marked2 (&optional arg)
+  (interactive)
+  (progn
+    (shell-command-to-string (concat "open -a Marked\\ 2 " buffer-file-name))
+    nil))
+
