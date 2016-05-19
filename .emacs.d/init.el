@@ -44,12 +44,8 @@
 
 (el-get-bundle shibayu36/emacs-open-github-from-here)
 
-(el-get-bundle tarao/with-eval-after-load-feature-el)
-(el-get-bundle anything
-  (global-set-key (kbd "C-x b") 'anything-for-files)
-  (with-eval-after-load-feature 'anything
-    (define-key anything-map (kbd "M-n") 'anything-next-source)
-    (define-key anything-map (kbd "M-p") 'anything-previous-source)))
+(el-get-bundle helm-git-grep)
+(el-get-bundle helm-ag)
 
 (el-get-bundle gist:7349439:ginger-rephrase-api)
 (el-get-bundle gist:5457732:ginger-api)
