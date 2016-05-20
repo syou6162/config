@@ -47,6 +47,11 @@
 (el-get-bundle helm-git-grep)
 (el-get-bundle helm-ag)
 
+(el-get-bundle emacswiki:sql)
+(el-get-bundle emacswiki:sql-indent)
+(el-get-bundle emacswiki:sql-complete)
+(el-get-bundle emacswiki:sql-transform)
+
 (el-get-bundle gist:7349439:ginger-rephrase-api)
 (el-get-bundle gist:5457732:ginger-api)
 
