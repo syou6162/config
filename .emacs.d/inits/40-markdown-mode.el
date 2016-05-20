@@ -20,8 +20,9 @@
   (interactive)
   (progn
     (shell-command-to-string (concat "blogsync push " buffer-file-name))
+    (find-alternate-file buffer-file-name)
+    (skk-mode)
     (let ((content (buffer-substring-no-properties (point-min) (point-max))))
       (string-match "^URL: \\(.*\\)$" content)
       (shell-command-to-string (concat "open -g " (match-string 1 content))))
-    (find-alternate-file buffer-file-name)
     nil))
