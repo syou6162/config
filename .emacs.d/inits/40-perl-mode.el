@@ -21,6 +21,8 @@
             (setq cperl-indent-parens-as-block t)
             (setq cperl-tab-always-indent t)
             (setq cperl-indent-parens-as-block t)
+	    (set-face-foreground 'font-lock-variable-name-face "red")
+	    (set-face-bold 'font-lock-variable-name-face 1)
 	    (define-key cperl-mode-map "\C-cd" 'credmp/flymake-display-err-minibuf)
 	    (define-key cperl-mode-map "\C-c\C-v" 'cperl-perldoc)
 	    (define-key cperl-mode-map "{" 'insert-braces)
