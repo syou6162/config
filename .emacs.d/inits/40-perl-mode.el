@@ -79,4 +79,5 @@
   (save-excursion
     (shell-command-on-region beg end "perl")))
 
+(require 'plenv)
 (require 'perltidy)
