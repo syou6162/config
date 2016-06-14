@@ -165,7 +165,7 @@ function __my_preexec_end_timetrack() {
     if which growlnotify >/dev/null 2>&1; then
       echo "$command" | growlnotify -n "ZSH timetracker" --appIcon Terminal
     elif which slackcat >/dev/null 2>&1; then
-      echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1 &;
+      echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1;
     else
       return
     fi
