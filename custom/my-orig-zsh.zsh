@@ -129,6 +129,17 @@ export PATH=$GOPATH/bin:$PATH
 
 setopt no_global_rcs
 
+# tmuxにもWINDOWを設定
+if [ "$TMUX" != "" ] ; then
+  export WINDOW=`tmux respawn-window 2>&1 > /dev/null | cut -d ':' -f 3`
+fi
+
+autoload -Uz add-zsh-hook
+function cmd-exit-notify() {
+  cmd-exit-notify.pl `\history -n -1`
+}
+add-zsh-hook precmd cmd-exit-notify
+
 function peco-branch () {
   local branch=$(git branch -a | peco | tr -d ' ' | tr -d '*')
   if [ -n "$branch" ]; then
