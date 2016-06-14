@@ -162,7 +162,7 @@ function __my_preexec_end_timetrack() {
   fi
 
   if [ "$exec_time" -ge "$__timetrack_threshold" ]; then
-    `echo "yasuhisa: $command" | slackcat -p >/dev/null 2>&1 &`;
+    `echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1 &`;
   fi
 
   unset __timetrack_start
