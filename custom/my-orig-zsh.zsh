@@ -162,14 +162,21 @@ function __my_preexec_end_timetrack() {
   fi
 
   if [ "$exec_time" -ge "$__timetrack_threshold" ]; then
-    `echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1 &`;
+    if which growlnotify >/dev/null 2>&1; then
+      echo "$command" | growlnotify -n "ZSH timetracker" --appIcon Terminal
+    elif which slackcat >/dev/null 2>&1; then
+      echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1 &;
+    else
+      return
+    fi
   fi
 
   unset __timetrack_start
   unset __timetrack_command
 }
 
-if which slackcat >/dev/null 2>&1; then
+if which growlnotify >/dev/null 2>&1 ||
+     which slackcat >/dev/null 2>&1; then
   add-zsh-hook preexec __my_preexec_start_timetrack
   add-zsh-hook precmd __my_preexec_end_timetrack
 fi
