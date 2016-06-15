@@ -159,9 +159,9 @@ function __my_preexec_end_timetrack() {
   fi
 
   if [[ $exit_status -eq 0 ]]; then
-    cmd_status="SUCCESS"
+    cmd_status="SUCCESS_"
   else
-    cmd_status="FAILURE"
+    cmd_status="FAILURE_"
   fi
 
   exec_time=$((__timetrack_end-__timetrack_start))
