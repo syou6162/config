@@ -144,6 +144,7 @@ function __my_preexec_start_timetrack() {
 }
 
 function __my_preexec_end_timetrack() {
+  local exit_status=$?
   local exec_time
   local command=$__timetrack_command
   local prog=$(echo $command|awk '{print $1}')
@@ -163,9 +164,9 @@ function __my_preexec_end_timetrack() {
 
   if [ "$exec_time" -ge "$__timetrack_threshold" ]; then
     if which growlnotify >/dev/null 2>&1; then
-      echo "$command" | growlnotify -n "ZSH timetracker" --appIcon Terminal
+      echo "$exit_status $command" | growlnotify -n "ZSH timetracker" --appIcon Terminal
     elif which slackcat >/dev/null 2>&1; then
-      echo "$command @yasuhisa" | slackcat -p >/dev/null 2>&1;
+      echo "$exit_status $command @yasuhisa" | slackcat -p >/dev/null 2>&1;
     else
       return
     fi
