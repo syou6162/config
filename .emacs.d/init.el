@@ -41,6 +41,7 @@
 (el-get-bundle sigma/pcache)
 (el-get-bundle sigma/logito)
 (el-get-bundle syohex/emacs-helm-open-github)
+(el-get-bundle web-mode)
 
 (el-get-bundle shibayu36/emacs-open-github-from-here)
 
