@@ -131,7 +131,7 @@ setopt no_global_rcs
 
 autoload -U add-zsh-hook 2>/dev/null || return
 
-__timetrack_threshold=1 # seconds
+__timetrack_threshold=10 # seconds
 
 export __timetrack_threshold
 export __timetrack_ignore_progs
