@@ -30,6 +30,12 @@
 (el-get-bundle emacswiki:perltidy)
 (el-get-bundle syohex/emacs-reply)
 
+(el-get-bundle s)
+(el-get-bundle hvesalai/scala-mode2)
+(el-get-bundle ensime/emacs-scala-mode)
+(el-get-bundle sbt-mode)
+(el-get-bundle ensime/ensime-emacs)
+
 (el-get-bundle markdown-mode)
 (el-get-bundle recentf-ext)
 (el-get-bundle ddskk)
