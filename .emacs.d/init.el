@@ -36,6 +36,10 @@
 (el-get-bundle sbt-mode)
 (el-get-bundle ensime/ensime-emacs)
 
+(el-get-bundle typescript-mode)
+(el-get-bundle json-mode)
+(el-get-bundle tss)
+
 (el-get-bundle markdown-mode)
 (el-get-bundle recentf-ext)
 (el-get-bundle ddskk)
