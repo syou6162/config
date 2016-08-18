@@ -3,4 +3,5 @@
 	  '(lambda ()
 	     (progn
 	       (local-set-key (kbd "D") (smartchr '("D" "use Data::Dumper; warn Dumper ")))
+	       (local-set-key (kbd "S") (smartchr '("S" "use Say::Compat; say ")))
 	       )))
