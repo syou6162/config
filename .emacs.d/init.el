@@ -31,7 +31,6 @@
 (el-get-bundle syohex/emacs-reply)
 
 (el-get-bundle s)
-(el-get-bundle hvesalai/scala-mode2)
 (el-get-bundle ensime/emacs-scala-mode)
 (el-get-bundle sbt-mode)
 (el-get-bundle ensime/ensime-emacs)
