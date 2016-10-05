@@ -51,3 +51,6 @@
 ;; Initialization
 (add-hook 'ensime-mode-hook #'scala/enable-eldoc)
 
+(setq ensime-sem-high-faces
+      '((implicitConversion nil)
+	(implicitParams nil)))
