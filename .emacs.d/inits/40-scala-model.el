@@ -1,9 +1,11 @@
-(require 'scala-mode2)
+(require 'scala-mode)
 (require 'ensime)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
 
-;;; Use auto-complete for ensime
+;;;Use auto-complete for ensime
 (setq ensime-completion-style 'auto-complete)
+(setq ensime-use-helm t)
+(setq ensime-ac-enable-argument-placeholders nil)
+(setq ensime-ac-override-settings nil)
 
 (defun scala/enable-eldoc ()
   "Show error message or type name at point by Eldoc."
@@ -46,5 +48,4 @@
 
 ;; Initialization
 (add-hook 'ensime-mode-hook #'scala/enable-eldoc)
-(add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-(add-hook 'scala-mode-hook 'flycheck-mode)
+
