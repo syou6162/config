@@ -29,6 +29,8 @@
   (insert ".")
   (ac-trigger-key-command t))
 
+(define-key scala-mode-map (kbd ".") 'scala/completing-dot)
+
 ;; Interactive commands
 
 (defun scala/completing-dot ()
