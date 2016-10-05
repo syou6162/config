@@ -3,9 +3,7 @@
 
 ;;;Use auto-complete for ensime
 (setq ensime-completion-style 'auto-complete)
-(setq ensime-use-helm t)
 (setq ensime-ac-enable-argument-placeholders nil)
-(setq ensime-ac-override-settings nil)
 
 (defun scala/enable-eldoc ()
   "Show error message or type name at point by Eldoc."
