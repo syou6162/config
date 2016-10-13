@@ -7,8 +7,9 @@
   "Hooks for Web mode."
   (setq web-mode-html-offset 2)
   (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-css-offset 4)
-  (setq web-mode-script-offset 4)
+  (setq web-mode-css-offset 2)
+  (setq web-mode-script-offset 2)
+  (setq web-mode-code-indent-offset 2)
   (setq indent-tabs-mode nil)
   (setq tab-width 2))
 
