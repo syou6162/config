@@ -236,3 +236,14 @@ function peco-src () {
 }
 zle -N peco-src
 bindkey '^]' peco-src
+
+function open-idea-from-git-grep () {
+  IDEA_PATH='open -b com.jetbrains.intellij'
+  # lineがなぜか動かない
+  # IDEA_PATH="/Applications/IntelliJ IDEA.app/Contents/MacOS/idea"
+  # DST_PATH=$(git grep -n $1 | grep -v "[0-9]:\s*//" | peco | awk -v pwd="$(pwd)" -F ":" '{print pwd "/" $1 " --line " $2 " "}')
+  DST_PATH=$(git grep -n $1 | grep -v "[0-9]:\s*//" | peco | awk -v pwd="$(pwd)" -F ":" '{print pwd "/" $1}')
+  if [ ${#DST_PATH} -ne 0 ]; then
+    zsh -c "$IDEA_PATH $DST_PATH"
+  fi
+}
