@@ -58,6 +58,10 @@
 (el-get-bundle helm-git-grep)
 (el-get-bundle helm-ag)
 
+(el-get-bundle go-mode)
+(el-get-bundle go-autocomplete)
+(el-get-bundle go-eldoc)
+
 (el-get-bundle emacswiki:sql)
 (el-get-bundle emacswiki:sql-indent)
 (el-get-bundle emacswiki:sql-complete)
