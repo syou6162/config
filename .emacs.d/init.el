@@ -70,6 +70,8 @@
 (el-get-bundle gist:7349439:ginger-rephrase-api)
 (el-get-bundle gist:5457732:ginger-api)
 
+(el-get-bundle stanaka/dash-at-point)
+
 ;; To install inf-clojrue
 (require 'package)
 (setq package-user-dir "~/.emacs.d/elpa/")
