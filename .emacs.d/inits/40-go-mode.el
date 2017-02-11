@@ -9,6 +9,7 @@
 (add-hook 'go-mode-hook 'auto-complete)
 (add-hook 'go-mode-hook 'flycheck-mode)
 (add-hook 'go-mode-hook 'go-eldoc-setup)
+(setq gofmt-command "goimports")
 (add-hook 'before-save-hook 'gofmt-before-save)
 (add-hook 'go-mode-hook
 	  (lambda()
