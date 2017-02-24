@@ -26,3 +26,8 @@
       (string-match "^URL: \\(.*\\)$" content)
       (shell-command-to-string (concat "open -g " (match-string 1 content))))
     nil))
+
+(defun memo ()
+  (interactive)
+  (find-file
+   (concat "~/Dropbox/_posts/" (format-time-string "%Y-%m-%d") "-日報.md")))
