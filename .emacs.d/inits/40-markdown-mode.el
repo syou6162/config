@@ -27,6 +27,11 @@
       (shell-command-to-string (concat "open -g " (match-string 1 content))))
     nil))
 
+;; cliで貼り付けるとインデントがおかしくなるので、これ経由でやる
+(defun markdown-paste-clipboard ()
+  (interactive)
+  (insert (shell-command-to-string "pbpaste")))
+
 (defun memo ()
   (interactive)
   (find-file
