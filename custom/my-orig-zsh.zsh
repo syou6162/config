@@ -153,8 +153,6 @@ function __my_preexec_end_timetrack() {
   if [ "$exec_time" -ge "$__timetrack_threshold" ]; then
     if which growlnotify >/dev/null 2>&1; then
       echo "$cmd_status $command" | growlnotify -n "ZSH timetracker" --appIcon Terminal
-    elif which slackcat >/dev/null 2>&1; then
-      echo "$cmd_status $command" | slackcat -p >/dev/null 2>&1;
     else
       return
     fi
