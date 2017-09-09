@@ -13,6 +13,9 @@
 (define-key key-translation-map [?\x80008a5] [?\M-\\])
 (define-key key-translation-map [?\xc0008a5] [?\C-\M-\\])
 
+(setq skk-server-host "localhost")
+(setq skk-server-portnum 1178)
+
 ;; (load "skk-bayesian" t)
 
 ;; ;; 半角で入力したい文字
