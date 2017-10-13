@@ -18,6 +18,7 @@ Plug 'itchyny/calendar.vim'
 call plug#end()
 
 nnoremap <Leader>t :MRU<CR>
+nnoremap <Leader>g :silent! !tig<CR>:redraw!<CR>
 
 function! Memo()
   let f = strftime('~/Dropbox/_posts/%Y-%m-%d-日報.md', localtime())
