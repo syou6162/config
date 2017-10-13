@@ -47,3 +47,7 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
+" Command line history
+cnoremap <C-p> <Up>
+cnoremap <C-n> <Down>
+
