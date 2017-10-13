@@ -5,6 +5,9 @@ set split-view-height = 80%
 
 set wrap-lines = yes
 
+# main-viewの左端にコミットIDを表示する
+set main-view = id date author commit-title:graph=yes,refs=yes
+
 # n / p で単位ごとの移動
 bind diff    n      :/^@@
 bind diff    p      :?^@@
