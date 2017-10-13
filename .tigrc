@@ -5,6 +5,9 @@ set split-view-height = 80%
 
 set wrap-lines = yes
 
+# 空白無視(status-viewでは表示するが、diff-viewでは無視)
+set ignore-space = at-eol
+
 # n / p で単位ごとの移動
 bind diff    n      :/^@@
 bind diff    p      :?^@@
