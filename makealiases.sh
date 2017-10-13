@@ -7,3 +7,7 @@ do
     ln -s `pwd`/.$filename $HOME/.$filename
   fi
 done
+
+if [ ! -e $HOME/.config/fish/config.fish ]; then
+  ln -s `pwd`/config.fish $HOME/.config/fish/config.fish
+fi

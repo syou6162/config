@@ -16,6 +16,7 @@ Plug 'mattn/vim-fz'
 Plug 'fatih/vim-go'
 Plug 'itchyny/calendar.vim'
 Plug 'ekalinin/Dockerfile.vim'
+Plug 'dag/vim-fish'
 call plug#end()
 
 nnoremap <Leader>t :MRU<CR>
