@@ -51,3 +51,13 @@ let g:calendar_google_task = 1
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
+" like emacs
+inoremap <C-p> <Up>
+inoremap <C-n> <Down>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-e> <End>
+inoremap <C-a> <Home>
+inoremap <C-d> <Del>
+inoremap <C-l> <C-o>zz
+inoremap <C-k> <c-o>D
