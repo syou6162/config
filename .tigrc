@@ -1,0 +1,11 @@
+set vertical-split = no
+
+# 水平分割したウィンドウの下画面サイズを % で指定（行数指定も可）
+set split-view-height = 80%
+
+set wrap-lines = yes
+
+bind main G !@hub browse -- commit/%(commit)
+bind diff G !@hub browse -- commit/%(commit)
+bind tree G !@hub browse -- tree/%(commit)/%(directory)
+bind blob G !@hub browse -- tree/%(commit)/%(file)
