@@ -5,6 +5,12 @@ set split-view-height = 80%
 
 set wrap-lines = yes
 
+# n / p で単位ごとの移動
+bind diff    n      :/^@@
+bind diff    p      :?^@@
+bind diff    <Esc>n :/^diff --(git|cc)
+bind diff    <Esc>p :?^diff --(git|cc)
+
 bind main G !@hub browse -- commit/%(commit)
 bind diff G !@hub browse -- commit/%(commit)
 bind tree G !@hub browse -- tree/%(commit)/%(directory)
