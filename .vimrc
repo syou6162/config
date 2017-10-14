@@ -19,6 +19,7 @@ Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 call plug#end()
 
 nnoremap <Leader>t :MRU<CR>
