@@ -54,8 +54,6 @@ cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
 
 " like emacs
-inoremap <C-p> <Up>
-inoremap <C-n> <Down>
 inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-e> <End>
