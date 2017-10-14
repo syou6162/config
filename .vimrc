@@ -17,6 +17,7 @@ Plug 'fatih/vim-go'
 Plug 'itchyny/calendar.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
+Plug 'itchyny/lightline.vim'
 call plug#end()
 
 nnoremap <Leader>t :MRU<CR>
@@ -30,7 +31,6 @@ command! Memo call Memo()
 
 " Statuslineの設定
 set laststatus=2
-set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ \[ENC=%{&fileencoding}]%P
 
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
