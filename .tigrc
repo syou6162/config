@@ -11,6 +11,7 @@ set main-view = id date author commit-title:graph=yes,refs=yes
 bind generic g move-first-line
 bind generic G move-last-line
 bind main G move-last-line
+bind generic E view-grep
 
 # n / p で単位ごとの移動
 bind diff    n      :/^@@
