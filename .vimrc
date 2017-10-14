@@ -8,7 +8,6 @@ set autowrite
 let mapleader=","
 
 call plug#begin('~/.vim/plugged')
-Plug 'vim-scripts/mru.vim'
 Plug 'vim-jp/vimdoc-ja'
 Plug 'tpope/vim-fugitive'
 Plug 'derekwyatt/vim-scala'
@@ -20,9 +19,9 @@ Plug 'dag/vim-fish'
 Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
-nnoremap <Leader>t :MRU<CR>
 nnoremap <Leader>g :silent! !tig status<CR>:redraw!<CR>
 
 function! Memo()
@@ -59,6 +58,13 @@ let g:nerdtree_tabs_open_on_console_startup=1
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 autocmd BufReadPost * if line("'\"") > 0 && line("'\"") <= line("$") | exe "normal g`\"" | endif
+
+let g:ctrlp_prompt_mappings = {
+      \ 'PrtSelectMove("j")':   ['<c-n>'], 
+      \ 'PrtSelectMove("k")':   ['<c-p>'],
+      \ 'PrtHistory(-1)':       ['<down>'],
+      \ 'PrtHistory(1)':        ['<up>'],
+      \ }
 
 " Command line history
 cnoremap <C-p> <Up>
