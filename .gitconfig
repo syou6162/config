@@ -13,4 +13,28 @@
   st = status -s -b --ignore-submodules=dirty
   br = branch
 [core]
-	excludesfile = /Users/yasuhisa/.gitignore
+  excludesfile = ~/.gitexclude
+  editor = /usr/local/bin/vim
+[pull]
+  rebase = preserve
+[merge]
+  ff = false
+[include]
+  path = ~/.gitconfig.local
+[ghq]
+  root = ~/.ghq
+  root = ~/go/src
+  root = ~/Desktop/work
+  root = ~/Desktop/hatena
+[filter "lfs"]
+  clean = git-lfs clean %f
+  smudge = git-lfs smudge %f
+  required = true
+[difftool]
+  prompt = false
+[mergetool]
+  prompt = false
+[http]
+  sslVerify = false
+[fetch]
+  prune = true
