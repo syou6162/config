@@ -20,6 +20,7 @@ Plug 'itchyny/lightline.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 nnoremap <Leader>g :silent! !tig status<CR>:redraw!<CR>
