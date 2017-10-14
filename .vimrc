@@ -9,7 +9,6 @@ let mapleader=","
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-jp/vimdoc-ja'
-Plug 'tpope/vim-fugitive'
 Plug 'derekwyatt/vim-scala'
 Plug 'mattn/vim-fz'
 Plug 'fatih/vim-go'
