@@ -61,6 +61,10 @@ let g:ctrlp_types = ['mru', 'buf']
 
 set tags=tags,./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 
+" Clipboard
+set clipboard=unnamed
+set clipboard+=unnamedplus
+
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
