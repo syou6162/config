@@ -38,3 +38,5 @@
   sslVerify = false
 [fetch]
   prune = true
+[commit]
+  verbose = true
