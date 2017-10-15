@@ -55,6 +55,7 @@ let NERDTreeShowHidden = 1
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
+let g:ctrlp_types = ['mru', 'buf']
 
 " 他のバッファをすべて閉じた時にNERDTreeが開いていたらNERDTreeも一緒に閉じる。
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
