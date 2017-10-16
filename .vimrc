@@ -22,6 +22,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
+Plug 'ivalkeen/vim-ctrlp-tjump'
 call plug#end()
 
 nnoremap <Leader>g :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
@@ -45,6 +46,12 @@ let g:go_metalinter_autosave = 1
 let g:syntastic_go_checkers = "gofmt"
 let g:go_auto_type_info = 1
 nnoremap <leader>a :cclose<CR>
+
+nnoremap <c-]> :CtrlPtjump<cr>
+vnoremap <c-]> :CtrlPtjumpVisual<cr>
+let g:ctrlp_tjump_only_silent = 1
+let g:ctrlp_tjump_skip_tag_name = 1
+
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
