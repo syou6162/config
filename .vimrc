@@ -47,8 +47,8 @@ let g:syntastic_go_checkers = "gofmt"
 let g:go_auto_type_info = 1
 nnoremap <leader>a :cclose<CR>
 
-nnoremap <c-]> :CtrlPtjump<cr>
-vnoremap <c-]> :CtrlPtjumpVisual<cr>
+nnoremap @ :CtrlPtjump<cr>
+vnoremap @ :CtrlPtjumpVisual<cr>
 let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 
