@@ -50,7 +50,6 @@ let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
 let g:go_metalinter_autosave = 1
 let g:syntastic_go_checkers = "gofmt"
 let g:go_auto_type_info = 1
-nnoremap <leader>a :cclose<CR>
 
 nnoremap @ :CtrlPtjump<cr>
 vnoremap @ :CtrlPtjumpVisual<cr>
