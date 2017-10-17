@@ -27,6 +27,9 @@ call plug#end()
 
 nnoremap <Leader>g :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
 
+noremap ; :
+noremap : ;
+
 function! Memo()
   let f = strftime('~/Dropbox/_posts/%Y-%m-%d-日報.md', localtime())
   execute 'edit' f
