@@ -65,6 +65,7 @@ let g:nerdtree_tabs_open_on_console_startup=1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_types = ['mru', 'buf']
+let g:ctrlp_max_height = 20
 
 set tags=tags,./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 
