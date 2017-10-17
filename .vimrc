@@ -23,6 +23,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'ivalkeen/vim-ctrlp-tjump'
+Plug 'mhinz/vim-grepper'
 call plug#end()
 
 nnoremap <Leader>g :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
@@ -71,6 +72,17 @@ let g:ctrlp_types = ['fil', 'mru', 'buf']
 let g:ctrlp_extensions = ['quickfix', 'dir', 'line', 'mixed']
 let g:ctrlp_max_height = 20
 let g:ctrlp_highlight_match = [1, 'IncSearch'] " 絞り込みで一致した部分のハイライト
+
+nmap gs <plug>(GrepperOperator)
+xmap gs <plug>(GrepperOperator)
+
+function! FallBackToCtrlP()
+  cclose
+  CtrlPQuickfix
+endfunction
+
+command! FallBackToCtrlP call FallBackToCtrlP()
+autocmd FileType qf nnoremap <buffer> q :FallBackToCtrlP<CR>
 
 set tags=tags,./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 
