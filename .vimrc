@@ -66,6 +66,7 @@ let g:ctrlp_show_hidden = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
 let g:ctrlp_types = ['mru', 'buf']
 let g:ctrlp_max_height = 20
+let g:ctrlp_highlight_match = [1, 'IncSearch'] " 絞り込みで一致した部分のハイライト
 
 set tags=tags,./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 
