@@ -25,6 +25,7 @@ Plug 'Quramy/tsuquyomi'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
+Plug 'junegunn/vim-easy-align'
 call plug#end()
 
 nnoremap <Leader>t :silent! !tig<CR>:redraw!<CR>
@@ -84,6 +85,11 @@ endfunction
 
 command! FallBackToCtrlP call FallBackToCtrlP()
 autocmd FileType qf nnoremap <buffer> q :FallBackToCtrlP<CR>
+
+" Start interactive EasyAlign in visual mode (e.g. vipga)
+xmap ga <Plug>(EasyAlign)
+" Start interactive EasyAlign for a motion/text object (e.g. gaip)
+nmap ga <Plug>(EasyAlign)
 
 set tags=tags,./tags,../tags,../../tags,../../../tags,../../../../tags,../../../../../tags,../../../../../../tags,../../../../../../../tags
 
