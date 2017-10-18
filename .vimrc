@@ -31,7 +31,6 @@ nnoremap <Leader>b :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
 nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 
 noremap ; :
-noremap : ;
 
 function! Memo()
   let f = strftime('~/Dropbox/_posts/%Y-%m-%d-日報.md', localtime())
