@@ -61,6 +61,7 @@ let g:ctrlp_tjump_skip_tag_name = 1
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
+autocmd FileType go nmap @ :GoDef<CR>
 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
