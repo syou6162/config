@@ -24,6 +24,7 @@ Plug 'leafgarland/typescript-vim'
 Plug 'Quramy/tsuquyomi'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
+Plug 'Yggdroot/indentLine'
 call plug#end()
 
 nnoremap <Leader>t :silent! !tig<CR>:redraw!<CR>
