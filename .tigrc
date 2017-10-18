@@ -8,6 +8,9 @@ set wrap-lines = yes
 # main-viewの左端にコミットIDを表示する
 set main-view = id date author commit-title:graph=yes,refs=yes
 
+# blame view の行数表示をON、intervalを1に
+set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
+
 bind generic g move-first-line
 bind generic G move-last-line
 bind main G move-last-line
