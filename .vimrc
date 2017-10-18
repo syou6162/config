@@ -26,6 +26,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
+Plug 'marijnh/tern_for_vim'
 call plug#end()
 
 nnoremap <Leader>t :silent! !tig<CR>:redraw!<CR>
@@ -62,6 +63,8 @@ autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap @ :GoDef<CR>
+
+autocmd FileType javascript nmap @ :TernDef<CR>
 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
