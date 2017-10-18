@@ -65,6 +65,7 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap @ :GoDef<CR>
 
 autocmd FileType javascript nmap @ :TernDef<CR>
+let g:tern_show_argument_hints = "on_move"
 
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
