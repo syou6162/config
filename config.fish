@@ -3,6 +3,8 @@ set -x LANG ja_JP.UTF-8
 
 set -x PATH /usr/local/bin $PATH
 set -x PATH $GOPATH/bin $PATH
+set -x PATH /usr/local/share/git-core/contrib/diff-highlight $PATH
+
 set -x GOPATH $HOME/go
 
 set -x EDITOR vim
