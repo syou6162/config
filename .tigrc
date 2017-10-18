@@ -11,6 +11,9 @@ set main-view = id date author commit-title:graph=yes,refs=yes
 # blame view の行数表示をON、intervalを1に
 set blame-view  = date:default author:email-user id:yes,color line-number:yes,interval=1 text
 
+# 差分表示にdiff-highlightを使う
+set diff-highlight = true
+
 bind generic g move-first-line
 bind generic G move-last-line
 bind main G move-last-line
