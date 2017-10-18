@@ -49,8 +49,6 @@ let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
 let g:go_metalinter_enabled = ['vet', 'golint', 'errcheck']
-let g:go_metalinter_autosave = 1
-let g:syntastic_go_checkers = "gofmt"
 let g:go_auto_type_info = 1
 inoremap <buffer> <C-X><C-O> <C-X><C-O><C-P>
 set completeopt=menuone
