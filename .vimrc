@@ -26,7 +26,7 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 call plug#end()
 
-nnoremap <Leader>g :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
+nnoremap <Leader>b :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
 nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 
 noremap ; :
