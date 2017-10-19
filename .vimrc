@@ -53,6 +53,7 @@ command! Memo call Memo()
 set laststatus=2
 
 let g:tagbar_left = 1
+let g:tagbar_width = 30
 
 set backspace=indent,eol,start
 
