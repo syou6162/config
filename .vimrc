@@ -35,6 +35,9 @@ nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 
 noremap ; :
 
+" ファイル名はフルパスで表示する
+nnoremap <C-g> 1<C-g>
+
 function! Memo()
   let f = strftime('~/Dropbox/_posts/%Y-%m-%d-日報.md', localtime())
   execute 'edit' f
