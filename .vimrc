@@ -52,6 +52,8 @@ command! Memo call Memo()
 " Statuslineの設定
 set laststatus=2
 
+let g:tagbar_left = 1
+
 set backspace=indent,eol,start
 
 let g:go_fmt_command = "goimports"
