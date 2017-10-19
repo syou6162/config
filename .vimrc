@@ -27,6 +27,7 @@ Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim'
+Plug 'majutsushi/tagbar'
 call plug#end()
 
 nnoremap <Leader>t :silent! !tig<CR>:redraw!<CR>
