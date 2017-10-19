@@ -44,6 +44,8 @@ command! Memo call Memo()
 " Statuslineの設定
 set laststatus=2
 
+set backspace=indent,eol,start
+
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
