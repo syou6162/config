@@ -116,6 +116,9 @@ let g:ctrlp_prompt_mappings = {
       \ 'PrtHistory(1)':        ['<up>'],
       \ }
 
+" 補完時に<CR>で候補を決定すると改行までされてうざいので、挿入モードのときだけ<C-Y>にしておく
+inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
+
 " Command line history
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
