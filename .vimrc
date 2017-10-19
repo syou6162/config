@@ -36,6 +36,10 @@ nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 
 noremap ; :
 
+if has("mouse")
+  set mouse=a
+endif
+
 " ファイル名はフルパスで表示する
 nnoremap <C-g> 1<C-g>
 
