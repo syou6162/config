@@ -38,6 +38,10 @@ nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 noremap ; :
 inoremap <silent> jj <ESC>
 
+nnoremap <Leader>i :silent! !/usr/local/bin/idea --line <C-r>=line('.')<CR> %:p<CR>:redraw!<CR>
+nnoremap <Leader>c :silent! !/usr/local/bin/charm --line <C-r>=line('.')<CR> %:p<CR>:redraw!<CR>
+nnoremap <Leader>g :silent! !/usr/local/bin/gogland --line <C-r>=line('.')<CR> %:p<CR>:redraw!<CR>
+
 if has("mouse")
   set mouse=a
 endif
