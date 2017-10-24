@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # $HOME以下に設定ファイル群へのシンボリックリンクを貼る
-for filename in emacs.d zshrc zshenv Rprofile gitconfig gitexclude tmux.conf vimrc tigrc ctags tern-project
+for filename in emacs.d zshrc zshenv Rprofile gitconfig gitexclude tmux.conf vimrc tigrc ctags tern-project ideavimrc
 do
   if [ ! -e $HOME/.$filename ]; then
     ln -s `pwd`/.$filename $HOME/.$filename

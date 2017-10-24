@@ -1,0 +1,6 @@
+source ~/.vimrc
+
+nnoremap <C-p> :action RecentFiles<CR>
+inoremap <C-h> <BS>
+nnoremap gd :action GotoDeclaration<CR>
+nnoremap <C-o> :action Back<CR>
