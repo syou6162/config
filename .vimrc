@@ -36,6 +36,7 @@ nnoremap <Leader>b :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
 nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
 
 noremap ; :
+inoremap <silent> jj <ESC>
 
 if has("mouse")
   set mouse=a
