@@ -67,17 +67,17 @@ let g:go_auto_type_info = 1
 inoremap <buffer> <C-X><C-O> <C-X><C-O><C-P>
 set completeopt=menuone
 
-nnoremap @ :CtrlPtjump<cr>
-vnoremap @ :CtrlPtjumpVisual<cr>
+nnoremap gd :CtrlPtjump<cr>
+vnoremap gd :CtrlPtjumpVisual<cr>
 let g:ctrlp_tjump_only_silent = 1
 let g:ctrlp_tjump_skip_tag_name = 1
 
 autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
-autocmd FileType go nmap @ :GoDef<CR>
+autocmd FileType go nmap gd :GoDef<CR>
 
-autocmd FileType javascript nmap @ :TernDef<CR>
+autocmd FileType javascript nmap gd :TernDef<CR>
 let g:tern_show_argument_hints = "on_move"
 
 let g:calendar_google_calendar = 1
