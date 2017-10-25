@@ -97,8 +97,8 @@ let NERDTreeShowHidden = 1
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:ctrlp_show_hidden = 1
 let g:ctrlp_cmd = 'CtrlPMRU'
-let g:ctrlp_types = ['fil', 'mru', 'buf']
-let g:ctrlp_extensions = ['quickfix', 'dir', 'line', 'mixed']
+let g:ctrlp_types = ['mru']
+let g:ctrlp_extensions = ['quickfix']
 let g:ctrlp_max_height = 20
 let g:ctrlp_highlight_match = [1, 'IncSearch'] " 絞り込みで一致した部分のハイライト
 
