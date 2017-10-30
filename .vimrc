@@ -31,6 +31,9 @@ Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
 call plug#end()
 
+" カーソルを表示行で移動する
+nnoremap j gj
+nnoremap k gk
 nnoremap <Leader>t :silent! !tig<CR>:redraw!<CR>
 nnoremap <Leader>b :silent! !tig blame +<C-r>=line('.')<CR> %<CR>:redraw!<CR>
 nnoremap <Leader>s :silent! !tig status<CR>:redraw!<CR>
