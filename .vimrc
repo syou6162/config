@@ -151,5 +151,4 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
-inoremap <C-l> <C-o>zz
 inoremap <C-k> <c-o>D
