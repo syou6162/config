@@ -3,6 +3,7 @@ set vertical-split = no
 # 水平分割したウィンドウの下画面サイズを % で指定（行数指定も可）
 set split-view-height = 80%
 
+# 長い行を改行する。statusでaddできないときは一時的にnoにするとよい
 set wrap-lines = yes
 
 # main-viewの左端にコミットIDを表示する
