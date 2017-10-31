@@ -92,6 +92,8 @@ autocmd FileType go nmap gd :GoDef<CR>
 autocmd FileType javascript nmap gd :TernDef<CR>
 let g:tern_show_argument_hints = "on_move"
 
+autocmd FileType help nnoremap <buffer> q <C-w>c
+
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
