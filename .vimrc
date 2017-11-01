@@ -30,6 +30,7 @@ Plug 'junegunn/vim-easy-align'
 Plug 'marijnh/tern_for_vim'
 Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
+Plug 'benmills/vimux'
 call plug#end()
 
 " カーソルを表示行で移動する
@@ -58,6 +59,20 @@ function! Memo()
   execute 'edit' f
 endfunction
 command! Memo call Memo()
+
+function! SendSQL()
+  if !exists("g:VimuxRunnerIndex")
+    call VimuxOpenRunner()
+  endif
+
+  normal vip
+  execute 'normal "vy'
+  call VimuxSendText(@v)
+  call VimuxSendKeys("Enter")
+endfunction
+command! SendSQL call SendSQL()
+
+autocmd FileType sql nmap sp :SendSQL<CR>
 
 " Statuslineの設定
 set laststatus=2
