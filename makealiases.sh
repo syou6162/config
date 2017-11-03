@@ -1,9 +1,5 @@
 #!/bin/sh
 
-if [ ! -e $HOME/.vim/autoload/plug.vim ]; then
-  curl -s -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-fi
-
 # $HOME以下に設定ファイル群へのシンボリックリンクを貼る
 for filename in emacs.d zshrc zshenv Rprofile gitconfig gitexclude tmux.conf vimrc tigrc ctags tern-project ideavimrc
 do
