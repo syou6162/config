@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-jp/vimdoc-ja'
 Plug 'derekwyatt/vim-scala'
 Plug 'mattn/vim-fz'
-Plug 'fatih/vim-go'
 Plug 'itchyny/calendar.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
@@ -28,7 +27,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/tsuquyomi'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
@@ -37,6 +35,10 @@ Plug 'marijnh/tern_for_vim'
 Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
 Plug 'benmills/vimux'
+if v:version >= 800
+  Plug 'fatih/vim-go'
+  Plug 'Quramy/tsuquyomi'
+endif
 call plug#end()
 
 " カーソルを表示行で移動する
