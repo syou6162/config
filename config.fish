@@ -26,3 +26,5 @@ end
 
 set -g theme_display_ruby no
 set -g theme_display_date no
+
+eval (direnv hook fish)
