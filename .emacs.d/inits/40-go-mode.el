@@ -2,6 +2,9 @@
 (require 'go-autocomplete)
 (require 'go-eldoc)
 
+(add-to-list 'load-path (concat (getenv "GOPATH")  "/src/github.com/golang/lint/misc/emacs"))
+(require 'golint)
+
 (add-to-list 'auto-mode-alist '("\\.go\\'" . go-mode))
 (autoload 'dash-at-point "dash-at-point"
   "Search the word at point with Dash." t nil)
@@ -19,6 +22,8 @@
 	    (setq indent-tabs-mode nil)    ; タブを利用
 	    (setq c-basic-offset 4)        ; tabサイズを4にする
 	    (setq tab-width 4)))
+
+
 
 (set-face-attribute 'eldoc-highlight-function-argument nil
 		    :underline t :foreground "green"

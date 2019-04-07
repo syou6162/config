@@ -35,11 +35,17 @@
 (el-get-bundle sbt-mode)
 (el-get-bundle ensime/ensime-emacs)
 
+(el-get-bundle company-mode/company-mode)
+(el-get-bundle yasnippet)
+(el-get-bundle manuel-uberti/helm-company)
+
 (el-get-bundle typescript-mode)
 (el-get-bundle json-mode)
 (el-get-bundle tss)
+(el-get-bundle tide)
 
 (el-get-bundle markdown-mode)
+(el-get-bundle emacswiki:bracketed-paste)
 (el-get-bundle recentf-ext)
 (el-get-bundle ddskk)
 (el-get-bundle smartchr)
@@ -54,6 +60,8 @@
 (el-get-bundle web-mode)
 
 (el-get-bundle shibayu36/emacs-open-github-from-here)
+
+(el-get-bundle karronoli/redpen-paragraph.el)
 
 (el-get-bundle helm-git-grep)
 (el-get-bundle helm-ag)
@@ -71,6 +79,15 @@
 (el-get-bundle gist:5457732:ginger-api)
 
 (el-get-bundle stanaka/dash-at-point)
+
+(el-get-bundle purcell/less-css-mode)
+(el-get-bundle purcell/flymake-less)
+
+(el-get-bundle HKey/mozc-temp)
+(el-get-bundle igjit/ac-mozc)
+
+(require 'flymake-less)
+(add-hook 'less-css-mode-hook 'flymake-less-load)
 
 ;; To install inf-clojrue
 (require 'package)

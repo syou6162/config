@@ -36,3 +36,11 @@
   (interactive)
   (find-file
    (concat "~/Dropbox/_posts/" (format-time-string "%Y-%m-%d") "-日報.md")))
+
+(define-key markdown-mode-map (kbd "C-c C-r") 'redpen-paragraph)
+
+(defvar redpen-commands
+  '("redpen --format markdown --result-format json2 --conf /usr/local/Cellar/redpen/1.8.0/libexec/conf/redpen-conf-en.xml %s 2>/dev/null"
+    "redpen --format markdown --result-format json2 --conf /usr/local/Cellar/redpen/1.8.0/libexec/conf/redpen-conf-ja.xml %s 2>/dev/null"))
+
+(defvar redpen-paragraph-force-reading-whole t)
