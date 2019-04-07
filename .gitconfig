@@ -35,6 +35,6 @@
 [mergetool]
   prompt = false
 [http]
-  sslVerify = false
+	sslVerify = true
 [commit]
   verbose = true
