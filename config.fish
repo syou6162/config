@@ -9,6 +9,9 @@ set -x PATH /usr/local/share/git-core/contrib/diff-highlight $PATH
 set -x EDITOR vim
 set -x TERM xterm-256color
 
+status --is-interactive; and . (pyenv init -|psub)
+status --is-interactive; and . (nodenv init -|psub)
+
 function history-merge --on-event fish_preexec
   history --save
   history --merge
