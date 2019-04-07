@@ -35,6 +35,7 @@ Plug 'marijnh/tern_for_vim'
 Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
 Plug 'benmills/vimux'
+Plug 'posva/vim-vue'
 if v:version >= 800
   Plug 'fatih/vim-go'
   Plug 'Quramy/tsuquyomi'
