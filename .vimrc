@@ -37,7 +37,7 @@ Plug 'djoshea/vim-autoread'
 Plug 'benmills/vimux'
 Plug 'posva/vim-vue'
 if v:version >= 800
-  Plug 'fatih/vim-go'
+  Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'Quramy/tsuquyomi'
 endif
 call plug#end()
