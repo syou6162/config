@@ -1,0 +1,59 @@
+{
+    "editor.minimap.enabled": false,
+    "editor.fontSize": 10,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                ";"
+            ],
+            "after": [
+                ":"
+            ]
+        },
+    ],
+    "window.title": "${activeEditorLong}${separator}${rootName}",
+    "diffEditor.renderSideBySide": true,
+    "vsnotes.defaultNotePath": "/Users/yasuhisa/Dropbox/_posts",
+    "vsnotes.listRecentLimit": 30,
+    "vsnotes.defaultNoteName": "日報",
+    "vsnotes.tokens": [
+        {
+            "type": "datetime",
+            "token": "{dt}",
+            "format": "YYYY-MM-DD",
+            "description": "Insert formatted datetime."
+        },
+        {
+            "type": "title",
+            "token": "{title}",
+            "description": "Insert note title from input box.",
+            "format": "Untitled"
+        },
+        {
+            "type": "extension",
+            "token": "{ext}",
+            "description": "Insert file vsnotes.",
+            "format": "md"
+        }
+    ],
+    "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
+    "vim.useSystemClipboard": true,
+    "workbench.tree.indent": 16,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 160,
+    "editor.lineHeight": 13,
+    "window.zoomLevel": 0,
+    "workbench.sideBar.location": "right",
+    "vim.hlsearch": true,
+    "explorer.sortOrder": "modified",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "zenMode.hideActivityBar": false,
+    "workbench.activityBar.visible": true,
+    "[go]": {
+        
+    },
+    "go.formatTool": "goimports",
+    "go.useLanguageServer": true,
+    "liveshare.featureSet": "insiders",
+}
