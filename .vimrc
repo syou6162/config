@@ -186,3 +186,5 @@ inoremap <C-f> <Right>
 inoremap <C-e> <End>
 inoremap <C-a> <Home>
 inoremap <C-k> <c-o>D
+
+autocmd FileType liquid set filetype=yaml
