@@ -13,5 +13,10 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.showCommands"
+    },
+    {
+        "key": "g d",
+        "command": "editor.action.revealDefinition",
+        "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
     }
 ]
