@@ -13,30 +13,6 @@
     ],
     "window.title": "${activeEditorLong}${separator}${rootName}",
     "diffEditor.renderSideBySide": true,
-    "vsnotes.defaultNotePath": "/Users/yasuhisa/Dropbox/_posts",
-    "vsnotes.listRecentLimit": 30,
-    "vsnotes.defaultNoteName": "日報",
-    "vsnotes.tokens": [
-        {
-            "type": "datetime",
-            "token": "{dt}",
-            "format": "YYYY-MM-DD",
-            "description": "Insert formatted datetime."
-        },
-        {
-            "type": "title",
-            "token": "{title}",
-            "description": "Insert note title from input box.",
-            "format": "Untitled"
-        },
-        {
-            "type": "extension",
-            "token": "{ext}",
-            "description": "Insert file vsnotes.",
-            "format": "md"
-        }
-    ],
-    "vsnotes.defaultNoteTitle": "{dt}-{title}.{ext}",
     "vim.useSystemClipboard": true,
     "workbench.tree.indent": 16,
     "editor.wordWrap": "wordWrapColumn",
