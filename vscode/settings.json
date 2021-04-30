@@ -43,7 +43,6 @@
     "editor.wordWrapColumn": 160,
     "editor.lineHeight": 13,
     "window.zoomLevel": 0,
-    "workbench.sideBar.location": "right",
     "vim.hlsearch": true,
     "explorer.sortOrder": "modified",
     "editor.suggestSelection": "first",
