@@ -45,3 +45,5 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.i
 alias k kubectl
 alias kd 'k describe'
 alias kg 'k get'
+set -g theme_display_k8s_context yes
+set -g theme_display_k8s_namespace yes
