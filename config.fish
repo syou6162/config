@@ -40,3 +40,7 @@ if not functions -q fisher
 end
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+
+alias k kubectl
+alias kd 'k describe'
+alias kg 'k get'
