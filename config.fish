@@ -44,3 +44,5 @@ source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.i
 alias k kubectl
 alias kd 'k describe'
 alias kg 'k get'
+
+set -U theme_display_cmd_duration no
