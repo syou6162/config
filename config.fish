@@ -47,3 +47,12 @@ alias kd 'k describe'
 alias kg 'k get'
 set -g theme_display_k8s_context yes
 set -g theme_display_k8s_namespace yes
+
+function kubeswitch
+  kubectl config get-contexts | peco --initial-index=1 --prompt='kubectl config use-context > ' |  sed -e 's/^\*//' | awk '{print $1}' | read line
+  if test $line
+    kubectl config use-context $line
+  else
+    # キャンセルされた場合はスキップ
+  end
+end
