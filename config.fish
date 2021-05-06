@@ -42,9 +42,17 @@ end
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
-alias k kubectl
-alias kd 'k describe'
-alias kg 'k get'
+if status --is-interactive
+    set -g fish_user_abbreviations
+    # kubectl関係
+    abbr --add k "kubectl"
+    abbr --add kg "kubectl get"
+    abbr --add kd "kubectl describe"
+
+    # others
+    abbr --add proxy "env https_proxy=localhost:3128"
+end
+
 set -g theme_display_k8s_context yes
 set -g theme_display_k8s_namespace yes
 
