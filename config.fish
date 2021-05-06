@@ -51,6 +51,7 @@ if status --is-interactive
 
     # others
     abbr --add proxy "env https_proxy=localhost:3128"
+    abbr --add pk "env https_proxy=localhost:3128 kubectl"
 end
 
 set -g theme_display_k8s_context yes
