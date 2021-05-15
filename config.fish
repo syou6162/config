@@ -50,7 +50,7 @@ if status --is-interactive
     abbr --add kd "kubectl describe"
 
     # others
-    abbr --add proxy "env https_proxy=localhost:3128"
+    abbr --add p "env https_proxy=localhost:3128"
     abbr --add pk "env https_proxy=localhost:3128 kubectl"
 end
 
