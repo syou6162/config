@@ -42,18 +42,6 @@ end
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
-if status --is-interactive
-    set -g fish_user_abbreviations
-    # kubectl関係
-    abbr --add k "kubectl"
-    abbr --add kg "kubectl get"
-    abbr --add kd "kubectl describe"
-
-    # others
-    abbr --add p "env https_proxy=localhost:3128"
-    abbr --add pk "env https_proxy=localhost:3128 kubectl"
-end
-
 function kubeswitch
   kubectl config get-contexts | peco --initial-index=1 --prompt='kubectl config use-context > ' |  sed -e 's/^\*//' | awk '{print $1}' | read line
   if test $line
@@ -61,4 +49,17 @@ function kubeswitch
   else
     # キャンセルされた場合はスキップ
   end
+end
+
+if status --is-interactive
+    set -g fish_user_abbreviations
+    # kubectl関係
+    abbr --add k "kubectl"
+    abbr --add kg "kubectl get"
+    abbr --add kd "kubectl describe"
+    abbr --add ks "kubeswitch"
+
+    # others
+    abbr --add p "env https_proxy=localhost:3128"
+    abbr --add pk "env https_proxy=localhost:3128 kubectl"
 end
