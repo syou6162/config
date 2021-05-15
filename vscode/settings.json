@@ -32,4 +32,10 @@
     "go.useLanguageServer": true,
     "liveshare.featureSet": "insiders",
     "editor.tabCompletion": "onlySnippets",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
 }
