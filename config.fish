@@ -54,9 +54,6 @@ if status --is-interactive
     abbr --add pk "env https_proxy=localhost:3128 kubectl"
 end
 
-set -g theme_display_k8s_context yes
-set -g theme_display_k8s_namespace yes
-
 function kubeswitch
   kubectl config get-contexts | peco --initial-index=1 --prompt='kubectl config use-context > ' |  sed -e 's/^\*//' | awk '{print $1}' | read line
   if test $line
