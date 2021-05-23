@@ -16,7 +16,6 @@ endif
 
 call plug#begin('~/.vim/plugged')
 Plug 'vim-jp/vimdoc-ja'
-Plug 'derekwyatt/vim-scala'
 Plug 'mattn/vim-fz'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
