@@ -63,7 +63,7 @@ endif
 nnoremap <C-g> 1<C-g>
 
 function! Memo()
-  let f = strftime('~/Dropbox/_posts/%Y-%m-%d-日報.md', localtime())
+  let f = strftime('~/.config/memo/_posts/%Y-%m-%d.md', localtime())
   execute 'edit' f
 endfunction
 command! Memo call Memo()
