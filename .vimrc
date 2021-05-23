@@ -68,6 +68,15 @@ function! Memo()
 endfunction
 command! Memo call Memo()
 
+function! MemoTime() abort
+  let t = strftime("%H:%M", localtime())
+  call append(0, t)
+  call cursor(1, 5)
+  execute "normal! A \n\n---\n"
+  call cursor(1, 6)
+endfunction
+command! MemoTime call MemoTime()
+
 " Statuslineの設定
 set laststatus=2
 
