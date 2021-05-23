@@ -18,7 +18,6 @@ call plug#begin('~/.vim/plugged')
 Plug 'vim-jp/vimdoc-ja'
 Plug 'derekwyatt/vim-scala'
 Plug 'mattn/vim-fz'
-Plug 'itchyny/calendar.vim'
 Plug 'ekalinin/Dockerfile.vim'
 Plug 'dag/vim-fish'
 Plug 'itchyny/lightline.vim'
@@ -107,9 +106,6 @@ autocmd FileType go nmap gd :GoDef<CR>
 
 autocmd FileType help nnoremap <buffer> q <C-w>c
 autocmd FileType help wincmd L
-
-let g:calendar_google_calendar = 1
-let g:calendar_google_task = 1
 
 let NERDTreeShowHidden = 1
 " デフォルトでツリーを表示させる
