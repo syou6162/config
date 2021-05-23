@@ -31,7 +31,6 @@ Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
-Plug 'marijnh/tern_for_vim'
 Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
 Plug 'benmills/vimux'
@@ -105,9 +104,6 @@ autocmd FileType go nmap <leader>b <Plug>(go-build)
 autocmd FileType go nmap <leader>r <Plug>(go-run)
 autocmd FileType go nmap <Leader>i <Plug>(go-info)
 autocmd FileType go nmap gd :GoDef<CR>
-
-autocmd FileType javascript nmap gd :TernDef<CR>
-let g:tern_show_argument_hints = "on_move"
 
 autocmd FileType help nnoremap <buffer> q <C-w>c
 autocmd FileType help wincmd L
