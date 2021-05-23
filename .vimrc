@@ -150,6 +150,7 @@ inoremap <expr> <CR> pumvisible() ? "\<C-Y>" : "\<CR>"
 " Command line history
 cnoremap <C-p> <Up>
 cnoremap <C-n> <Down>
+set history=1000
 
 " like emacs
 inoremap <C-b> <Left>
