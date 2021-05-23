@@ -75,20 +75,6 @@ function! Memo()
 endfunction
 command! Memo call Memo()
 
-function! SendSQL()
-  if !exists("g:VimuxRunnerIndex")
-    call VimuxOpenRunner()
-  endif
-
-  normal vip
-  execute 'normal "vy'
-  call VimuxSendText(@v)
-  call VimuxSendKeys("Enter")
-endfunction
-command! SendSQL call SendSQL()
-
-autocmd FileType sql nmap sp :SendSQL<CR>
-
 " Statuslineの設定
 set laststatus=2
 
