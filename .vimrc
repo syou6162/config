@@ -169,3 +169,16 @@ inoremap <C-a> <Home>
 inoremap <C-k> <c-o>D
 
 autocmd FileType liquid set filetype=yaml
+
+function! FoldMarkdown(lnum)
+  let prev = getline(a:lnum - 2)
+  let line = getline(a:lnum)
+  if line == "---"
+    return 1
+  elseif prev == "---"
+    return '>1'
+  endif
+  return '='
+endfunction
+
+autocmd BufNewFile,BufRead *.md set foldmethod=expr foldexpr=FoldMarkdown(v:lnum)
