@@ -76,6 +76,7 @@ function! MemoTime() abort
   call cursor(1, 6)
 endfunction
 command! MemoTime call MemoTime()
+nnoremap <leader>t :MemoTime<cr>
 
 " Statuslineの設定
 set laststatus=2
