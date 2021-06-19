@@ -9,7 +9,10 @@ set -x PATH /usr/local/share/git-core/contrib/diff-highlight $PATH
 set -x EDITOR vim
 set -x TERM xterm-256color
 
-status --is-interactive; and . (pyenv init -|psub)
+set -Ux PYENV_ROOT $HOME/.pyenv
+set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+status is-login; and pyenv init --path | source
+
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
 
