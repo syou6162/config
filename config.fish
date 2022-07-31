@@ -34,6 +34,7 @@ end
 set -g theme_display_ruby no
 set -g theme_display_date no
 set -U theme_display_cmd_duration no
+set -g theme_powerline_fonts no
 
 eval (direnv hook fish)
 
