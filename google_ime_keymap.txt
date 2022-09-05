@@ -1,0 +1,56 @@
+status	key	command
+
+; 変換前入力中
+Composition	ASCII	InsertCharacter
+Composition	Backspace	Backspace
+Composition	ESC	Cancel
+Composition	Enter	Commit
+Composition	Space	Convert
+Composition	Tab	PredictAndConvert
+Composition	Ctrl a	MoveCursorToBeginning
+Composition	Ctrl e	MoveCursorToEnd
+Composition	Ctrl f	MoveCursorRight
+Composition	Ctrl b	MoveCursorLeft
+Composition	Ctrl g	Delete
+Composition	Ctrl h	Backspace
+Composition	Ctrl q	ConvertToFullKatakana
+
+; 変換中
+Conversion	Backspace	Cancel
+Conversion	Ctrl a	SegmentFocusFirst
+Conversion	Ctrl b	SegmentFocusLeft
+Conversion	Ctrl e	SegmentFocusLast
+Conversion	Ctrl f	SegmentFocusRight
+Conversion	Ctrl g	Cancel
+Conversion	Ctrl h	Cancel
+Conversion	Ctrl i	SegmentWidthShrink
+Conversion	Ctrl j	Commit
+Conversion	Ctrl k	SegmentWidthShrink
+Conversion	Ctrl l	SegmentWidthExpand
+Conversion	Ctrl m	Commit
+Conversion	Ctrl n	ConvertNext
+Conversion	Ctrl o	SegmentWidthExpand
+Conversion	Ctrl p	ConvertPrev
+Conversion	Ctrl s	SegmentFocusLeft
+Conversion	ESC	Cancel
+Conversion	Enter	Commit
+Conversion	Space	ConvertNext
+Conversion	Shift Tab	ConvertPrev
+Conversion	Tab	PredictAndConvert
+Conversion	l	IMEOff
+Conversion	Ctrl q	ConvertToFullKatakana
+
+; 直接入力
+DirectInput	Ctrl j	IMEOn
+
+; 入力文字なし
+Precomposition	l	IMEOff
+
+; サジェスト表示中
+Suggestion	l	IMEOff
+Suggestion	Ctrl g	Cancel
+
+; サジェスト選択中
+; 何か効いてないっぽいな...
+Prediction	Ctrl n	ConvertNext
+Prediction	Ctrl p	ConvertPrev
