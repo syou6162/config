@@ -51,6 +51,4 @@ Suggestion	l	IMEOff
 Suggestion	Ctrl g	Cancel
 
 ; サジェスト選択中
-; 何か効いてないっぽいな...
-Prediction	Ctrl n	ConvertNext
-Prediction	Ctrl p	ConvertPrev
+Prediction	Ctrl Delete	DeleteSelectedCandidate
