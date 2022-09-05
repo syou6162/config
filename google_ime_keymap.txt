@@ -11,6 +11,7 @@ Composition	Ctrl a	MoveCursorToBeginning
 Composition	Ctrl e	MoveCursorToEnd
 Composition	Ctrl f	MoveCursorRight
 Composition	Ctrl b	MoveCursorLeft
+Composition	Ctrl m	Commit
 Composition	Ctrl g	Delete
 Composition	Ctrl h	Backspace
 Composition	Ctrl q	ConvertToFullKatakana
