@@ -11,6 +11,16 @@ set -x TERM xterm-256color
 
 set -Ux PYENV_ROOT $HOME/.pyenv
 set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+
+switch (uname -m)
+case arm64
+  status --is-interactive; and eval (/opt/homebrew/bin/brew shellenv)
+  source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+case x86_64
+  status --is-interactive; and eval (/usr/local/bin/brew shellenv)
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+end
+
 status is-login; and pyenv init --path | source
 
 status --is-interactive; and . (rbenv init -|psub)
@@ -44,8 +54,6 @@ if not functions -q fisher
   curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
   fisher update
 end
-
-source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 
 function kubeswitch
   kubectl config get-contexts | peco --initial-index=1 --prompt='kubectl config use-context > ' |  sed -e 's/^\*//' | awk '{print $1}' | read line
