@@ -38,10 +38,11 @@ set -g theme_powerline_fonts no
 
 eval (direnv hook fish)
 
+# fisherが入っていない場合、インストールする
+# また、fisherのプラグインも同様にインストールする
 if not functions -q fisher
-    set -q XDG_CONFIG_HOME; or set XDG_CONFIG_HOME ~/.config
-    curl https://git.io/fisher --create-dirs -sLo $XDG_CONFIG_HOME/fish/functions/fisher.fish
-    fish -c fisher
+  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
+  fisher update
 end
 
 source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
