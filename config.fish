@@ -69,8 +69,4 @@ if status --is-interactive
     abbr --add kg "kubectl get"
     abbr --add kd "kubectl describe"
     abbr --add ks "kubeswitch"
-
-    # others
-    abbr --add p "env https_proxy=localhost:3128"
-    abbr --add pk "env https_proxy=localhost:3128 kubectl"
 end
