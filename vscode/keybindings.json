@@ -13,6 +13,6 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.showCommands",
-        "when": "!inCommandsPicker"
+        "when": "!inCommandsPicker && !terminalFocus"
     }
 ]
