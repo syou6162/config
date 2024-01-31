@@ -21,7 +21,7 @@ end
 
 set -x TMUX_SHELL (which fish)
 
-status is-login; and pyenv init --path | source
+status --is-interactive; and pyenv init --path | source
 
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
