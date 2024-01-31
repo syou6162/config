@@ -24,8 +24,8 @@
 [ghq]
   root = ~/.ghq
   root = ~/go/src
-  root = ~/Desktop/work
-  root = ~/Desktop/hatena
+  root = ~/work
+  root = ~/10xinc
 [filter "lfs"]
   clean = git-lfs clean %f
   smudge = git-lfs smudge %f
