@@ -12,6 +12,7 @@
     },
     {
         "key": "ctrl+p",
-        "command": "workbench.action.showCommands"
+        "command": "workbench.action.showCommands",
+        "when": "!inCommandsPicker"
     }
 ]
