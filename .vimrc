@@ -24,15 +24,12 @@ Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
-Plug 'leafgarland/typescript-vim'
 Plug 'ivalkeen/vim-ctrlp-tjump'
 Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
-Plug 'majutsushi/tagbar'
 Plug 'djoshea/vim-autoread'
 Plug 'benmills/vimux'
-Plug 'posva/vim-vue'
 if v:version >= 800
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'Quramy/tsuquyomi'
@@ -62,27 +59,8 @@ endif
 " ファイル名はフルパスで表示する
 nnoremap <C-g> 1<C-g>
 
-function! Memo()
-  let f = strftime('~/.config/memo/_posts/%Y-%m-%d.md', localtime())
-  execute 'edit' f
-endfunction
-command! Memo call Memo()
-
-function! MemoTime() abort
-  let t = strftime("%H:%M", localtime())
-  call append(0, t)
-  call cursor(1, 5)
-  execute "normal! A \n\n---\n"
-  call cursor(1, 6)
-endfunction
-command! MemoTime call MemoTime()
-nnoremap <leader>t :MemoTime<cr>
-
 " Statuslineの設定
 set laststatus=2
-
-let g:tagbar_left = 1
-let g:tagbar_width = 30
 
 set backspace=indent,eol,start
 
