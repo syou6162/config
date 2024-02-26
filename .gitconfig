@@ -16,7 +16,7 @@
   excludesfile = ~/.gitexclude
   editor = code --wait
 [pull]
-  rebase = preserve
+  rebase = false
 [merge]
   ff = false
 [include]
