@@ -24,9 +24,6 @@
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "zenMode.hideActivityBar": false,
     "workbench.activityBar.visible": true,
-    "[go]": {
-        
-    },
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "liveshare.featureSet": "insiders",
