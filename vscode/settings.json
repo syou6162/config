@@ -1,6 +1,12 @@
 {
     "editor.minimap.enabled": false,
     "editor.fontSize": 10,
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.wordWrapColumn": 160,
+    "editor.lineHeight": 13,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
     "vim.normalModeKeyBindingsNonRecursive": [
         {
             "before": [
@@ -11,23 +17,17 @@
             ]
         },
     ],
+    "vim.useSystemClipboard": true,
+    "vim.hlsearch": true,
     "window.title": "${activeEditorLong}${separator}${rootName}",
     "diffEditor.renderSideBySide": true,
-    "vim.useSystemClipboard": true,
     "workbench.tree.indent": 16,
-    "editor.wordWrap": "wordWrapColumn",
-    "editor.wordWrapColumn": 160,
-    "editor.lineHeight": 13,
-    "vim.hlsearch": true,
     "explorer.sortOrder": "modified",
-    "editor.suggestSelection": "first",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "zenMode.hideActivityBar": false,
     "workbench.activityBar.visible": true,
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
-    "liveshare.featureSet": "insiders",
-    "editor.tabCompletion": "onlySnippets",
     "workbench.editorAssociations": [
         {
             "viewType": "jupyter.notebook.ipynb",
@@ -38,7 +38,7 @@
         "editor.formatOnType": true,
         "editor.defaultFormatter": "ms-python.python"
     },
-    "editor.inlineSuggest.enabled": true,
+    "python.interpreter.infoVisibility": "always",
     "github.copilot.enable": {
         "*": true,
         "plaintext": false,
@@ -50,5 +50,4 @@
     "files.associations": {
         "*.sql": "jinja-sql"
     },
-    "python.interpreter.infoVisibility": "always",
 }
