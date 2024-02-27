@@ -25,7 +25,6 @@
     "explorer.sortOrder": "modified",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "zenMode.hideActivityBar": false,
-    "workbench.activityBar.visible": true,
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "workbench.editorAssociations": [
@@ -51,4 +50,5 @@
         "*.sql": "jinja-sql"
     },
     "terminal.integrated.defaultProfile.osx": "fish",
+    "workbench.activityBar.location": "top",
 }
