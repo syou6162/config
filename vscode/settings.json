@@ -35,8 +35,8 @@
         }
     ],
     "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter",
         "editor.formatOnType": true,
-        "editor.defaultFormatter": "ms-python.python"
     },
     "python.interpreter.infoVisibility": "always",
     "github.copilot.enable": {
