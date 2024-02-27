@@ -42,5 +42,19 @@
     {
         "key": "ctrl+cmd+left",
         "command": "-workbench.action.moveEditorToPreviousGroup"
-    }
+    },
+    // 新規ターミナル作成
+    {
+        "key": "ctrl+z c",
+        "command": "workbench.action.terminal.new"
+    },
+    // ターミナルの切り替え (next, previous)
+    {
+        "key": "ctrl+z n",
+        "command": "workbench.action.terminal.focusNext"
+    },
+    {
+        "key": "ctrl+z p",
+        "command": "workbench.action.terminal.focusPrevious"
+    }    
 ]
