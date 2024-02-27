@@ -50,4 +50,5 @@
     "files.associations": {
         "*.sql": "jinja-sql"
     },
+    "terminal.integrated.defaultProfile.osx": "fish",
 }
