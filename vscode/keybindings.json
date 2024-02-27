@@ -16,16 +16,6 @@
         "when": "!inCommandsPicker && !terminalFocus"
     },
     {
-        "key": "ctrl+shift+p",
-        "command": "workbench.action.terminal.focusPrevious",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
-        "key": "ctrl+shift+n",
-        "command": "workbench.action.terminal.focusNext",
-        "when": "terminalFocus && terminalHasBeenCreated && !terminalEditorFocus || terminalFocus && terminalProcessSupported && !terminalEditorFocus"
-    },
-    {
         "key": "ctrl+cmd+right",
         "command": "-workbench.action.moveEditorToNextGroup"
     },
