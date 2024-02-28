@@ -29,7 +29,6 @@ Plug 'mhinz/vim-grepper'
 Plug 'Yggdroot/indentLine'
 Plug 'junegunn/vim-easy-align'
 Plug 'djoshea/vim-autoread'
-Plug 'benmills/vimux'
 if v:version >= 800
   Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
   Plug 'Quramy/tsuquyomi'
