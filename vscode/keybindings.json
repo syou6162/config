@@ -12,6 +12,11 @@
     },
     {
         "key": "ctrl+p",
+        "command": "workbench.action.quickOpen",
+        "when": "!inFilesPicker && !terminalFocus"
+    },
+    {
+        "key": "cmd+p",
         "command": "workbench.action.showCommands",
         "when": "!inCommandsPicker && !terminalFocus"
     },
