@@ -36,15 +36,18 @@
     // 新規ターミナル作成
     {
         "key": "ctrl+z c",
-        "command": "workbench.action.terminal.new"
+        "command": "workbench.action.terminal.new",
+        "when": "terminalFocus"
     },
     // ターミナルの切り替え (next, previous)
     {
         "key": "ctrl+z n",
-        "command": "workbench.action.terminal.focusNext"
+        "command": "workbench.action.terminal.focusNext",
+        "when": "terminalFocus"
     },
     {
         "key": "ctrl+z p",
-        "command": "workbench.action.terminal.focusPrevious"
+        "command": "workbench.action.terminal.focusPrevious",
+        "when": "terminalFocus"
     }    
 ]
