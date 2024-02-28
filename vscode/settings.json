@@ -51,6 +51,7 @@
     },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.scrollback": 200000,
     "workbench.activityBar.location": "top",
