@@ -50,6 +50,7 @@
         "*.sql": "jinja-sql"
     },
     "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.scrollback": 200000,
     "workbench.activityBar.location": "top",
