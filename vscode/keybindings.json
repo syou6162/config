@@ -49,5 +49,5 @@
         "key": "ctrl+z p",
         "command": "workbench.action.terminal.focusPrevious",
         "when": "terminalFocus"
-    }    
+    }
 ]
