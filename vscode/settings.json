@@ -50,5 +50,6 @@
         "*.sql": "jinja-sql"
     },
     "terminal.integrated.defaultProfile.osx": "fish",
+    "terminal.integrated.scrollback": 200000,
     "workbench.activityBar.location": "top",
 }
