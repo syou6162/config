@@ -24,7 +24,6 @@
     "workbench.tree.indent": 16,
     "explorer.sortOrder": "modified",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "zenMode.hideActivityBar": false,
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
     "workbench.editorAssociations": [
@@ -55,4 +54,12 @@
     "terminal.integrated.defaultProfile.osx": "fish",
     "terminal.integrated.scrollback": 200000,
     "workbench.activityBar.location": "top",
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.preferHistoryBasedLanguageDetection": true,
+    "zenMode.centerLayout": false,
+    "zenMode.showTabs": "none",
+    "zenMode.hideStatusBar": false,
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "windowed",
+    "breadcrumbs.enabled": false,
 }
