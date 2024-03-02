@@ -13,7 +13,7 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen",
-        "when": "!inFilesPicker && !terminalFocus"
+        "when": "!inFilesPicker && !terminalFocus && !codetour:inTour"
     },
     {
         "key": "cmd+p",
