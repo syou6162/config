@@ -62,4 +62,7 @@
     "window.commandCenter": false,
     "window.customTitleBarVisibility": "windowed",
     "breadcrumbs.enabled": false,
+    "codetour.showMarkers": true,
+    "github.copilot.chat.localeOverride": "ja",
+    "github.copilot.chat.welcomeMessage": "never",
 }
