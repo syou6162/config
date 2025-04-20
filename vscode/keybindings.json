@@ -13,12 +13,12 @@
     {
         "key": "ctrl+p",
         "command": "workbench.action.quickOpen",
-        "when": "!inFilesPicker && !terminalFocus && !codetour:isEditing"
+        "when": "!inFilesPicker && !terminalFocus && !codetour:isEditing && !inChatInput"
     },
     {
         "key": "cmd+p",
         "command": "workbench.action.showCommands",
-        "when": "!inCommandsPicker && !terminalFocus"
+        "when": "!inCommandsPicker && !terminalFocus && !inChatInput"
     },
     {
         "key": "ctrl+cmd+right",
