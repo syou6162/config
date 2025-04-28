@@ -63,6 +63,27 @@
     "window.customTitleBarVisibility": "windowed",
     "breadcrumbs.enabled": false,
     "codetour.showMarkers": true,
+    "chat.agent.enabled": true,
     "github.copilot.chat.localeOverride": "ja",
-    "github.copilot.chat.welcomeMessage": "never",
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "python.defaultInterpreterPath": "${env:HOME}/.pyenv/shims/python",
+    "github.copilot.chat.agent.thinkingTool": true,
+    "github.copilot.chat.codesearch.enabled": true,
+    "accessibility.voice.speechLanguage": "ja-JP",
+    "accessibility.voice.speechTimeout": 0,
+    "mcp": {
+        "servers": {
+            "esa-mcp-server": {
+                "command": "direnv",
+                "args": [
+                    "exec",
+                    "${env:HOME}",
+                    "npx",
+                    "-y",
+                    "esa-mcp-server@latest"
+                ]
+            }
+        }
+    }
 }
