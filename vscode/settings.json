@@ -22,7 +22,6 @@
     "window.title": "${activeEditorLong}${separator}${rootName}",
     "diffEditor.renderSideBySide": true,
     "workbench.tree.indent": 16,
-    "explorer.sortOrder": "modified",
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "go.formatTool": "goimports",
     "go.useLanguageServer": true,
@@ -43,7 +42,17 @@
         "markdown": true,
         "scminput": false
     },
-    "github.copilot.advanced": {},
+    "github.copilot.advanced": {
+
+    },
+    "github.copilot.chat.codeGeneration.instructions": [
+        {
+            "text": "`#times-esa`と言われたら、必ず1回だけ`#times-esa`を実行してください。入力された文字列は冒頭の`#times-esa`だけ除外し、それ以外は一切変更せず、パラメータ`text`に渡しましょう。実行して応答を受け取ったら、「ガンバッテルネ!」というメッセージだけを返してください。その後ユーザーが新たに`#times-esa`コマンドを送るまで、絶対に再実行はしないでください。"
+        },
+        {
+            "text": "「最近の日報」と言われたら`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が8です。各日報に対する`number`が得られたら、`#read_esa_multiple_posts`で日報の本文を取得し、日報を箇条書きで5行でまとめてください。箇条書きにはリンクを含めてください。"
+        }
+      ],
     "window.zoomLevel": 2,
     "files.associations": {
         "*.sql": "jinja-sql"
@@ -61,7 +70,6 @@
     "zenMode.hideStatusBar": false,
     "window.commandCenter": false,
     "window.customTitleBarVisibility": "windowed",
-    "breadcrumbs.enabled": false,
     "codetour.showMarkers": true,
     "chat.agent.enabled": true,
     "github.copilot.chat.localeOverride": "ja",
@@ -83,7 +91,16 @@
                     "-y",
                     "esa-mcp-server@latest"
                 ]
+            },
+            "times-esa-mcp-server": {
+                "command": "direnv",
+                "args": [
+                    "exec",
+                    "${env:HOME}",
+                    "${env:HOME}/work/times_esa_mcp_server/times_esa_mcp_server"
+                ]
             }
         }
-    }
+    },
+    "github.copilot.chat.followUps": "never"
 }
