@@ -50,7 +50,7 @@
             "text": "`#times-esa`と言われたら、必ず1回だけ`#times-esa`を実行してください。入力された文字列は冒頭の`#times-esa`だけ除外し、それ以外は一切変更せず、パラメータ`text`に渡しましょう。実行して応答を受け取ったら、「ガンバッテルネ!」というメッセージだけを返してください。その後ユーザーが新たに`#times-esa`コマンドを送るまで、絶対に再実行はしないでください。"
         },
         {
-            "text": "「最近の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が8です。次に、各日報に対する`number`が得られたら、`#read_esa_multiple_posts`で日報の本文を取得してください。最後に、日報を箇条書きで5行でまとめてください。箇条書きにはリンクを含めてください。"
+            "text": "「最近の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が8です。次に、各日報に対する`number`が得られたら、`#read_esa_multiple_posts`で日報の本文を取得してください(`postNumbers`に全ての`number`を渡してください)。最後に、日報を箇条書きで5行でまとめてください。箇条書きにはリンクを含めてください。"
         },
         {
             "text": "「最近の投稿」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が``、`sort`が`updated`、`order`がdesc、`perPage`が10です。次に、各投稿に対する`number`が得られたら、`#read_esa_multiple_posts`で投稿の本文を取得してください(`postNumbers`に全ての`number`を渡してください)。最後に、投稿のタイトルをh2セクション(リンクを付与)にし、内容を箇条書きで5行でそれぞれの投稿をまとめてください。"
