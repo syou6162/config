@@ -51,6 +51,12 @@
         },
         {
             "text": "「最近の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が8です。次に、各日報に対する`number`が得られたら、`#read_esa_multiple_posts`で日報の本文を取得してください。最後に、日報を箇条書きで5行でまとめてください。箇条書きにはリンクを含めてください。"
+        },
+        {
+            "text": "「今日の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が1です。次に、日報に対する`number`が得られたら、`#read_esa_post`で日報の本文を取得してください。最後に、冒頭にはリンク表示し、日報を箇条書きで時系列順に並べて表示してください。"
+        },
+        {
+            "text": "「昨日の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が2です。次に、2番目の日報に対する`number`が得られたら、`#read_esa_post`で日報の本文を取得してください。最後に、冒頭にはリンク表示し、日報を箇条書きで時系列順に並べて表示してください。"
         }
       ],
     "window.zoomLevel": 2,
