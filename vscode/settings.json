@@ -108,6 +108,13 @@
                     "${env:HOME}",
                     "${env:HOME}/work/times_esa_mcp_server/times_esa_mcp_server"
                 ]
+            },
+            "godoc-mcp": {
+                "command": "${env:HOME}/go/bin/godoc-mcp",
+                "args": [],
+                "env": {
+                    "GOMODCACHE": "${env:HOME}/go/pkg/mod"
+                }
             }
         }
     },
