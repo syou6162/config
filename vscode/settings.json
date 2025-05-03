@@ -106,7 +106,7 @@
                 "args": [
                     "exec",
                     "${env:HOME}",
-                    "${env:HOME}/work/times_esa_mcp_server/times_esa_mcp_server"
+                    "${env:HOME}/go/bin/times_esa_mcp_server"
                 ]
             },
             "godoc-mcp": {
