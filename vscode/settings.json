@@ -60,8 +60,11 @@
         },
         {
             "text": "「昨日の日報」と言われたら、まず`#search_esa_posts`を実行してください。実行のパラメータは`query`が`in:日報`、`sort`が`updated`、`order`がdesc、`perPage`が2です。次に、2番目の日報に対する`number`が得られたら、`#read_esa_post`で日報の本文を取得してください。最後に、冒頭にはリンク表示し、日報を箇条書きで時系列順(古いものが先頭)に並べて全て表示してください。"
+        },
+        {
+            "text": "「prを更新して」と言われたら、最初に修正内容をdiff形式で確認するために`gh pr diff`を実行しましょう。次にコミットメッセージを把握するために`gh pr view --json commits --jq '.commits[] | .messageHeadline'`を実行しましょう。最後に、修正内容とコミットメッセージを把握した上で、チャットの会話内容を考慮しながらPull Requestのタイトルとdescriptionを更新しましょう。実際の更新には`gh pr edit`を使いましょう。`.github/PULL_REQUEST_TEMPLATE.md`が存在する場合、そのテンプレートに沿った形でPull Requestの説明文を生成してください。"
         }
-      ],
+    ],
     "window.zoomLevel": 2,
     "files.associations": {
         "*.sql": "jinja-sql"
