@@ -65,7 +65,7 @@
             "text": "「prを更新して」と言われたら、最初に修正内容をdiff形式で確認するために`gh pr diff`を実行しましょう。次にコミットメッセージを把握するために`gh pr view --json commits --jq '.commits[] | .messageHeadline'`を実行しましょう。最後に、修正内容とコミットメッセージを把握した上で、チャットの会話内容を考慮しながらPull Requestのタイトルとdescriptionを更新しましょう。実際の更新には`gh pr edit`を使いましょう。`.github/PULL_REQUEST_TEMPLATE.md`が存在する場合、そのテンプレートに沿った形でPull Requestの説明文を生成してください。"
         },
         {
-            "text": "「今日の作業ログ」と言われたら、まず`git log --all --no-merges --since='24 hours ago' --author=syou6162@gmail.com --pretty=format:'- (%ad) %s' --date=format:'%H:%`を実行しましょう。次に、取得した内容の先頭に「今日の作業ログ:\n\n」と追加した内容を`text`パラメータとしてに渡して、`#times-esa`を実行してください。"
+            "text": "「今日の作業ログ」と言われたら、まず`git log --all --no-merges --since='24 hours ago' --author=syou6162@gmail.com --pretty=format:'- (%ad) %s' --date=format:'%H:%`を実行しましょう。次に`basename (git rev-parse --show-toplevel)`で作業リポジトリの情報を取得しましょう。最後に、取得した内容の先頭に「<作業リポジトリ>の作業ログ:\n\n」と追加した内容を`text`パラメータとしてに渡して、`#times-esa`を実行してください。<作業リポジトリ>の部分は前のステップで取得したリポジトリ名の情報を使用してください。"
         }
     ],
     "window.zoomLevel": 2,
