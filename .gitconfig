@@ -14,7 +14,7 @@
   br = branch
 [core]
   excludesfile = ~/.gitexclude
-  editor = code --wait
+  editor = vim
 [pull]
   rebase = false
 [merge]
