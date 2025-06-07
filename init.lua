@@ -3,7 +3,7 @@ local function keyCode(key, modifiers)
    return function()
       hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), true):post()
       hs.timer.usleep(1000)
-      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()      
+      hs.eventtap.event.newKeyEvent(modifiers, string.lower(key), false):post()
    end
 end
 
@@ -32,6 +32,4 @@ function toggleApp(key, modifiers, bundleID)
   end)
 end
 
-toggleApp({"ctrl", "shift"}, "s", "com.tinyspeck.slackmacgap") -- Slack
-toggleApp({"ctrl", "shift"}, "c", "com.google.Chrome")
-toggleApp({"ctrl"}, "i", "com.microsoft.VSCode")
+toggleApp({"ctrl"}, "i", "com.googlecode.iterm2")
