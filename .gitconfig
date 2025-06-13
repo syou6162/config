@@ -15,7 +15,7 @@
 
   default-branch = "!git symbolic-ref refs/remotes/origin/HEAD 2>/dev/null | sed 's@^refs/remotes/origin/@@' || (git show-ref --verify --quiet refs/remotes/origin/main && echo 'main') || echo 'master'"
   worktree-add = "!f() { git worktree add ../${1//\\//-} -b $1 origin/$(git default-branch); }; f"
-  worktree-clean = "!f() { branch=${1:-$(basename $(pwd))}; main_dir=$(git rev-parse --show-toplevel); cd $main_dir && git worktree remove ../$branch && git branch -D $branch; }; f"
+  worktree-clean = "!f() { branch=${1:-$(basename $(pwd))}; main_dir=$(git rev-parse --show-toplevel); cd $main_dir && git worktree remove --force ../$branch && git branch -D $branch; }; f"
 [core]
   excludesfile = ~/.gitexclude
   editor = vim
