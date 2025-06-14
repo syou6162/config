@@ -54,6 +54,9 @@ if not functions -q fisher
   fisher update
 end
 
+# https://iterm2.com/documentation-shell-integration.html
+source ~/.iterm2_shell_integration.fish
+
 function kubeswitch
   kubectl config get-contexts | peco --initial-index=1 --prompt='kubectl config use-context > ' |  sed -e 's/^\*//' | awk '{print $1}' | read line
   if test $line
