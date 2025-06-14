@@ -71,3 +71,7 @@ if status --is-interactive
     abbr --add kd "kubectl describe"
     abbr --add ks "kubeswitch"
 end
+
+function gws
+  cd (git worktree list | peco | awk '{print $1}')
+end
