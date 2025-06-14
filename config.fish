@@ -75,3 +75,5 @@ end
 function gws
   cd (git worktree list | peco | awk '{print $1}')
 end
+
+set -gx FZF_DEFAULT_OPTS '--exact --bind "enter:become(vim {})" --preview "bat --color=always --style=header,grid --line-range :300 {}" --preview-window "up:80%:border"'
