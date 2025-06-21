@@ -3,6 +3,7 @@ set -x LANG ja_JP.UTF-8
 
 set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
+set -x XDG_CONFIG_HOME $HOME/.config
 
 set -x EDITOR vim
 set -x TERM xterm-256color
