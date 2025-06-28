@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Grep",
+      "LS",
+      "Glob",
+      "WebFetch",
+      "WebSearch",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh pr view:*)",
+      "Bash(gh pr checks:*)",
+      "Bash(gh run view:*)",
+      "Bash(terminal-notifier:*)",
+      "Bash(ntfy publish:*)",
+      "/times_esa:*"
+    ],
+    "deny": [
+      "Grep(*.env)",
+      "Read(*.env)",
+      "Bash(git push:*)",
+      "Bash(gh pr checkout:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": false,
+  "includeCoAuthoredBy": false,
+  "cleanupPeriodDays": 1095
+}
