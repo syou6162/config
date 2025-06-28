@@ -9,4 +9,3 @@ swank
 .emacs.d/elisp/set-perl5lib.el
 
 .emacs.d/ac-comphist.dat
-.claude/settings.local.json
