@@ -151,5 +151,3 @@ function! FoldMarkdown(lnum)
   endif
   return '='
 endfunction
-
-autocmd BufNewFile,BufRead *.md set foldmethod=expr foldexpr=FoldMarkdown(v:lnum)
