@@ -6,7 +6,6 @@
       "Glob",
       "WebFetch",
       "WebSearch",
-      "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(gh issue view:*)",
       "Bash(gh pr diff:*)",
@@ -21,6 +20,7 @@
       "Grep(*.env)",
       "Read(*.env)",
       "Bash(git push:*)",
+      "Bash(git add -A)",
       "Bash(gh pr checkout:*)"
     ]
   },
