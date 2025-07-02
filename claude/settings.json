@@ -6,14 +6,67 @@
       "Glob",
       "WebFetch",
       "WebSearch",
+
       "Bash(git commit:*)",
+      "Bash(git restore:*)",
+
+      "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
+      "Bash(gh issue comment:*)",
+
+      "Bash(gh run view:*)",
+      "Bash(gh run list:*)",
+
+      "Bash(gh pr comment:*)",
+      "Bash(gh pr edit:*)",
+      "Bash(gh pr diff:*)",
+      "Bash(gh pr edit:*)",
       "Bash(gh pr diff:*)",
       "Bash(gh pr view:*)",
       "Bash(gh pr checks:*)",
-      "Bash(gh run view:*)",
+     
+      "bash(gh repo view:*)",
+      "bash(gh browse:*)",
+      
+      "Bash(ls:*)",
+      "Bash(echo:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "Bash(find:*)",
+      "Bash(mv:*)",
+      "Bash(tree:*)",
+      
+      "Bash(sqlite3:*)",
+      
+      "Bash(uv run pytest:*)",
+      "Bash(uv run:*)",
+
+      "Bash(npm info:*)",
+      "Bash(npm run lint:*)",
+      "Bash(npx tsx:*)",
+      "Bash(npm run test:run:*)",
+      "Bash(npm install)",
+      "Bash(npm view:*)",
+      "Bash(npm run test:*)",
+      "Bash(npm test:*)",
+      "Bash(npm run format:*)",
+      "Bash(npx vitest run:*)",
+      "Bash(npm install:*)",
+      "Bash(npm ls:*)",
+      "Bash(npm run dev:*)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck:*)",
+      "Bash(npm start:*)",
+      "Bash(npm run build:*)",
+      
+      "Bash(gcloud logging read:*)",
+      "Bash(gcloud run jobs executions list:*)",
+      "Bash(gcloud run jobs executions describe:*)",
+      "Bash(gcloud run jobs list:*)",
+
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
+      
       "/times_esa:*"
     ],
     "deny": [
