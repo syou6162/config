@@ -77,6 +77,34 @@
       "Bash(gh pr checkout:*)"
     ]
   },
+  "hooks": {
+    "Notification": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat > /tmp/cc_notification.json && terminal-notifier -title \"$(cat /tmp/cc_notification.json | jq -r '.hook_event_name')\" -subtitle \"$(cat /tmp/cc_notification.json | jq -r '.session_id')\" -message \"$(cat /tmp/cc_notification.json | jq -r '.message')\""
+          },
+          {
+            "type": "command",
+            "command": "cat > /tmp/cc_ntfy.json && ntfy publish --title \"$(cat /tmp/cc_ntfy.json | jq -r '.hook_event_name')\" yasu10 \"$(cat /tmp/cc_ntfy.json | jq -r '.message')\""
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "transcript_path=$(jq -r '.transcript_path') && cat \"${transcript_path}\" | jq -s 'reverse | map(select(.type == \"assistant\" and .message.content[0].type == \"text\")) | .[0].message.content[0]' > /tmp/cc_ntfy.json && ntfy publish --title 'Claude Code' yasu10 \"$(cat /tmp/cc_ntfy.json | jq -r '.text')\""
+          }
+        ]
+      }
+    ]
+  },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
   "cleanupPeriodDays": 1095

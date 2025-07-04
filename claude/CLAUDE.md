@@ -6,9 +6,6 @@
   - `times_esa`のmcpを実行する際は、ghコマンドを使った確認は必要ありません
 - ユーザーが「k」とだけ発言した際は「ok」や「問題ありません」の意味です
   - 一文字で入力できて便利なため、ユーザーはこういった表現を使います
-- タスクが完了したら以下を必ず実行し、ユーザーにタスクの完了を知らせること
-  - `terminal-notifier -title "Claude Code" -subtitle "{summary of task under 24 chars}" -message "{additional summary of task under 24 chars}"`
-  - `ntfy publish --title ${title of task} yasu10 "${description of task}"`
 
 ## パス表記ルール
 
