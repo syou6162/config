@@ -151,3 +151,13 @@ function! FoldMarkdown(lnum)
   endif
   return '='
 endfunction
+
+" 現在のvimの選択部分をtmuxの上のペインにコピペする
+function! SendToUpperPane()
+  '<,'>w !tmux load-buffer -
+  silent !tmux paste-buffer -t '{up-of}'
+  silent !tmux select-pane -t '{up-of}'
+  redraw!
+endfunction
+
+vnoremap <leader>s :<C-u>call SendToUpperPane()<CR>
