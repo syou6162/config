@@ -152,9 +152,15 @@ function! FoldMarkdown(lnum)
   return '='
 endfunction
 
-" 現在のvimの選択部分をtmuxの上のペインにコピペする
+" 現在のvimの選択部分をtmuxの上のペインに切り取って送る
 function! SendToUpperPane()
+  " まずクリップボードにコピー
+  normal! "+y
+  " tmuxバッファに送る
   '<,'>w !tmux load-buffer -
+  " 選択範囲を削除
+  normal! gvd
+  " 上のペインにペースト
   silent !tmux paste-buffer -t '{up-of}'
   silent !tmux select-pane -t '{up-of}'
   redraw!
