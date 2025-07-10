@@ -88,7 +88,7 @@
           },
           {
             "type": "command",
-            "command": "cat > /tmp/cc_ntfy.json && ntfy publish --title \"$(cat /tmp/cc_ntfy.json | jq -r '.hook_event_name')\" yasu10 \"$(cat /tmp/cc_ntfy.json | jq -r '.message')\""
+            "command": "cat > /tmp/cc_ntfy.json && ntfy publish --markdown --title \"$(cat /tmp/cc_ntfy.json | jq -r '.hook_event_name')\" \"$(cat /tmp/cc_ntfy.json | jq -r '.message')\""
           }
         ]
       }
@@ -99,7 +99,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "transcript_path=$(jq -r '.transcript_path') && cat \"${transcript_path}\" | jq -s 'reverse | map(select(.type == \"assistant\" and .message.content[0].type == \"text\")) | .[0].message.content[0]' > /tmp/cc_ntfy.json && ntfy publish --title 'Claude Code' yasu10 \"$(cat /tmp/cc_ntfy.json | jq -r '.text')\""
+            "command": "transcript_path=$(jq -r '.transcript_path') && cat \"${transcript_path}\" | jq -s 'reverse | map(select(.type == \"assistant\" and .message.content[0].type == \"text\")) | .[0].message.content[0]' > /tmp/cc_ntfy.json && ntfy publish --markdown --title 'Claude Code' \"$(cat /tmp/cc_ntfy.json | jq -r '.text')\""
           }
         ]
       }
