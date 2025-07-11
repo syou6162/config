@@ -9,6 +9,10 @@
 
       "Bash(git commit:*)",
       "Bash(git restore:*)",
+      "Bash(git rev-parse:*)",
+      "Bash(git ls-files:*)",
+      "Bash(git diff:*)",
+      "Bash(git add -N:*)",
 
       "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
@@ -66,14 +70,20 @@
 
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
+
+      "mcp__notion__API-retrieve-a-page",
+      "mcp__notion__API-get-block-children",
       
+      "Bash(git-sequential-stage:*)",
       "/times_esa:*"
     ],
     "deny": [
       "Grep(*.env)",
       "Read(*.env)",
       "Bash(git push:*)",
-      "Bash(git add -A)",
+      "Bash(git add:*)",
+      "Bash(git commit -am:*)",
+      "Bash(git commit --all:*)",
       "Bash(gh pr checkout:*)"
     ]
   },
