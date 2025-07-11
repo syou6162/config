@@ -1,2 +1,8 @@
 tags
+
 .claude/settings.local.json
+.claude/commands/cccsc/*
+.claude/tmp/*
+
+cccsc-lock.json
+cccsc.json
