@@ -50,9 +50,6 @@
 
 ;; Keychain and authentication access
 (allow mach-lookup (global-name "com.apple.SecurityServer"))
-(allow iokit-open 
-    (iokit-user-client-class "AppleFDEKeyStoreUserClient")
-    (iokit-user-client-class "AppleKeyStoreUserClient"))
 
 ;; Terminal and TTY interaction
 (allow file-ioctl 
