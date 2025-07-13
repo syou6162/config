@@ -82,6 +82,7 @@
       "Read(*.env)",
       "Bash(git push:*)",
       "Bash(git add:*)",
+      "Bash(filterdiff:*)",
       "Bash(git commit -am:*)",
       "Bash(git commit --all:*)",
       "Bash(gh pr checkout:*)"
