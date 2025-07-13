@@ -24,7 +24,10 @@
     (subpath (param "TARGET_DIR"))
     (regex (string-append "^" (param "HOME_DIR") "/.claude"))
     (subpath "/tmp")
+    (subpath "/private/tmp")
     (subpath "/private/var/folders")
+    (subpath (string-append (param "HOME_DIR") "/.pyenv"))
+    (subpath "/opt/homebrew/var")
 )
 
 ;; Deny dangerous cloud commands
@@ -42,6 +45,12 @@
 ;; Process execution and control
 (allow process-exec process-fork)
 (allow process-info*)
+
+; /bin/ps
+(allow process-exec-interpreter)
+(allow process-exec 
+    (literal "/bin/ps")
+        (with no-sandbox))
 
 ;; Network access
 (allow network-outbound)
