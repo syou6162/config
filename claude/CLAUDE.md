@@ -61,16 +61,6 @@ Claude Code: ファイル・ディレクトリを言及する時は以下の形�
 - 使用方法: `mcp__notion__API-retrieve-a-page` (ページ情報取得) → `mcp__notion__API-get-block-children` (ページ内容取得)
 - 例: `https://www.notion.so/hoge/fuga` → ページID `fuga` を抽出してMCPで取得
 
-## Pull Request更新に関するルール
-
-「Pull Requestを作成して」や「prを更新して」と言われたら、以下の手順で作業をしましょう。
-
-- 最初に修正内容をdiff形式で確認するために`gh pr diff`を実行しましょう
-- 次にコミットメッセージを把握するために`gh pr view --json commits --jq '.commits[] | .messageHeadline'`を実行しましょう
-- 最後に、修正内容とコミットメッセージを把握した上で、チャットの会話内容を考慮しながらPull Requestのタイトルとdescriptionを更新しましょう
-  - 実際の更新には`gh pr edit`を使いましょう
-  - `.github/PULL_REQUEST_TEMPLATE.md`が存在する場合、そのテンプレートに沿った形でPull Requestの説明文を生成してください
-  - `.github/PULL_REQUEST_TEMPLATE.md`が存在しない場合、「何をやったか」と「修正が必要になった背景」を必ず入れるようにしてください
 
 ## ユーザーのプログラミング言語に関する情報
 
