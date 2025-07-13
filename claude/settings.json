@@ -89,6 +89,7 @@
       "Bash(git add:*)",
       "Bash(filterdiff:*)",
       "Bash(git commit -am:*)",
+      "Bash(git commit -a -m:*)",
       "Bash(git commit --all:*)",
       "Bash(gh pr checkout:*)"
     ]
