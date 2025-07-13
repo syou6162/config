@@ -19,39 +19,44 @@
     (literal (string-append (param "HOME_DIR") "/.envrc"))
 )
 
-;; Allow create and write to various home directory subdirectories
-(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json")))
-(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json.lock")))
-(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json.backup")))
-(allow file-write-create file-write* (regex (string-append "^" (param "HOME_DIR") "/.claude\\.json\\.tmp\\.")))
-(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.claude")))
-(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.cache")))
-(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.npm")))
-(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.cargo")))
+;; File write permissions
+(allow file-write*)
 
-;; Allow creating in the TARGET_DIR (current working directory) 
-(allow file-write-create file-write* (subpath (param "TARGET_DIR")))
+;; Deny dangerous cloud commands
+(deny process-exec
+    (literal "/usr/local/bin/gh")
+    (literal "/opt/homebrew/bin/gh")
+    (literal "/usr/local/bin/gcloud")
+    (literal "/opt/homebrew/bin/gcloud")
+    (literal "/usr/local/bin/gsutil")
+    (literal "/opt/homebrew/bin/gsutil")
+    (literal "/usr/local/bin/bq")
+    (literal "/opt/homebrew/bin/bq")
+)
 
-;; Process execution and forking
+;; Process execution and control
 (allow process-exec process-fork)
 (allow process-info*)
 
-;; Temporary directories
-(allow file-write-create file-write* (subpath "/tmp") (subpath "/var/tmp"))
-
-;; Network
+;; Network access
 (allow network-outbound)
 (allow network-bind (local ip))
-
-;; UNIX sockets for IPC
 (allow network-bind network-inbound (local unix))
 
-;; Debugging: Enable debugging output for denied operations
-(allow file-read* file-write* (subpath "/var/tmp/trace"))
-
-;; Some darwin/unix stuff
+;; System access
 (allow sysctl-read)
-(allow file-ioctl (literal "/dev/null") (literal "/dev/dtracehelper"))
+(allow user-preference-read)
+(allow user-preference-write)
+
+;; Keychain and authentication access
+(allow mach-lookup (global-name "com.apple.SecurityServer"))
+(allow file-read* file-write* 
+    (regex #"/Users/.*/Library/Keychains/.*")
+    (subpath "/private/var/keybags")
+    (subpath "/private/var/db/mds"))
+(allow iokit-open 
+    (iokit-user-client-class "AppleFDEKeyStoreUserClient")
+    (iokit-user-client-class "AppleKeyStoreUserClient"))
 
 ;; Terminal and TTY interaction
 (allow file-ioctl 
