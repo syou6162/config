@@ -98,34 +98,5 @@
     "github.copilot.chat.codesearch.enabled": true,
     "accessibility.voice.speechLanguage": "ja-JP",
     "accessibility.voice.speechTimeout": 0,
-    "mcp": {
-        "servers": {
-            "esa-mcp-server": {
-                "command": "direnv",
-                "args": [
-                    "exec",
-                    "${env:HOME}",
-                    "npx",
-                    "-y",
-                    "esa-mcp-server@latest"
-                ]
-            },
-            "times-esa-mcp-server": {
-                "command": "direnv",
-                "args": [
-                    "exec",
-                    "${env:HOME}",
-                    "${env:HOME}/go/bin/times_esa_mcp_server"
-                ]
-            },
-            "godoc-mcp": {
-                "command": "${env:HOME}/go/bin/godoc-mcp",
-                "args": [],
-                "env": {
-                    "GOMODCACHE": "${env:HOME}/go/pkg/mod"
-                }
-            }
-        }
-    },
     "github.copilot.chat.followUps": "never"
 }
