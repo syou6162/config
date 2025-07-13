@@ -64,18 +64,11 @@
     (literal "/dev/stdin")
     (literal "/dev/stdout") 
     (literal "/dev/stderr")
+    (regex #"^/dev/tty.*")
 )
 (allow file-read* file-write* (subpath "/dev/tty"))
+(allow file-write-data (regex #"^/dev/tty.*"))
 (allow iokit-open)
 
-;; Deny dangerous cloud commands
-(deny process-exec
-    (literal "/usr/local/bin/gh")
-    (literal "/opt/homebrew/bin/gh")
-    (literal "/usr/local/bin/gcloud")
-    (literal "/opt/homebrew/bin/gcloud")
-    (literal "/usr/local/bin/gsutil")
-    (literal "/opt/homebrew/bin/gsutil")
-    (literal "/usr/local/bin/bq")
-    (literal "/opt/homebrew/bin/bq")
-)
+;; Device files
+(allow file-ioctl (literal "/dev/null") (literal "/dev/dtracehelper"))
