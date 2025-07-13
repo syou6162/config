@@ -17,7 +17,17 @@
     ;; 一時ファイル
     (subpath "/tmp")
     (subpath "/private/tmp")
+    
+    ;; macOSのセッション管理・認証トークン保存用（Claude CodeのAPIキー認証に必須）
+    (subpath "/var/folders")
+    (subpath "/private/var/folders")
+    
 )
+
+
+
+
+
 
 ;; セキュリティ制限（重要な設定ファイルへのアクセス拒否）
 (deny file-read* file-write*
