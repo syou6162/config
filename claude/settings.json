@@ -24,8 +24,7 @@
       "Bash(gh pr comment:*)",
       "Bash(gh pr edit:*)",
       "Bash(gh pr diff:*)",
-      "Bash(gh pr edit:*)",
-      "Bash(gh pr diff:*)",
+      "Bash(gh pr list:*)",
       "Bash(gh pr view:*)",
       "Bash(gh pr checks:*)",
      
@@ -62,6 +61,12 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm start:*)",
       "Bash(npm run build:*)",
+      
+      "Bash(go build:*)",
+      "Bash(go test:*)",
+      "Bash(go vet:*)",
+      "Bash(go tool cover:*)",
+      "mcp__godoc-mcp__get_doc",
       
       "Bash(gcloud logging read:*)",
       "Bash(gcloud run jobs executions list:*)",
