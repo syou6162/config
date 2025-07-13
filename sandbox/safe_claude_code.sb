@@ -50,10 +50,6 @@
 
 ;; Keychain and authentication access
 (allow mach-lookup (global-name "com.apple.SecurityServer"))
-(allow file-read* file-write* 
-    (regex #"/Users/.*/Library/Keychains/.*")
-    (subpath "/private/var/keybags")
-    (subpath "/private/var/db/mds"))
 (allow iokit-open 
     (iokit-user-client-class "AppleFDEKeyStoreUserClient")
     (iokit-user-client-class "AppleKeyStoreUserClient"))
