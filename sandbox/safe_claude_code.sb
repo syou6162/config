@@ -1,14 +1,7 @@
 (version 1)
 
-;; デフォルトですべて許可（参考文献通りの寛容な設定から開始）
+;; デフォルトですべて許可
 (allow default)
-
-;; 明示的にシステムコマンドの実行を許可
-(allow process-exec)
-
-;; /bin/ps専用の権限設定
-(allow mach-priv-host-port)
-(allow system-privilege)
 
 ;; ファイル書き込みを一旦すべて拒否
 (deny file-write*)
@@ -17,84 +10,14 @@
 (allow file-write*
     ;; プロジェクトディレクトリへの書き込み
     (subpath (param "TARGET_DIR"))
-
-    ;; Claude Code設定ファイルとキャッシュ
+    
+    ;; Claude Code設定ファイル
     (regex (string-append "^" (param "HOME_DIR") "/.claude"))
-    (subpath (string-append (param "HOME_DIR") "/.cache"))
-    (subpath (string-append (param "HOME_DIR") "/Library/Caches"))
-
-    ;; APIキー認証に必要なKeychain関連
-    (subpath (string-append (param "HOME_DIR") "/Library/Keychains"))
-    (subpath (string-append (param "HOME_DIR") "/Library/Group Containers"))
-
-    ;; 一時ファイルとシステム必須ディレクトリ
+    
+    ;; 一時ファイル
     (subpath "/tmp")
-    (subpath "/var/folders")
     (subpath "/private/tmp")
-    (subpath "/private/var/folders")
-
-    ;; 開発ツール関連（Git、npm等）
-    (subpath (string-append (param "HOME_DIR") "/.npm"))
-    (subpath (string-append (param "HOME_DIR") "/.git"))
-    (subpath (string-append (param "HOME_DIR") "/.config"))
-    
-    ;; pyenv関連
-    (subpath (string-append (param "HOME_DIR") "/.pyenv"))
-
-    ;; 標準入出力とデバイス
-    (literal "/dev/stdout")
-    (literal "/dev/stderr")
-    (literal "/dev/stdin")
-    (literal "/dev/null")
-    (literal "/dev/dtracehelper")
-    (regex "^/dev/tty")
 )
-
-;; TTY制御許可
-(allow file-ioctl
-    (literal "/dev/stdin")
-    (literal "/dev/stdout")
-    (literal "/dev/stderr")
-    (regex "^/dev/tty")
-)
-
-;; 認証とネットワーク通信に必要なmach-lookup権限
-(allow mach-lookup
-    ;; システム認証サービス
-    (global-name "com.apple.SecurityServer")
-    (global-name "com.apple.security.authhost")
-    
-    ;; ネットワーク設定とDNS
-    (global-name "com.apple.SystemConfiguration.configd")
-    (global-name "com.apple.cfnetwork.AuthBrokerAgent")
-    (global-name "com.apple.cfnetwork.cfnetworkagent")
-    
-    ;; システム監視
-    (global-name "com.apple.sysmond")
-    
-    ;; その他のシステムサービス
-    (global-name "com.apple.distributed_notifications@1v3")
-    (global-name "com.apple.lsd.mapdb")
-    (global-name "com.apple.CoreServices.coreservicesd")
-)
-
-;; システムソケット通信（認証プロトコル用）
-(allow system-socket)
-
-;; ネットワーク通信（Claude API接続用）
-(allow network-outbound)
-
-;; プロセス間通信
-(allow ipc-posix-shm)
-(allow ipc-sysv-shm)
-
-;; プロセス情報アクセス（Homebrew shellenv.sh用）
-(allow process-info*)
-
-;; ユーザー認証とauthorization
-(allow authorization-right-obtain)
-(allow user-preference-read)
-(allow user-preference-write)
 
 ;; セキュリティ制限（重要な設定ファイルへのアクセス拒否）
 (deny file-read* file-write*
@@ -104,26 +27,10 @@
     (literal (string-append (param "HOME_DIR") "/.envrc"))
 )
 
-;; 基本的なシステムコマンドの許可
-(allow process-exec
-    (subpath "/bin")
-    (subpath "/usr/bin")
-    (subpath "/usr/sbin")
-    (subpath "/sbin")
-)
-
-;; /bin/ps（SUIDバイナリ）の実行を明示的に許可
-(allow process-exec* (with no-sandbox) (literal "/bin/ps"))
-
 ;; 危険なコマンドの実行拒否
 (deny process-exec
-    ;; GitHub CLI
-    (literal "/usr/local/bin/gh")
-    (literal "/opt/homebrew/bin/gh")
     (regex ".*bin/gh$")
-    
-    ;; Google Cloud CLI
-    (literal "/usr/local/bin/gcloud")
-    (literal "/opt/homebrew/bin/gcloud")
     (regex ".*bin/gcloud$")
+    (regex ".*bin/gsutil$")
+    (regex ".*bin/bq$")
 )
