@@ -1,46 +1,75 @@
 (version 1)
 
-;; デフォルトですべて許可
-(allow default)
+;; /System/Library/Sandbox/Profiles/system.sb
+;; It appears that this is a basic policy for applications (actually this is imported from application.sb)
+;; This allows access to some standard devices such as /dev/null and /dev/urandom,
+;; and allows to run sysctl-read, which is required to run Claude Code.
+(import "system.sb")
 
-;; ファイル書き込みを一旦すべて拒否
-(deny file-write*)
+(deny default)
 
-;; 必要な書き込み権限を個別に許可
-(allow file-write*
-    ;; プロジェクトディレクトリへの書き込み
-    (subpath (param "TARGET_DIR"))
-    
-    ;; Claude Code設定ファイル
-    (regex (string-append "^" (param "HOME_DIR") "/.claude"))
-    
-    ;; 一時ファイル
-    (subpath "/tmp")
-    (subpath "/private/tmp")
-    
-    ;; macOSのセッション管理・認証トークン保存用（Claude CodeのAPIキー認証に必須）
-    (subpath "/var/folders")
-    (subpath "/private/var/folders")
-    
-)
+(allow file-read*)
 
-
-
-
-
-
-;; セキュリティ制限（重要な設定ファイルへのアクセス拒否）
-(deny file-read* file-write*
+;; We can't read SSH key files and cloud config files
+(deny file-read* 
     (subpath (string-append (param "HOME_DIR") "/.ssh"))
     (subpath (string-append (param "HOME_DIR") "/.config/gcloud"))
     (subpath (string-append (param "HOME_DIR") "/.config/gh"))
     (literal (string-append (param "HOME_DIR") "/.envrc"))
 )
 
-;; 危険なコマンドの実行拒否
+;; Allow create and write to various home directory subdirectories
+(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json")))
+(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json.lock")))
+(allow file-write-create file-write* (literal (string-append (param "HOME_DIR") "/.claude.json.backup")))
+(allow file-write-create file-write* (regex (string-append "^" (param "HOME_DIR") "/.claude\\.json\\.tmp\\.")))
+(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.claude")))
+(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.cache")))
+(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.npm")))
+(allow file-write-create file-write* (subpath (string-append (param "HOME_DIR") "/.cargo")))
+
+;; Allow creating in the TARGET_DIR (current working directory) 
+(allow file-write-create file-write* (subpath (param "TARGET_DIR")))
+
+;; Process execution and forking
+(allow process-exec process-fork)
+(allow process-info*)
+
+;; Temporary directories
+(allow file-write-create file-write* (subpath "/tmp") (subpath "/var/tmp"))
+
+;; Network
+(allow network-outbound)
+(allow network-bind (local ip))
+
+;; UNIX sockets for IPC
+(allow network-bind network-inbound (local unix))
+
+;; Debugging: Enable debugging output for denied operations
+(allow file-read* file-write* (subpath "/var/tmp/trace"))
+
+;; Some darwin/unix stuff
+(allow sysctl-read)
+(allow file-ioctl (literal "/dev/null") (literal "/dev/dtracehelper"))
+
+;; Terminal and TTY interaction
+(allow file-ioctl 
+    (literal "/dev/tty")
+    (literal "/dev/stdin")
+    (literal "/dev/stdout") 
+    (literal "/dev/stderr")
+)
+(allow file-read* file-write* (subpath "/dev/tty"))
+(allow iokit-open)
+
+;; Deny dangerous cloud commands
 (deny process-exec
-    (regex ".*bin/gh$")
-    (regex ".*bin/gcloud$")
-    (regex ".*bin/gsutil$")
-    (regex ".*bin/bq$")
+    (literal "/usr/local/bin/gh")
+    (literal "/opt/homebrew/bin/gh")
+    (literal "/usr/local/bin/gcloud")
+    (literal "/opt/homebrew/bin/gcloud")
+    (literal "/usr/local/bin/gsutil")
+    (literal "/opt/homebrew/bin/gsutil")
+    (literal "/usr/local/bin/bq")
+    (literal "/opt/homebrew/bin/bq")
 )
