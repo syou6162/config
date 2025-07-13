@@ -48,6 +48,9 @@ set -g theme_powerline_fonts no
 
 eval (direnv hook fish)
 
+# Claude Code サンドボックス実行用エイリアス
+abbr --add scc 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="(pwd)" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)"'
+
 # fisherが入っていない場合、インストールする
 # また、fisherのプラグインも同様にインストールする
 if not functions -q fisher
