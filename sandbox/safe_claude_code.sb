@@ -6,6 +6,10 @@
 ;; 明示的にシステムコマンドの実行を許可
 (allow process-exec)
 
+;; /bin/ps専用の権限設定
+(allow mach-priv-host-port)
+(allow system-privilege)
+
 ;; ファイル書き込みを一旦すべて拒否
 (deny file-write*)
 
@@ -76,6 +80,9 @@
 (allow ipc-posix-shm)
 (allow ipc-sysv-shm)
 
+;; プロセス情報アクセス（Homebrew shellenv.sh用）
+(allow process-info*)
+
 ;; ユーザー認証とauthorization
 (allow authorization-right-obtain)
 (allow user-preference-read)
@@ -96,6 +103,9 @@
     (subpath "/usr/sbin")
     (subpath "/sbin")
 )
+
+;; /bin/ps（SUIDバイナリ）の実行を明示的に許可
+(allow process-exec* (with no-sandbox) (literal "/bin/ps"))
 
 ;; 危険なコマンドの実行拒否
 (deny process-exec
