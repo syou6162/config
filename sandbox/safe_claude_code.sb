@@ -19,8 +19,13 @@
     (literal (string-append (param "HOME_DIR") "/.envrc"))
 )
 
-;; File write permissions
-(allow file-write*)
+;; File write permissions - whitelist approach
+(allow file-write-create file-write* 
+    (subpath (param "TARGET_DIR"))
+    (regex (string-append "^" (param "HOME_DIR") "/.claude"))
+    (subpath "/tmp")
+    (subpath "/private/var/folders")
+)
 
 ;; Deny dangerous cloud commands
 (deny process-exec
