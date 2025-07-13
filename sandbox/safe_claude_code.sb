@@ -43,11 +43,6 @@
 (allow network-bind (local ip))
 (allow network-bind network-inbound (local unix))
 
-;; System access
-(allow sysctl-read)
-(allow user-preference-read)
-(allow user-preference-write)
-
 ;; Keychain and authentication access
 (allow mach-lookup (global-name "com.apple.SecurityServer"))
 (allow file-read* file-write* 
