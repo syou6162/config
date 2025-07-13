@@ -50,6 +50,14 @@
     (regex "^/dev/tty")
 )
 
+;; TTY制御許可
+(allow file-ioctl
+    (literal "/dev/stdin")
+    (literal "/dev/stdout")
+    (literal "/dev/stderr")
+    (regex "^/dev/tty")
+)
+
 ;; 認証とネットワーク通信に必要なmach-lookup権限
 (allow mach-lookup
     ;; システム認証サービス
