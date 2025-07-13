@@ -64,6 +64,3 @@
 (allow file-read* file-write* (subpath "/dev/tty"))
 (allow file-write-data (regex #"^/dev/tty.*"))
 (allow iokit-open)
-
-;; Device files
-(allow file-ioctl (literal "/dev/null") (literal "/dev/dtracehelper"))
