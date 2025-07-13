@@ -8,9 +8,10 @@
 
 (deny default)
 
+;; File access permissions
 (allow file-read*)
 
-;; We can't read SSH key files and cloud config files
+;; Deny access to sensitive configuration files
 (deny file-read* 
     (subpath (string-append (param "HOME_DIR") "/.ssh"))
     (subpath (string-append (param "HOME_DIR") "/.config/gcloud"))
