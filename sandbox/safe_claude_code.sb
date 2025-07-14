@@ -28,6 +28,7 @@
     (subpath "/private/var/folders")
     (subpath (string-append (param "HOME_DIR") "/.pyenv"))
     (subpath (string-append (param "HOME_DIR") "/.cache/uv"))
+    (subpath (string-append (param "HOME_DIR") "/.cache/pre-commit"))
     (subpath "/opt/homebrew/var")
 )
 
