@@ -124,5 +124,6 @@
   },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
+  "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
   "cleanupPeriodDays": 1095
 }
