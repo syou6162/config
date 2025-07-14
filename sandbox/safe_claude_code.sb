@@ -20,13 +20,14 @@
 )
 
 ;; File write permissions - whitelist approach
-(allow file-write-create file-write* 
+(allow file-write*
     (subpath (param "TARGET_DIR"))
     (regex (string-append "^" (param "HOME_DIR") "/.claude"))
     (subpath "/tmp")
     (subpath "/private/tmp")
     (subpath "/private/var/folders")
     (subpath (string-append (param "HOME_DIR") "/.pyenv"))
+    (subpath (string-append (param "HOME_DIR") "/.cache/uv"))
     (subpath "/opt/homebrew/var")
 )
 
