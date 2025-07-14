@@ -91,6 +91,7 @@
       "Bash(git commit -am:*)",
       "Bash(git commit -a -m:*)",
       "Bash(git commit --all:*)",
+      "Bash(git commit --no-verify:*)",
       "Bash(gh pr checkout:*)"
     ]
   },
