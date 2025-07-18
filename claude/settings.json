@@ -81,6 +81,7 @@
       "mcp__notion__API-get-block-children",
       
       "Bash(git-sequential-stage:*)",
+      "mcp__o3__o3-search",
       "/times_esa:*"
     ],
     "deny": [
