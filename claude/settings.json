@@ -1,11 +1,11 @@
 {
   "permissions": {
     "allow": [
-      "Grep",
-      "LS",
-      "Glob",
-      "WebFetch",
-      "WebSearch",
+      "Grep(*)",
+      "LS(*)",
+      "Glob(*)",
+      "WebFetch(*)",
+      "WebSearch(*)",
 
       "Bash(git commit:*)",
       "Bash(git restore:*)",
