@@ -30,6 +30,7 @@
      
       "bash(gh repo view:*)",
       "bash(gh browse:*)",
+      "Bash(gh search issues:*)",
       
       "Bash(ls:*)",
       "Bash(echo:*)",
