@@ -12,7 +12,6 @@
       "Bash(git rev-parse:*)",
       "Bash(git ls-files:*)",
       "Bash(git diff:*)",
-      "Bash(git add -N:*)",
 
       "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
@@ -82,14 +81,14 @@
       
       "Bash(git-sequential-stage:*)",
       "mcp__o3__o3-search",
-      "/times_esa:*"
+      "/times_esa:*",
+      "/cccsc:syou6162:claude-code-commands:*"
     ],
     "deny": [
       "Grep(*.env)",
       "Read(*.env)",
       "Bash(git push:*)",
       "Bash(git add:*)",
-      "Bash(filterdiff:*)",
       "Bash(git commit -am:*)",
       "Bash(git commit -a -m:*)",
       "Bash(git commit --all:*)",
