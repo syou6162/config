@@ -125,7 +125,8 @@
     ]
   },
   "env": {
-    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
+    "ANTHROPIC_MODEL": "claude-opus-4-20250514"
   },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
