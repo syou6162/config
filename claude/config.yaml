@@ -29,7 +29,7 @@ PreToolUse:
   - matcher: "WebFetch"
     conditions:
       - type: url_starts_with
-        value: https://github.com
+        value: "https://github.com"
     actions:
       - type: output
         message: "WebFetchではなく、`gh`コマンド経由で情報を取得しましょう"
