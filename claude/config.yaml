@@ -19,6 +19,13 @@ PreToolUse:
     actions:
       - type: output
         message: "git addは直接使わず、カスタムスラッシュコマンドである`/cccsc:syou6162:claude-code-commands:semantic_commit`を使いましょう"
+  - matcher: "Bash"
+    conditions:
+      - type: command_starts_with
+        value: "python"
+    actions:
+      - type: output
+        message: "pythonは使わず`uv`を代わりに使いましょう"
   - matcher: "WebFetch"
     conditions:
       - type: url_starts_with
