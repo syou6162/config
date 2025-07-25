@@ -123,6 +123,17 @@
         ]
       }
     ],
+    "PreToolUse": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cchook -event PreToolUse"
+          }
+        ]
+      }
+    ],
     "PostToolUse": [
       {
         "matcher": "",
