@@ -19,6 +19,13 @@ PreToolUse:
     actions:
       - type: output
         message: "git addは直接使わず、カスタムスラッシュコマンドである`/cccsc:syou6162:claude-code-commands:semantic_commit`を使いましょう"
+  - matcher: "WebFetch"
+    conditions:
+      - type: url_starts_with
+        value: https://github.com
+    actions:
+      - type: output
+        message: "WebFetchではなく、`gh`コマンド経由で情報を取得しましょう"
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
