@@ -1,0 +1,30 @@
+Notification:
+  - actions:
+      - type: command
+        command: ntfy publish --markdown --title "{.hook_event_name}" "{.message}"
+
+Stop:
+  - actions:
+      - type: command
+        command: >
+          MESSAGE=$(cat '{.transcript_path}' | 
+            jq -rs 'reverse | map(select(.type == "assistant" and .message.content[0].type == "text")) | .[0].message.content[0].text')
+          ntfy publish --markdown --title 'Claude Code Complete' "$MESSAGE"
+
+PreToolUse:
+  - matcher: "Bash"
+    conditions:
+      - type: command_starts_with
+        value: "git add"
+    actions:
+      - type: output
+        message: "git addは直接使わず、カスタムスラッシュコマンドである`/cccsc:syou6162:claude-code-commands:semantic_commit`を使いましょう"
+
+PostToolUse:
+  - matcher: "Write|Edit|MultiEdit"
+    conditions:
+      - type: file_extension
+        value: ".go"
+    actions:
+      - type: command
+        command: "gofmt -w {.tool_input.file_path}"
