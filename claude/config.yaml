@@ -2,6 +2,8 @@ Notification:
   - actions:
       - type: command
         command: ntfy publish --markdown --title "{.hook_event_name}" "{.message}"
+      - type: command
+        command: terminal-notifier -title "{.hook_event_name}" -subtitle "{.session_id}" -message "{.message}
 
 Stop:
   - actions:
