@@ -28,6 +28,7 @@
     (subpath "/private/var/folders")
     (subpath (string-append (param "HOME_DIR") "/.pyenv"))
     (subpath (string-append (param "HOME_DIR") "/.cache/uv"))
+    (subpath (string-append (param "HOME_DIR") "/.local/share/uv/tools/.lock"))
     (subpath (string-append (param "HOME_DIR") "/.npm/_cacache"))
     (subpath (string-append (param "HOME_DIR") "/.cache/pre-commit"))
     (subpath (string-append (param "HOME_DIR") "/Library/Caches/go-build"))
