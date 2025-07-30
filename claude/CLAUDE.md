@@ -45,16 +45,6 @@ Claude Code: ファイル・ディレクトリを言及する時は以下の形�
 - `git add`は基本的に禁止されています
   - `git add -N`のみ例外的に許可されています
 
-## Notion MCP使用ルール
-
-- NotionページのURLやページIDが含まれている場合は、WebFetchではなく必ずNotion MCPを使用してページの内容を取得してください
-  - 理由: 社内限定公開のNotionページはWebFetchでは内容を取得できないため
-  - Notion MCPを使用することで認証済みの状態でページコンテンツにアクセス可能
-  - より詳細で構造化された情報を取得できる
-- 使用方法: `mcp__notion__API-retrieve-a-page` (ページ情報取得) → `mcp__notion__API-get-block-children` (ページ内容取得)
-- 例: `https://www.notion.so/hoge/fuga` → ページID `fuga` を抽出してMCPで取得
-
-
 ## ユーザーのプログラミング言語に関する情報
 
 - Python
