@@ -38,7 +38,7 @@ PreToolUse:
   - matcher: "WebFetch"
     conditions:
       - type: url_starts_with
-        value: "www.notion.so"
+        value: "https://www.notion.so"
     actions:
       - type: output
         message: "WebFetchではなく、notion用のMCP(`mcp__notion__API-retrieve-a-page`や`mcp__notion__API-get-block-children`)経由で情報を取得しましょう"
