@@ -48,8 +48,11 @@ set -g theme_powerline_fonts no
 
 eval (direnv hook fish)
 
+abbr --add update_pr 'claude --model opus --debug --print "/cccsc:syou6162:claude-code-commands:update_pr_title_and_description" --resume'
+
 # Claude Code サンドボックス実行用エイリアス
 abbr --add scc 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)"'
+abbr --add semantic_commit 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)" --debug --print "/cccsc:syou6162:claude-code-commands:semantic_commit" --resume'
 
 # fisherが入っていない場合、インストールする
 # また、fisherのプラグインも同様にインストールする
@@ -86,3 +89,5 @@ end
 abbr -a gl "glow -p -w0"
 
 set -gx FZF_DEFAULT_OPTS '--exact --bind "enter:become(vim {})" --preview "bat --color=always --style=header,grid --line-range :300 {}" --preview-window "up:80%:border"'
+
+string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
