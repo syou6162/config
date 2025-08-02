@@ -28,6 +28,13 @@ PreToolUse:
     actions:
       - type: output
         message: "pythonは使わず`uv`を代わりに使いましょう"
+  - matcher: "Bash"
+    conditions:
+      - type: command_contains
+        value: "poetry"
+    actions:
+      - type: output
+        message: "poetryは使わず`uv`を代わりに使いましょう"
   - matcher: "WebFetch"
     conditions:
       - type: url_starts_with
