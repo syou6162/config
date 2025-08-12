@@ -81,6 +81,9 @@
       
       "Bash(git-sequential-stage:*)",
       "mcp__o3__o3-search",
+      "mcp__chrome-tabs__open_in_new_tab",
+      "mcp__chrome-tabs__read_tab_content",
+      "mcp__chrome-tabs__list_tabs",
       "/times_esa:*",
       "/cccsc:syou6162:claude-code-commands:*"
     ],
