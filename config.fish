@@ -50,8 +50,11 @@ eval (direnv hook fish)
 
 abbr --add update_pr 'claude --model opus --debug --print "/cccsc:syou6162:claude-code-commands:update_pr_title_and_description" --resume'
 
+# __fish_enable_bracketed_paste は有効にしてもよいが、Claude Code立ち上げた後はシェルとして使い回すことがない & コマンドの編集に邪魔なので意図的に入れていない
+abbr --add cc '__fish_disable_bracketed_paste; claude --model opus'
+
 # Claude Code サンドボックス実行用エイリアス
-abbr --add scc 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)"'
+abbr --add scc '__fish_disable_bracketed_paste; sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)"'
 abbr --add semantic_commit 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)" --debug --print "/cccsc:syou6162:claude-code-commands:semantic_commit" --resume'
 
 # fisherが入っていない場合、インストールする
