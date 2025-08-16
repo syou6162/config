@@ -101,6 +101,7 @@
       "mcp__serena__read_memory",
       "mcp__serena__list_memories",
       "mcp__serena__delete_memory",
+      "mcp__serena__activate_project",
       "mcp__serena__check_onboarding_performed",
       "mcp__serena__onboarding",
       "mcp__serena__think_about_collected_information",
