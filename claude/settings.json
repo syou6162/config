@@ -6,6 +6,8 @@
       "Glob",
       "WebFetch",
       "WebSearch",
+      "Edit(.claude/tmp/*)",
+      "Write(.claude/tmp/*)",
 
       "Bash(git commit:*)",
       "Bash(git restore:*)",
