@@ -65,3 +65,12 @@ PostToolUse:
     actions:
       - type: command
         command: "pre-commit run --files {.tool_input.file_path}"
+
+SessionStart:
+  - matcher: startup
+    conditions:
+      - type: file_exists
+        value: "go.mod"
+    actions:
+      - type: output
+        message: "Golangのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
