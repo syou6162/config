@@ -4,5 +4,7 @@ tags
 .claude/commands/cccsc/*
 .claude/tmp/*
 
+.serena/*
+
 cccsc-lock.json
 cccsc.json
