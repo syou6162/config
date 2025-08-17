@@ -23,6 +23,13 @@ PreToolUse:
         message: "git addは直接使わず、カスタムスラッシュコマンドである`/cccsc:syou6162:claude-code-commands:semantic_commit`を使いましょう"
   - matcher: "Bash"
     conditions:
+      - type: git_tracked_file_operation
+        value: "rm|mv"
+    actions:
+      - type: output
+        message: "gitの管理下にあるファイルをmvやrmしようとしています。git mvやgit rmを使うようにしましょう"
+  - matcher: "Bash"
+    conditions:
       - type: command_starts_with
         value: "python"
     actions:
