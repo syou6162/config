@@ -195,7 +195,7 @@
   },
   "statusLine": {
     "type": "command",
-    "command": "cat | jq -r '.transcript_path' | xargs -I% cat % | jq -r '.sessionId' | tail -n 1",
+    "command": "ccstatusline",
     "padding": 0
   },
   "env": {
