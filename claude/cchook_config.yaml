@@ -93,6 +93,8 @@ UserPromptSubmit:
   - conditions:
       - type: every_n_prompts
         value: 15
+      - type: cwd_not_contains
+        value: times_esa_talk_slack
     actions:
       - type: output
         message: "Golangのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
