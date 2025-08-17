@@ -91,6 +91,12 @@ SessionStart:
 
 UserPromptSubmit:
   - conditions:
+      - type: every_n_prompts
+        value: 15
+    actions:
+      - type: output
+        message: "Golangのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
+  - conditions:
       - type: prompt_regex
         value: "バカ|ばか|アホ|あほ|ふざけ|いい加減"
     actions:
