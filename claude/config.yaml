@@ -102,4 +102,3 @@ UserPromptSubmit:
     actions:
       - type: output
         message: "ユーザーの意図を理解していないあなたの挙動(ファイルの修正やオペレーション)に対してユーザーが非常に怒っています。まず丁寧に謝罪した上で、何が悪かったかを説明しましょう"
-        exit_status: 0
