@@ -1,0 +1,27 @@
+actions:
+  - name: session_id
+    prefix: "セッション: "
+    command: "echo '{.session_id}'"
+    color: "bg_magenta"
+  - name: model 
+    command: "echo '{.model.display_name}'"
+  - name: turn数
+    prefix: "会話ターン数: "
+    command: "cat '{.transcript_path}' | jq -s '[.[] | select(.type == \"user\")] | length'"
+  - name: branch_name 
+    prefix: "ブランチ: "
+    command: "git branch --show-current"
+  - name: git_diff 
+    prefix: "ファイル差分: "
+    command: "git status --porcelain | wc -l"
+  - name: pr_status
+    prefix: "Actions Status: "
+    command: |
+      if gh pr view >/dev/null 2>&1; then
+        gh pr checks >/dev/null 2>&1 && echo "✅" || echo "❌"
+      fi
+    cache_ttl: 30
+  - name: pr_url 
+    command: "gh pr view --json url -q .url"
+    cache_ttl: 60
+    color: "bg_magenta"
