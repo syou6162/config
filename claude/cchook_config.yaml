@@ -67,6 +67,13 @@ PostToolUse:
         command: "gofmt -w {.tool_input.file_path}"
   - matcher: "Write|Edit|MultiEdit"
     conditions:
+      - type: file_extension
+        value: ".tf"
+    actions:
+      - type: command
+        command: "terraform fmt {.tool_input.file_path}"
+  - matcher: "Write|Edit|MultiEdit"
+    conditions:
       - type: file_exists
         value: ".pre-commit-config.yaml"
     actions:
