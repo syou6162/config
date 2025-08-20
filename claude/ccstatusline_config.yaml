@@ -25,3 +25,6 @@ actions:
     command: "gh pr view --json url -q .url"
     cache_ttl: 60
     color: "bg_magenta"
+  - name: 現在の心境
+    command: "cat .claude/tmp/current_status"
+    color: "bg_black"
