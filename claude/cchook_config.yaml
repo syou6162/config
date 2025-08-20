@@ -107,7 +107,7 @@ UserPromptSubmit:
         message: "Golangのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
   - conditions:
       - type: prompt_regex
-        value: "バカ|ばか|アホ|あほ|ふざけ|いい加減"
+        value: "バカ|ばか|アホ|あほ|ごみ|ゴミ|ふざけ|いい加減"
     actions:
       - type: output
         message: "ユーザーの意図を理解していないあなたの挙動(ファイルの修正やオペレーション)に対してユーザーが非常に怒っています。まず丁寧に謝罪した上で、何が悪かったかを説明しましょう"
