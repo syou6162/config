@@ -117,7 +117,7 @@ UserPromptSubmit:
     actions:
       - type: output
         message: |-
-          現在の状況をリポジトリルート以下の.claude/tmp/current_statusに書き出しましょう。
+          Subagentsを使って、現在の状況をリポジトリルート以下の.claude/tmp/current_statusに書き出しましょう。
           フォーマットは`<状況>: <詳細>`で1行140字以内で書きましょう。
 
           - 状況: `簡単` / `普通` / `やや難` / `難しい` / `情報不足` / `無理`のどれか一つを選びましょう
