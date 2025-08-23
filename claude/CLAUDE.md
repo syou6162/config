@@ -7,26 +7,6 @@
 - 実装中に技術的に詰まったところやわからないところ、解決できないエラーなどがあればo3 mcp(`mcp__o3__o3`)に英語で相談してください
 - Golang / Python / TypeScriptのプロジェクトでは積極的にserena mcp(`mcp__serena__read_memory`など)を活用してください
 
-## パス表記ルール
-
-Claude Code: ファイル・ディレクトリを言及する時は以下の形式で書く
-
-**リポジトリ内のファイル**: リポジトリルートからの相対パスで記載
-**リポジトリ外のファイル**: `~`または`/`で始まる絶対パスで記載
-
-例:
-- 良い例: `src/main.py`, `docs/README.md`, `config/settings.yml`
-- 悪い例: `main.py`, `README.md`, `settings.yml`
-- 良い例: `~/.bashrc`, `/etc/hosts`
-- 悪い例: `.bashrc`, `hosts`
-
-判定ルール: リポジトリ内ファイル言及時はファイル名のみの記載を避ける
-- リポジトリルート: `README.md`, `package.json`
-- サブディレクトリ: `src/main.py`, `docs/guide.md`
-- 避けるべき: ファイル名のみで場所が特定できない記載
-
-理由: ユーザーはパスから直接ファイルを開く設定をしている
-
 ## Gitの操作に関するルール
 
 ### ファイル変更を元に戻す場合
