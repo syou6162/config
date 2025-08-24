@@ -134,6 +134,8 @@ UserPromptSubmit:
   - conditions:
       - type: every_n_prompts
         value: 1
+      - type: cwd_not_contains
+        value: times_esa_talk_slack
     actions:
       - type: output
         message: |-
