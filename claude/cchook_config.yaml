@@ -133,7 +133,7 @@ UserPromptSubmit:
         message: "ユーザーの意図を理解していないあなたの挙動(ファイルの修正やオペレーション)に対してユーザーが非常に怒っています。まず丁寧に謝罪した上で、何が悪かったかを説明しましょう"
   - conditions:
       - type: every_n_prompts
-        value: 1
+        value: 3
       - type: cwd_not_contains
         value: times_esa_talk_slack
     actions:
