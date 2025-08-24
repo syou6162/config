@@ -5,6 +5,7 @@ tags
 .claude/tmp/*
 
 .serena/*
+data/*
 
 cccsc-lock.json
 cccsc.json
