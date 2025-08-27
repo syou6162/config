@@ -119,6 +119,15 @@ SessionStart:
 UserPromptSubmit:
   - conditions:
       - type: prompt_regex
+        value: "^(Q|質問): "
+    actions:
+      - type: output
+        message: |-
+          ユーザーが質問をしています。質問内容を把握した上で回答しましょう。
+
+          ユーザーは単純に質問をしているだけであり、作業内容は一切求めていないことに注意しましょう。
+  - conditions:
+      - type: prompt_regex
         value: "バカ|ばか|アホ|あほ|ごみ|ゴミ|ふざけ|いい加減"
     actions:
       - type: output
