@@ -150,6 +150,15 @@
       "Bash(bq add-iam-policy-binding:*)",
       "Bash(bq remove-iam-policy-binding:*)",
       
+      "mcp__notion__API-patch-block-children",
+      "mcp__notion__API-update-a-block",
+      "mcp__notion__API-delete-a-block",
+      "mcp__notion__API-patch-page",
+      "mcp__notion__API-post-page",
+      "mcp__notion__API-create-a-database",
+      "mcp__notion__API-update-a-database",
+      "mcp__notion__API-create-a-comment",
+
       "Bash(gh pr checkout:*)"
     ]
   },
