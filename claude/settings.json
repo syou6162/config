@@ -87,7 +87,11 @@
 
       "mcp__notion__API-retrieve-a-page",
       "mcp__notion__API-get-block-children",
-      
+      "mcp__notion__API-post-search",
+      "mcp__notion__API-post-database-query",
+      "mcp__notion__API-retrieve-a-block",
+      "mcp__notion__API-retrieve-a-database",
+
       "Bash(git-sequential-stage:*)",
       "mcp__o3__o3-search",
 
