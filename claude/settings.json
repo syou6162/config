@@ -74,6 +74,11 @@
       "Bash(gcloud run jobs executions list:*)",
       "Bash(gcloud run jobs executions describe:*)",
       "Bash(gcloud run jobs list:*)",
+     
+      "Bash(bq ls:*)",
+      "Bash(bq show:*)",
+      "Bash(bq info:*)",
+      "Bash(bq head:*)",
 
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
