@@ -133,6 +133,21 @@
       "Bash(git commit -a -m:*)",
       "Bash(git commit --all:*)",
       "Bash(git commit --no-verify:*)",
+      
+      "Bash(bq rm:*)",
+      "Bash(bq load:*)",
+      "Bash(bq cp:*)",
+      "Bash(bq extract:*)",
+      "Bash(bq mk:*)",
+      "Bash(bq update:*)",
+      "Bash(bq cancel:*)",
+      "Bash(bq insert:*)",
+      "Bash(bq shell:*)",
+      "Bash(bq partition:*)",
+      "Bash(bq set-iam-policy:*)",
+      "Bash(bq add-iam-policy-binding:*)",
+      "Bash(bq remove-iam-policy-binding:*)",
+      
       "Bash(gh pr checkout:*)"
     ]
   },
