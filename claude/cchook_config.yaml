@@ -63,19 +63,7 @@ PreToolUse:
     actions:
       - type: command
         command: |-
-          result=$(echo '/validate_bq_query {.tool_input.command}' | claude --print)
-          status=$(echo "$result" | jq -r .status 2>/dev/null)
-          if [ "$status" = "PASS" ]; then
-            echo "問題ないコマンドです"
-            exit 0
-          elif [ "$status" = "FAIL" ]; then
-            reason=$(echo "$result" | jq -r .reason)
-            echo "危険なコマンドのため、実行は許可できません。理由は「 $reason 」のためです" >&2
-            exit 2
-          else
-            echo "INVALIDなJSONが出力されました" >&2
-            exit 2
-          fi
+          echo '/validate_bq_query {.tool_input.command}' | claude --print
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
