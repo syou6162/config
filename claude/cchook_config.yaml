@@ -62,6 +62,7 @@ PreToolUse:
         value: "bq query"
     actions:
       - type: command
+        exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
         command: |-
           echo '/validate_bq_query {.tool_input.command}' | claude --print
 
