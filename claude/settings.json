@@ -125,6 +125,8 @@
     "deny": [
       "Grep(*.env)",
       "Read(*.env)",
+      "Bash(env:*)",
+
       "Bash(git push:*)",
       "Bash(git add:*)",
       "Bash(git commit -am:*)",
