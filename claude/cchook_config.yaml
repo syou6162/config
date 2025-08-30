@@ -64,7 +64,7 @@ PreToolUse:
       - type: command
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
         command: |-
-          echo '/validate_bq_query {.tool_input.command}' | claude --strict-mcp-config --mcp-config ~/.files/claude/empty_mcp.json --print
+          echo '/cccsc:syou6162:claude-code-commands:validate_bq_query {.tool_input.command}' | claude --strict-mcp-config --mcp-config ~/.files/claude/empty_mcp.json --print
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
