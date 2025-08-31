@@ -31,8 +31,8 @@
       "Bash(gh pr view:*)",
       "Bash(gh pr checks:*)",
      
-      "bash(gh repo view:*)",
-      "bash(gh browse:*)",
+      "Bash(gh repo view:*)",
+      "Bash(gh browse:*)",
       "Bash(gh search issues:*)",
       
       "Bash(ls:*)",
