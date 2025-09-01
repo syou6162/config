@@ -15,6 +15,7 @@
       "Bash(git ls-files:*)",
       "Bash(git diff:*)",
       "Bash(git log:*)",
+      "Bash(git show:*)",
       "Bash(git blame:*)",
 
       "Bash(gh issue create:*)",
