@@ -197,7 +197,8 @@
         "hooks": [
           {
             "type": "command",
-            "command": "cchook -event PreToolUse"
+            "command": "cchook -event PreToolUse",
+            "timeout": 180
           }
         ]
       }
