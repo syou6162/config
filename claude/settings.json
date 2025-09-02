@@ -21,6 +21,8 @@
       "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
       "Bash(gh issue comment:*)",
+      "Bash(gh search prs:*)",
+      "Bash(gh search issues:*)",
 
       "Bash(gh run view:*)",
       "Bash(gh run list:*)",
