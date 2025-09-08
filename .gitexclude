@@ -5,6 +5,7 @@ tags
 .claude/tmp/*
 
 .serena/*
+.spec-workflow/*
 data/*
 
 cccsc-lock.json
