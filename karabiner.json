@@ -91,6 +91,24 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "description": "Map Ctrl-b to Left Arrow (backward-char)",
+                        "manipulators": [
+                            {
+                                "type": "basic",
+                                "from": {
+                                    "key_code": "b",
+                                    "modifiers": {
+                                        "mandatory": ["control"],
+                                        "optional": ["caps_lock","shift","option","command"]
+                                    }
+                                },
+                                "to": [
+                                    { "key_code": "left_arrow" }
+                                ]
+                            }
+                        ]
                     }
                 ]
             },
