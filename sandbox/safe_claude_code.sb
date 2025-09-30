@@ -36,6 +36,7 @@
     (subpath (string-append (param "HOME_DIR") "/Library/Caches/go-build"))
     (subpath (string-append (param "HOME_DIR") "/Library/Caches/golangci-lint"))
     (subpath (string-append (param "HOME_DIR") "/.serena"))
+    (subpath (string-append (param "HOME_DIR") "/Library/Logs/claude-cli-nodejs"))
     (subpath "/opt/homebrew/var")
 )
 
