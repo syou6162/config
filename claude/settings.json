@@ -41,6 +41,7 @@
       
       "Bash(ls:*)",
       "Bash(echo:*)",
+      "Bash(test:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
       "Bash(find:*)",
