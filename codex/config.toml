@@ -1,0 +1,9 @@
+model = "gpt-5-codex"
+
+project_doc_fallback_filenames = ["CLAUDE.md"]
+
+[sandbox_workspace_write]
+network_access = true
+
+[tools]
+web_search = true
