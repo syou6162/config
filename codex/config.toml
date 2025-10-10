@@ -2,6 +2,8 @@ model = "gpt-5-codex"
 
 project_doc_fallback_filenames = ["CLAUDE.md"]
 
+notify = ["ntfy", "publish", "--quiet", "--title", "Codex"] 
+
 [sandbox_workspace_write]
 network_access = true
 
