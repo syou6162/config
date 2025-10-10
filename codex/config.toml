@@ -1,5 +1,7 @@
 model = "gpt-5-codex"
 
+model_verbosity = "high"
+
 project_doc_fallback_filenames = ["CLAUDE.md"]
 
 notify = ["ntfy", "publish", "--quiet", "--title", "Codex"] 
