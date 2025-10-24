@@ -134,6 +134,10 @@
       "mcp__serena__think_about_task_adherence",
       "mcp__serena__think_about_whether_you_are_done",
 
+      "mcp__spec-workflow__spec-workflow-guide",
+      "mcp__spec-workflow__approvals",
+      "mcp__spec-workflow__spec-status",
+
       "/times_esa:*",
       "/syou6162-plugin:*"
     ],
