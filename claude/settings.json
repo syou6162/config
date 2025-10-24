@@ -135,7 +135,7 @@
       "mcp__serena__think_about_whether_you_are_done",
 
       "/times_esa:*",
-      "/cccsc:syou6162:claude-code-commands:*"
+      "/syou6162-plugin:*"
     ],
     "deny": [
       "Grep(*.env)",
