@@ -20,7 +20,7 @@ PreToolUse:
         value: "git add"
     actions:
       - type: output
-        message: "git addは直接使わず、カスタムスラッシュコマンドである`/cccsc:syou6162:claude-code-commands:semantic_commit`を使いましょう"
+        message: "git addは直接使わず、サブエージェントの`syou6162-plugin:semantic-commit`を呼び出しましょう"
   - matcher: "Bash"
     conditions:
       - type: git_tracked_file_operation
