@@ -251,6 +251,9 @@
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
     "ANTHROPIC_MODEL": "claude-sonnet-4-20250514"
   },
+  "enabledPlugins": {
+    "syou6162-plugin@syou6162-marketplace": true
+  },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
   "cleanupPeriodDays": 1095
