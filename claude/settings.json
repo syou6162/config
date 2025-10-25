@@ -20,6 +20,7 @@
       "Bash(git log:*)",
       "Bash(git show:*)",
       "Bash(git blame:*)",
+      "Bash(xargs git add -N:*)",
 
       "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
