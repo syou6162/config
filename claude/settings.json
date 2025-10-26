@@ -22,6 +22,7 @@
       "Bash(git blame:*)",
       "Bash(git symbolic-ref refs/remotes/origin/HEAD --short:*)",
       "Bash(xargs git add -N:*)",
+      "Bash(xargs -r git add -N:*)",
 
       "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
