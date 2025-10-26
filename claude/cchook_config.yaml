@@ -128,7 +128,7 @@ SessionStart:
 UserPromptSubmit:
   - conditions:
       - type: prompt_regex
-        value: "^(Q|質問): "
+        value: "^(Q|質問|q): "
     actions:
       - type: output
         message: |-
