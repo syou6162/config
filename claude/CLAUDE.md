@@ -81,3 +81,11 @@ t_wada式TDDの手順:
   - 悪い例: `gh pr diff > .claude/tmp/pr_diff.txt`
   - 良い例: `gh pr diff | tee .claude/tmp/pr_diff.txt > /dev/null`
   - 理由: `>`によるリダイレクトは許可が必要だが、`tee`の引数としてファイルパスを渡せば許可なしで操作できる
+
+## Subagentの省略形
+
+ユーザーが以下の省略形で指示した場合、対応するsubagentを使用してください:
+
+- "commit" => `syou6162-plugin:semantic-commit`
+- "check ci" => `syou6162-plugin:monitor-ci`
+- "update pr" => `syou6162-plugin:update-pr-title-and-description`
