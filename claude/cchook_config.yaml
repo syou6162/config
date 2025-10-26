@@ -35,6 +35,15 @@ PreToolUse:
         message: "gitの管理下にあるファイルをmvやrmしようとしています。git mvやgit rmを使うようにしましょう"
   - matcher: "Bash"
     conditions:
+      - type: command_contains
+        value: "cat"
+      - type: command_contains
+        value: "EOF"
+    actions:
+      - type: output
+        message: "ヒアドキュメントとリダイレクトを使ってファイルを新規作成するのは止めましょう。Writeツールで新規ファイルを作成しましょう"
+  - matcher: "Bash"
+    conditions:
       - type: command_starts_with
         value: "python"
     actions:
