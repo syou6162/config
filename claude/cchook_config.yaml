@@ -20,7 +20,10 @@ PreToolUse:
         value: "git add"
     actions:
       - type: output
-        message: "git addは直接使わず、サブエージェントの`syou6162-plugin:semantic-commit`を呼び出しましょう"
+        message: |-
+          手順通りに作業を進めてください。
+
+          サブエージェントであるあなたの役割は、手順通りにsemantic-commitを完了させることです。
   - matcher: "Bash"
     conditions:
       - type: git_tracked_file_operation
