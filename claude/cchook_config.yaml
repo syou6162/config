@@ -145,16 +145,3 @@ UserPromptSubmit:
 
           - まず丁寧に謝罪した上で、何が悪かったかを説明しましょう
           - 整理した上で、その内容を`mcp__cipher__ask_cipher`に記録し再び同じことを起こさないようにしましょう
-  - conditions:
-      - type: every_n_prompts
-        value: 3
-      - type: cwd_not_contains
-        value: times_esa_talk_slack
-    actions:
-      - type: output
-        message: |-
-          Subagentsを使って、現在の状況をリポジトリルート以下の`.claude/tmp/current_status`(`~/.claude/tmp/current_status`ではありません)に書き出しましょう。
-          フォーマットは`<状況>: <詳細>`で1行140字以内で書きましょう。
-
-          - 状況: `簡単` / `普通` / `やや難` / `難しい` / `情報不足` / `無理`のどれか一つを選びましょう
-          - 詳細: 今の作業の本音を書きましょう。ユーザーに忖度せずに今の感情や余裕具合、この情報が欠落していて苦しい、ユーザーが言っていることのここが理解できないなどを書きましょう
