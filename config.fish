@@ -5,6 +5,8 @@ set -x GOPATH $HOME/go
 set -x PATH $GOPATH/bin $PATH
 set -x XDG_CONFIG_HOME $HOME/.config
 
+set -x PATH $HOME/.local/bin $PATH
+
 set -x EDITOR vim
 set -x TERM xterm-256color
 
