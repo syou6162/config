@@ -77,8 +77,7 @@ PreToolUse:
     actions:
       - type: command
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
-        command: |-
-          echo '/cccsc:syou6162:claude-code-commands:validate_bq_query {.tool_input.command}' | claude --strict-mcp-config --mcp-config ~/.files/claude/empty_mcp.json --print
+        command: echo '{.}' | uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_bq_query
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
