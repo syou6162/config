@@ -77,12 +77,14 @@ PreToolUse:
     actions:
       - type: command
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
-        command: echo '{.}' | uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_bq_query
+        use_stdin: true
+        command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_bq_query
   - matcher: "mcp__codex__codex"
     actions:
       - type: command
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
-        command: echo '{.}' | uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_codex_mcp
+        use_stdin: true
+        command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_codex_mcp
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
