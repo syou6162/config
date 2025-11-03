@@ -1,6 +1,7 @@
 model = "gpt-5-codex"
 
 model_verbosity = "high"
+web_search_request = true
 
 project_doc_fallback_filenames = ["CLAUDE.md"]
 
@@ -8,6 +9,3 @@ notify = ["ntfy", "publish", "--quiet", "--title", "Codex"]
 
 [sandbox_workspace_write]
 network_access = true
-
-[tools]
-web_search_request = true
