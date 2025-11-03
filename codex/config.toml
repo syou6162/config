@@ -10,4 +10,4 @@ notify = ["ntfy", "publish", "--quiet", "--title", "Codex"]
 network_access = true
 
 [tools]
-web_search = true
+web_search_request = true
