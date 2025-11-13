@@ -97,6 +97,7 @@
 
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
+      "Bash(pinact run:*)",
 
       "mcp__notion__API-retrieve-a-page",
       "mcp__notion__API-get-block-children",
