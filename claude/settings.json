@@ -143,6 +143,8 @@
       "mcp__spec-workflow__approvals",
       "mcp__spec-workflow__spec-status",
 
+      "Skill(syou6162-plugin:gha-sha-reference)",
+
       "/times_esa:*",
       "/syou6162-plugin:*"
     ],
