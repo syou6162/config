@@ -98,6 +98,7 @@
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
       "Bash(pinact run:*)",
+      "Bash(mcptools call API-post-search npx -y @notionhq/notion-mcp-server:*)",
 
       "Bash(git-sequential-stage:*)",
       "mcp__o3__o3-search",
