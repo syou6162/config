@@ -99,13 +99,6 @@
       "Bash(ntfy publish:*)",
       "Bash(pinact run:*)",
 
-      "mcp__notion__API-retrieve-a-page",
-      "mcp__notion__API-get-block-children",
-      "mcp__notion__API-post-search",
-      "mcp__notion__API-post-database-query",
-      "mcp__notion__API-retrieve-a-block",
-      "mcp__notion__API-retrieve-a-database",
-
       "Bash(git-sequential-stage:*)",
       "mcp__o3__o3-search",
       "mcp__codex__codex",
@@ -145,6 +138,7 @@
       "mcp__spec-workflow__spec-status",
 
       "Skill(syou6162-plugin:gha-sha-reference)",
+      "Skill(syou6162-plugin:reading-notion)",
 
       "/times_esa:*",
       "/syou6162-plugin:*"
