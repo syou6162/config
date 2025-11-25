@@ -152,6 +152,10 @@
       "Grep(*.env)",
       "Read(*.env)",
       "Bash(env:*)",
+      
+      "Read(//tmp/**)",
+      "Write(//tmp/**)",
+      "Edit(//tmp/**)",
 
       "Bash(git push:*)",
       "Bash(git add:*)",
