@@ -78,8 +78,8 @@ t_wada式TDDの手順:
 
 ### コマンド出力をファイルに保存する場合
 - コマンドの出力結果をファイルに保存したい場合は、`tee`と`> /dev/null`を組み合わせて使用してください
-  - 悪い例: `gh pr diff > .claude/tmp/pr_diff.txt`
-  - 良い例: `gh pr diff | tee .claude/tmp/pr_diff.txt > /dev/null`
+  - 悪い例: `gh pr diff > .claude_work/pr_diff.txt`
+  - 良い例: `gh pr diff | tee .claude_work/pr_diff.txt > /dev/null`
   - 理由: `>`によるリダイレクトは許可が必要だが、`tee`の引数としてファイルパスを渡せば許可なしで操作できる
 
 ## Subagentの省略形
