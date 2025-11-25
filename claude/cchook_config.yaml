@@ -69,7 +69,9 @@ PreToolUse:
         value: "https://www.notion.so"
     actions:
       - type: output
-        message: "WebFetchではなく、notion用のMCP(`mcp__notion__API-retrieve-a-page`や`mcp__notion__API-get-block-children`)経由で情報を取得しましょう"
+        message: |-
+          WebFetchではなく、サブエージェントを起動して、以下のコマンドで情報収集をしましょう
+          claude --debug --strict-mcp-config --mcp-config ~/.files/claude/notion_mcp.json --print "<該当のNotionの URL>の内容について省略や要約を一切せず、全ての内容を教えてください"
   - matcher: "Bash"
     conditions:
       - type: command_starts_with
