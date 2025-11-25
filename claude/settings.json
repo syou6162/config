@@ -6,9 +6,6 @@
       "Glob",
       "WebFetch",
       "WebSearch",
-      "Read(/tmp/**)",
-      "Write(/tmp/**)",
-      "Edit(/tmp/**)",
       "Edit(.claude/tmp/*)",
       "Write(.claude/tmp/*)",
 
