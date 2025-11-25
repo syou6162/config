@@ -126,13 +126,6 @@ SessionStart:
         message: "Pythonのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
   - matcher: startup
     conditions:
-      - type: dir_not_exists
-        value: ".claude/tmp"
-    actions:
-      - type: output
-        message: "Claude Code用の一時的な作業用ディレクトリが存在していません。`mkdir -p .claude/tmp`を実行するようにユーザーに依頼しましょう"
-  - matcher: startup
-    conditions:
       - type: file_not_exists
         value: ".serena/project.yml"
     actions:
