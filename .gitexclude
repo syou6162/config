@@ -3,6 +3,7 @@ tags
 .claude/settings.local.json
 .claude/commands/cccsc/*
 .claude/tmp/*
+.claude_work/*
 
 .serena/*
 .spec-workflow/*

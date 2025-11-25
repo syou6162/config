@@ -12,6 +12,10 @@
       "Edit(.claude/tmp/*)",
       "Write(.claude/tmp/*)",
 
+      "Read(.claude_work/**)",
+      "Write(.claude_work/**)",
+      "Edit(.claude_work/**)",
+
       "Bash(git commit:*)",
       "Bash(git restore:*)",
       "Bash(git rev-parse:*)",
