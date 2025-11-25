@@ -58,6 +58,7 @@
       "Bash(rg:*)",
       "Bash(find:*)",
       "Bash(mv:*)",
+      "Bash(mkdir:*)",
       "Bash(tree:*)",
       
       "Bash(sqlite3:*)",
