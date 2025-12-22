@@ -13,7 +13,7 @@ actions:
     command: "git branch --show-current"
   - name: git_diff 
     prefix: "ファイル差分: "
-    command: "git status --porcelain | wc -l"
+    command: "git status --porcelain --no-optional-locks | wc -l"
   - name: pr_status
     prefix: "Actions Status: "
     command: |
