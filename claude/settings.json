@@ -24,10 +24,9 @@
       "Bash(xargs -r git add -N:*)",
       "Bash(pre-commit run:*)",
 
-      "Bash(gh issue create:*)",
       "Bash(gh issue view:*)",
-      "Bash(gh issue list:*)",
-      "Bash(gh issue comment:*)",
+      "Bash(gh issue view:*)",
+      "Bash(gh issue status :*)",
       "Bash(gh search prs:*)",
       "Bash(gh search issues:*)",
 
@@ -176,6 +175,14 @@
       "Bash(bq add-iam-policy-binding:*)",
       "Bash(bq remove-iam-policy-binding:*)",
       
+      "Bash(gh issue create:*)",
+      "Bash(gh issue close:*)",
+      "Bash(gh issue comment:*)",
+      "Bash(gh issue delete:*)",
+      "Bash(gh issue develop:*)",
+      "Bash(gh issue edit:*)",
+      "Bash(gh issue reopen:*)",
+
       "mcp__notion__API-patch-block-children",
       "mcp__notion__API-update-a-block",
       "mcp__notion__API-delete-a-block",
