@@ -87,6 +87,15 @@ PreToolUse:
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
         use_stdin: true
         command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_codex_mcp
+  - matcher: "Bash"
+    conditions:
+      - type: command_starts_with
+        value: "git push"
+    actions:
+      - type: command
+        exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
+        use_stdin: true
+        command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_git_push
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
