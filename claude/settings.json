@@ -154,7 +154,10 @@
       "Write(//tmp/**)",
       "Edit(//tmp/**)",
 
-      "Bash(git push:*)",
+      "Bash(git push origin main)",
+      "Bash(git push origin master)",
+      "Bash(git push origin develop)",
+      "Bash(git push -f:*)",
       "Bash(git add:*)",
       "Bash(git commit -am:*)",
       "Bash(git commit -a -m:*)",
