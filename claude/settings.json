@@ -196,6 +196,9 @@
       "mcp__notion__API-create-a-comment",
 
       "Bash(gh pr checkout:*)"
+    ],
+    "ask": [
+      "Bash(gh pr create --draft:*)"
     ]
   },
   "hooks": {
