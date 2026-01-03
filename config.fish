@@ -87,12 +87,44 @@ if status --is-interactive
     abbr --add ks "kubeswitch"
 end
 
-function gws
-  cd (git worktree list | peco | awk '{print $1}')
-end
-
 abbr -a gl "glow -p -w0"
 
 set -gx FZF_DEFAULT_OPTS '--exact --bind "enter:become(vim {})" --preview "bat --color=always --style=header,grid --line-range :300 {}" --preview-window "up:80%:border"'
 
 string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
+
+# based on https://github.com/k1LoW/git-wt
+# pecoで移動できるようにしたいから、自分で書いている
+function git --wraps git
+    if test "$argv[1]" = "wt"
+        if test (count $argv) -eq 1
+            # git wt のみ → peco で選択して移動
+            set -l dir (command git worktree list | peco | awk '{print $1}')
+            test -n "$dir" && cd "$dir"
+        else
+            # それ以外は git-wt にそのまま渡す
+            set -l result (command git wt $argv[2..] | string collect)
+            set -l exit_code $status
+            if test $exit_code -eq 0 -a -d "$result"
+                cd "$result"
+            else
+                printf "%s\n" "$result"
+                return $exit_code
+            end
+        end
+    else
+        command git $argv
+    end
+end
+
+# git wt <branch> completion for fish
+function __fish_git_wt_branches
+    command git-wt __complete "" 2>/dev/null | string match -rv '^:'
+end
+
+function __fish_git_wt_needs_branch
+    set -l cmd (commandline -opc)
+    test (count $cmd) -eq 2 -a "$cmd[2]" = "wt"
+end
+
+complete -c git -n '__fish_git_wt_needs_branch' -f -a '(__fish_git_wt_branches)'
