@@ -10,6 +10,8 @@
       "Read(.claude_work/**)",
       "Write(.claude_work/**)",
       "Edit(.claude_work/**)",
+      
+      "Read(~/Desktop/screenshots/**)",
 
       "Bash(git commit:*)",
       "Bash(git restore:*)",
