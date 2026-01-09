@@ -20,12 +20,7 @@ PreToolUse:
         value: "git add"
     actions:
       - type: output
-        message: |-
-          手順通りに作業を進めてください。
-
-          git addは禁止されています。このメッセージが出力されるということは、あなたが手順書通りに進めていない証拠です。手順書を読み直して、手順通りに作業を進めてください。
-
-          他者にコミット作業の依頼をすることは禁止されています、あなたがこのタスクを完了させてください。
+        message: "syou6162-plugin:semantic-committingのスキルを使ってください"
   - matcher: "Bash"
     conditions:
       - type: git_tracked_file_operation
