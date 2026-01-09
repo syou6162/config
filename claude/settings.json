@@ -143,6 +143,10 @@
 
       "Skill(syou6162-plugin:gha-sha-reference)",
       "Skill(syou6162-plugin:reading-notion)",
+      "Skill(syou6162-plugin:updating-pr-title-and-description)",
+      "Skill(syou6162-plugin:ask-user-choice)",
+      "Skill(syou6162-plugin:requesting-gcloud-bq-auth)",
+      "Skill(syou6162-plugin:semantic-committing)",
 
       "/times_esa:*",
       "/syou6162-plugin:*"
