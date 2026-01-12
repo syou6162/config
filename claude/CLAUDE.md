@@ -91,6 +91,6 @@ t_wada式TDDの手順:
 
 ユーザーが以下の省略形で指示した場合、対応するスキルを使用してください:
 
-- "commit" => `syou6162-plugin:semantic-commit`
+- "commit" => `syou6162-plugin:semantic-committing`
 - "check ci" => `syou6162-plugin:monitor-ci`
-- "update pr" => `syou6162-plugin:update-pr-title-and-description`
+- "update pr" => `syou6162-plugin:updating-pr-title-and-description`
