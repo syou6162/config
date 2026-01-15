@@ -82,6 +82,13 @@ PreToolUse:
         exit_status: 0 # JSON Outputで制御するので、exit_statusはこれでよい
         use_stdin: true
         command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_git_push
+  - matcher: "Bash"
+    conditions:
+      - type: command_starts_with
+        value: "gsutil"
+    actions:
+      - type: output
+        message: "gsutilはlegacyであり、deprecatedになっています。代わりにgcloud storageを使いましょう"
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
