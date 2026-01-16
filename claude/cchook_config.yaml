@@ -161,7 +161,10 @@ UserPromptSubmit:
           ユーザーが以下のスキルを順番に行なうことを求めています。
 
           - Skill(syou6162-plugin:semantic-committing)
+            - 意味的に分割したレビューしやすいコミットを行なう
           - Skill(syou6162-plugin:updating-pr-title-and-description) 
+            - Pull Requestのタイトルやdescriptionの更新を指示内容に従って行なう
+            - Pull Requestが存在しないときはdraft状態で作成することを忘れないようにする
   - conditions:
       - type: prompt_regex
         value: "バカ|ばか|アホ|あほ|ごみ|ゴミ|ふざけ|いい加減"
