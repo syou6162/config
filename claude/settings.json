@@ -278,8 +278,7 @@
     "padding": 0
   },
   "env": {
-    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
-    "ANTHROPIC_MODEL": "claude-sonnet-4-20250514"
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true
   },
   "enabledPlugins": {
     "syou6162-plugin@syou6162-marketplace": true
@@ -288,5 +287,6 @@
   "includeCoAuthoredBy": false,
   "cleanupPeriodDays": 1095,
   "plansDirectory": ".claude_work/plans",
+  "model": "opusplan",
   "language": "japanese"
 }
