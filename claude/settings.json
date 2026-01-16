@@ -287,5 +287,6 @@
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
   "cleanupPeriodDays": 1095,
+  "plansDirectory": "./claude_work/plans",
   "language": "japanese"
 }
