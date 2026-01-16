@@ -278,7 +278,8 @@
     "padding": 0
   },
   "env": {
-    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
+    "CLAUDE_CODE_TMPDIR": ".claude_work"
   },
   "enabledPlugins": {
     "syou6162-plugin@syou6162-marketplace": true
