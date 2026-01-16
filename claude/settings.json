@@ -286,5 +286,6 @@
   },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
-  "cleanupPeriodDays": 1095
+  "cleanupPeriodDays": 1095,
+  "language": "japanese"
 }
