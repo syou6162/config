@@ -91,8 +91,6 @@ abbr -a gl "glow -p -w0"
 
 set -gx FZF_DEFAULT_OPTS '--exact --bind "enter:become(vim {})" --preview "bat --color=always --style=header,grid --line-range :300 {}" --preview-window "up:80%:border"'
 
-string match -q "$TERM_PROGRAM" "kiro" and . (kiro --locate-shell-integration-path fish)
-
 # based on https://github.com/k1LoW/git-wt
 # pecoで移動できるようにしたいから、自分で書いている
 function git --wraps git
