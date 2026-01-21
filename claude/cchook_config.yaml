@@ -158,7 +158,7 @@ UserPromptSubmit:
     actions:
       - type: output
         message: |-
-          ユーザーが以下のスキルを順番に行なうことを求めています。
+          ユーザーが以下のスキルを順番に行なうことを求めています(`comish`は`commit`のtypoではありません)。`TodoWrite`を使い、タスクとして順次実行してください。
 
           - Skill(syou6162-plugin:semantic-committing)
             - 意味的に分割したレビューしやすいコミットを行なう
