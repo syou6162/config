@@ -141,6 +141,15 @@ UserPromptSubmit:
           ユーザーは単純に質問をしているだけであり、作業内容は一切求めていないことに注意しましょう。
   - conditions:
       - type: prompt_regex
+        value: "開発日誌"
+    actions:
+      - type: output
+        message: |-
+          ユーザーが開発日誌の参照あるいは更新を求めています。
+
+          必ず`Skill(syou6162-plugin:writing-dev-diary)`のスキルを起動しましょう。
+  - conditions:
+      - type: prompt_regex
         value: "comish"
     actions:
       - type: output
