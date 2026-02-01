@@ -145,6 +145,7 @@
       "Skill(syou6162-plugin:ask-user-choice)",
       "Skill(syou6162-plugin:requesting-gcloud-bq-auth)",
       "Skill(syou6162-plugin:semantic-committing)",
+      "Skill(syou6162-plugin:codex-review)",
 
       "/times_esa:*",
       "/syou6162-plugin:*"
