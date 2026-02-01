@@ -146,6 +146,7 @@
       "Skill(syou6162-plugin:requesting-gcloud-bq-auth)",
       "Skill(syou6162-plugin:semantic-committing)",
       "Skill(syou6162-plugin:codex-review)",
+      "Skill(syou6162-plugin:writing-dev-diary)",
 
       "/times_esa:*",
       "/syou6162-plugin:*"
