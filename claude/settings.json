@@ -282,7 +282,8 @@
     "CLAUDE_CODE_TMPDIR": ".claude_work"
   },
   "enabledPlugins": {
-    "syou6162-plugin@syou6162-marketplace": true
+    "syou6162-plugin@syou6162-marketplace": true,
+    "gopls-lsp@claude-plugins-official": true
   },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
