@@ -103,6 +103,11 @@
 
       "Bash(mcptools call API-post-search npx -y @notionhq/notion-mcp-server:*)",
       "Bash(notion-to-md:*)",
+      
+      "Bash(esa-llm-scoped-guard fetch:*)",
+      "Bash(esa-llm-scoped-guard validate:*)",
+      "Bash(esa-llm-scoped-guard diff:*)",
+      "Bash(esa-llm-scoped-guard preview:*)",
 
       "Bash(git-sequential-stage:*)",
       "Bash(codex exec --sandbox read-only:*)",
@@ -205,7 +210,8 @@
       "Bash(gh pr checkout:*)"
     ],
     "ask": [
-      "Bash(gh pr create --draft:*)"
+      "Bash(gh pr create --draft:*)",
+      "Bash(esa-llm-scoped-guard post:*)"
     ]
   },
   "hooks": {
