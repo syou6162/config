@@ -150,6 +150,15 @@ UserPromptSubmit:
           必ず`Skill(syou6162-plugin:writing-dev-diary)`のスキルを起動しましょう。
   - conditions:
       - type: prompt_regex
+        value: "codex review"
+    actions:
+      - type: output
+        message: |-
+          ユーザーが作業内容をcodexにレビューさせるように求めています。
+
+          必ず`Skill(syou6162-plugin:codex-review)`のスキルを起動しましょう。
+  - conditions:
+      - type: prompt_regex
         value: "comish"
     actions:
       - type: output
