@@ -105,6 +105,7 @@
       "Bash(notion-to-md:*)",
 
       "Bash(git-sequential-stage:*)",
+      "Bash(codex exec --sandbox read-only:*)",
       "mcp__codex__codex",
 
       "mcp__chrome-tabs__open_in_new_tab",
