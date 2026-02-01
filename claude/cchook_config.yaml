@@ -60,7 +60,7 @@ PreToolUse:
         message: "WebFetchではなく、`gh`コマンド経由で情報を取得しましょう"
   - matcher: "Bash"
     conditions:
-      - type: command_starts_with
+      - type: command_contains
         value: "bq query"
     actions:
       - type: command
