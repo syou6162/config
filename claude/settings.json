@@ -282,11 +282,6 @@
       }
     ]
   },
-  "statusLine": {
-    "type": "command",
-    "command": "ccstatusline",
-    "padding": 0
-  },
   "env": {
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
     "CLAUDE_CODE_TMPDIR": ".claude_work"
