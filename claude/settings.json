@@ -300,5 +300,6 @@
   "cleanupPeriodDays": 1095,
   "plansDirectory": ".claude_work/plans",
   "model": "opusplan",
-  "language": "japanese"
+  "language": "japanese",
+  "promptSuggestionEnabled": false
 }
