@@ -110,7 +110,9 @@
       "Bash(esa-llm-scoped-guard preview:*)",
 
       "Bash(git-sequential-stage:*)",
+
       "Bash(codex exec --sandbox read-only:*)",
+      "Bash(codex review:*)",
       "mcp__codex__codex",
 
       "mcp__chrome-tabs__open_in_new_tab",
