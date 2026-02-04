@@ -10,9 +10,6 @@ set -x PATH $HOME/.local/bin $PATH
 set -x EDITOR vim
 set -x TERM xterm-256color
 
-set -Ux PYENV_ROOT $HOME/.pyenv
-set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-
 switch (uname -m)
 case arm64
   status --is-interactive; and eval (/opt/homebrew/bin/brew shellenv)
@@ -22,8 +19,6 @@ case x86_64
   status --is-interactive; and eval (/usr/local/bin/brew shellenv)
   source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 end
-
-status --is-interactive; and pyenv init --path | source
 
 status --is-interactive; and . (rbenv init -|psub)
 status --is-interactive; and . (nodenv init -|psub)
