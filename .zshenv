@@ -12,8 +12,5 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export PATH="$HOME/.ndenv/bin:$PATH"
 if which ndenv > /dev/null; then eval "$(ndenv init - zsh)"; fi
 
-export PATH="$HOME/.pyenv/bin:$PATH"
-if which pyenv > /dev/null; then eval "$(pyenv init - zsh)"; fi
-
 export GOPATH=$HOME/go
 export PATH=$GOPATH/bin:$PATH
