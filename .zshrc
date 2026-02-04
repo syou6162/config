@@ -100,12 +100,6 @@ _update_rprompt () {
     fi
 }
 
-# alias for stats functions
-for f in mean sd max min
-do
-    alias $f="R --vanilla --slave -e \"x <- scan('stdin', quiet=TRUE); cat($f(x), fill=TRUE)\""
-done
-
 eval "$(direnv hook zsh)"
 
 setopt no_global_rcs
