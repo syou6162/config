@@ -282,7 +282,8 @@
   },
   "env": {
     "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
-    "CLAUDE_CODE_TMPDIR": ".claude_work"
+    "CLAUDE_CODE_TMPDIR": ".claude_work",
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
   },
   "enabledPlugins": {
     "syou6162-plugin@syou6162-marketplace": true,
