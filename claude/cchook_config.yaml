@@ -132,6 +132,15 @@ SessionStart:
     actions:
       - type: output
         message: "Pythonのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
+  - matcher: "startup"
+    # バグでまだ使えない...
+    # ref: https://github.com/anthropics/claude-code/issues/22922
+    # conditions:
+    #   - type: permission_mode_is
+    #     value: "plan"
+    actions:
+      - type: output
+        message: "Planモードで計画を立てる際は必ず`Skill(syou6162-plugin:planning-guardrails)`を活用しましょう"
 
 UserPromptSubmit:
   - conditions:
