@@ -10,7 +10,9 @@
       "Read(.claude_work/**)",
       "Write(.claude_work/**)",
       "Edit(.claude_work/**)",
-      
+
+      "Read(~/.claude/plugins/cache/syou6162-marketplace/**)",
+
       "Read(~/Desktop/screenshots/**)",
 
       "Bash(git commit:*)",
