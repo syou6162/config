@@ -89,6 +89,10 @@ PreToolUse:
     actions:
       - type: output
         message: "gsutilはlegacyであり、deprecatedになっています。代わりにgcloud storageを使いましょう"
+  - matcher: "ExitPlanMode"
+    actions:
+      - type: output
+        message: "Planモードを抜ける際はユーザーが自分で行ないます"
 
 PostToolUse:
   - matcher: "Write|Edit|MultiEdit"
