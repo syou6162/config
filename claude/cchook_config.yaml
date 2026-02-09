@@ -141,6 +141,10 @@ SessionStart:
     actions:
       - type: output
         message: "Planモードで計画を立てる際は必ず`Skill(syou6162-plugin:planning-guardrails)`を活用しましょう"
+  - matcher: "startup"
+    actions:
+      - type: command
+        command: "mkdir -p .claude_work"
 
 UserPromptSubmit:
   - conditions:
@@ -192,3 +196,8 @@ UserPromptSubmit:
           ユーザーの意図を理解していないあなたの挙動(ファイルの修正やオペレーション)に対してユーザーが非常に怒っています。
 
           まず丁寧に謝罪した上で、何が悪かったかを説明しましょう。
+  - actions:
+      - type: command
+        use_stdin: true
+        command: "T=$(date '+%Y-%m-%d %H:%M:%S') && jq -r --arg t \"$T\"
+'\"\\($t) | \\(.prompt)\"' >> .claude_work/user_prompts.txt"
