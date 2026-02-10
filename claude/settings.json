@@ -302,7 +302,11 @@
   },
   "enabledPlugins": {
     "syou6162-plugin@syou6162-marketplace": true,
-    "gopls-lsp@claude-plugins-official": true
+    "gopls-lsp@claude-plugins-official": true,
+    "pyright-lsp@claude-plugins-official": true,
+    "typescript-lsp@claude-plugins-official": true,
+    "context7@claude-plugins-official": true,
+    "code-simplifier@claude-plugins-official": true
   },
   "enableAllProjectMcpServers": false,
   "includeCoAuthoredBy": false,
