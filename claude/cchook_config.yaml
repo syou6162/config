@@ -146,6 +146,14 @@ SessionStart:
       - type: command
         command: "mkdir -p .claude_work"
 
+SessionEnd:
+  - conditions:
+      - type: reason_is
+        value: "prompt_input_exit"  
+    actions:
+      - type: command
+        command: ./plan2esa
+
 UserPromptSubmit:
   - conditions:
       - type: prompt_regex
