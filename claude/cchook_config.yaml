@@ -152,7 +152,7 @@ SessionEnd:
         value: "prompt_input_exit"  
     actions:
       - type: command
-        command: ./plan2esa
+        command: plan2esa
 
 UserPromptSubmit:
   - conditions:
