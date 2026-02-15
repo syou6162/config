@@ -49,8 +49,11 @@
       "Bash(gh search issues:*)",
       
       "Bash(ls:*)",
+      "Bash(cat:*)",
       "Bash(echo:*)",
+      "Bash(touch:*)",
       "Bash(test:*)",
+      "Bash(true:*)",
       "Bash(tee:*)",
       "Bash(grep:*)",
       "Bash(rg:*)",
