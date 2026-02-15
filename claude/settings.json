@@ -96,9 +96,11 @@
       "mcp__godoc-mcp__get_doc",
       
       "Bash(gcloud logging read:*)",
+      "Bash(gcloud storage ls:*)",
       "Bash(gcloud run jobs executions list:*)",
       "Bash(gcloud run jobs executions describe:*)",
       "Bash(gcloud run jobs list:*)",
+      "Bash(gcloud run jobs describe:*)",
      
       "Bash(bq ls:*)",
       "Bash(bq show:*)",
