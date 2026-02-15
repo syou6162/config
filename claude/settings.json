@@ -114,6 +114,7 @@
       "Bash(mcptools call API-post-search npx -y @notionhq/notion-mcp-server:*)",
       "Bash(notion-to-md:*)",
       
+      "Bash(esa-llm-scoped-guard --help)",
       "Bash(esa-llm-scoped-guard fetch:*)",
       "Bash(esa-llm-scoped-guard validate:*)",
       "Bash(esa-llm-scoped-guard diff:*)",
