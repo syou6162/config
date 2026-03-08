@@ -9,3 +9,6 @@ notify = ["ntfy", "publish", "--quiet", "--title", "Codex"]
 
 [sandbox_workspace_write]
 network_access = true
+
+[features]
+voice_transcription = true
