@@ -323,5 +323,6 @@
   "plansDirectory": ".claude_work/plans",
   "model": "opusplan",
   "language": "japanese",
-  "promptSuggestionEnabled": false
+  "promptSuggestionEnabled": false,
+  "voiceEnabled": true
 }
