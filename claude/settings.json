@@ -1,4 +1,12 @@
 {
+  "cleanupPeriodDays": 1095,
+  "env": {
+    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
+    "CLAUDE_CODE_TMPDIR": ".claude_work",
+    "ENABLE_LSP_TOOL": 1,
+    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
+  },
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Grep",
@@ -226,6 +234,8 @@
       "Bash(esa-llm-scoped-guard post:*)"
     ]
   },
+  "model": "opusplan",
+  "enableAllProjectMcpServers": false,
   "hooks": {
     "Notification": [
       {
@@ -303,12 +313,6 @@
       }
     ]
   },
-  "env": {
-    "CLAUDE_BASH_MAINTAIN_PROJECT_WORKING_DIR" : true,
-    "CLAUDE_CODE_TMPDIR": ".claude_work",
-    "ENABLE_LSP_TOOL": 1,
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
   "enabledPlugins": {
     "syou6162-plugin@syou6162-marketplace": true,
     "gopls-lsp@claude-plugins-official": true,
@@ -317,12 +321,8 @@
     "context7@claude-plugins-official": true,
     "code-simplifier@claude-plugins-official": true
   },
-  "enableAllProjectMcpServers": false,
-  "includeCoAuthoredBy": false,
-  "cleanupPeriodDays": 1095,
-  "plansDirectory": ".claude_work/plans",
-  "model": "opusplan",
   "language": "japanese",
   "promptSuggestionEnabled": false,
+  "plansDirectory": ".claude_work/plans",
   "voiceEnabled": true
 }
