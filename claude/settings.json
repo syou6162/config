@@ -234,7 +234,6 @@
       "Bash(esa-llm-scoped-guard post:*)"
     ]
   },
-  "model": "opusplan",
   "enableAllProjectMcpServers": false,
   "hooks": {
     "Notification": [
@@ -324,5 +323,6 @@
   "language": "japanese",
   "promptSuggestionEnabled": false,
   "plansDirectory": ".claude_work/plans",
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "effortLevel": "high"
 }
