@@ -11,7 +11,7 @@ Stop:
         command: >
           MESSAGE=$(cat '{.transcript_path}' | 
             jq -rs 'reverse | map(select(.type == "assistant" and .message.content[0].type == "text")) | .[0].message.content[0].text')
-          ntfy publish --markdown --title 'Claude Code Complete' "$MESSAGE"
+          ntfy publish --markdown --title 'Claude Code Complete' --message "$MESSAGE"
 
 PreToolUse:
   - matcher: "Bash"
