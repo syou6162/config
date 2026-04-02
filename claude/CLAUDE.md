@@ -77,6 +77,14 @@ t_wada式TDDの手順:
   - 良い例: `gh pr diff | tee .claude_work/pr_diff.txt > /dev/null`
   - 理由: `>`によるリダイレクトは許可が必要だが、`tee`の引数としてファイルパスを渡せば許可なしで操作できる
 
+## JSONデータ処理に関するルール
+
+- JSONデータの加工・整形・フィルタリングには**常に**`jq`を使用してください
+- `python3`でJSONを処理することは禁止です。ユーザーは常にdenyします
+  - 悪い例: `cat data.json | python3 -c "import json, sys; ..."`
+  - 良い例: `cat data.json | jq '.issues.nodes[] | .key'`
+  - 理由: python3は自由度が高すぎて可読性・レビューしやすさが下がる。jqはJSON処理に特化しており、意図が明確になる
+
 ## スキルの省略形
 
 ユーザーが以下の省略形で指示した場合、対応するスキルを使用してください:
