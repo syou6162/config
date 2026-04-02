@@ -173,6 +173,10 @@
       "mcp__atlassian__getJiraProjectIssueTypesMetadata",
       "mcp__atlassian__getVisibleJiraProjects",
       "mcp__atlassian__lookupJiraAccountId",
+      "mcp__atlassian__getAccessibleAtlassianResources",
+      "mcp__atlassian__atlassianUserInfo",
+      "mcp__atlassian__searchAtlassian",
+      "mcp__atlassian__fetchAtlassian",
 
       "Skill(syou6162-plugin:gha-sha-reference)",
       "Skill(syou6162-plugin:reading-notion)",
