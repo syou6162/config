@@ -164,6 +164,16 @@
       "mcp__serena__think_about_task_adherence",
       "mcp__serena__think_about_whether_you_are_done",
 
+      "mcp__atlassian__getJiraIssue",
+      "mcp__atlassian__searchJiraIssuesUsingJql",
+      "mcp__atlassian__getTransitionsForJiraIssue",
+      "mcp__atlassian__getIssueLinkTypes",
+      "mcp__atlassian__getJiraIssueRemoteIssueLinks",
+      "mcp__atlassian__getJiraIssueTypeMetaWithFields",
+      "mcp__atlassian__getJiraProjectIssueTypesMetadata",
+      "mcp__atlassian__getVisibleJiraProjects",
+      "mcp__atlassian__lookupJiraAccountId",
+
       "Skill(syou6162-plugin:gha-sha-reference)",
       "Skill(syou6162-plugin:reading-notion)",
       "Skill(syou6162-plugin:updating-pr-title-and-description)",
