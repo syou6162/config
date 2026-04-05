@@ -164,6 +164,29 @@
       "mcp__serena__think_about_task_adherence",
       "mcp__serena__think_about_whether_you_are_done",
 
+      "mcp__claude_ai_Linear__get_attachment",
+      "mcp__claude_ai_Linear__get_document",
+      "mcp__claude_ai_Linear__get_issue",
+      "mcp__claude_ai_Linear__get_issue_status",
+      "mcp__claude_ai_Linear__get_milestone",
+      "mcp__claude_ai_Linear__get_project",
+      "mcp__claude_ai_Linear__get_team",
+      "mcp__claude_ai_Linear__get_user",
+      "mcp__claude_ai_Linear__list_comments",
+      "mcp__claude_ai_Linear__list_cycles",
+      "mcp__claude_ai_Linear__list_documents",
+      "mcp__claude_ai_Linear__list_issue_labels",
+      "mcp__claude_ai_Linear__list_issue_statuses",
+      "mcp__claude_ai_Linear__list_issues",
+      "mcp__claude_ai_Linear__list_milestones",
+      "mcp__claude_ai_Linear__list_project_labels",
+      "mcp__claude_ai_Linear__list_projects",
+      "mcp__claude_ai_Linear__list_teams",
+      "mcp__claude_ai_Linear__list_users",
+      "mcp__claude_ai_Linear__extract_images",
+
+
+
       "mcp__atlassian__getJiraIssue",
       "mcp__atlassian__searchJiraIssuesUsingJql",
       "mcp__atlassian__getTransitionsForJiraIssue",
@@ -247,7 +270,20 @@
     ],
     "ask": [
       "Bash(gh pr create --draft:*)",
-      "Bash(esa-llm-scoped-guard post:*)"
+      "Bash(esa-llm-scoped-guard post:*)",
+      
+      "mcp__claude_ai_Linear__research",
+      "mcp__claude_ai_Linear__create_attachment",
+      "mcp__claude_ai_Linear__create_document",
+      "mcp__claude_ai_Linear__create_issue_label",
+      "mcp__claude_ai_Linear__delete_attachment",
+      "mcp__claude_ai_Linear__delete_comment",
+      "mcp__claude_ai_Linear__save_comment",
+      "mcp__claude_ai_Linear__save_issue",
+      "mcp__claude_ai_Linear__save_milestone",
+      "mcp__claude_ai_Linear__save_project",
+      "mcp__claude_ai_Linear__search_documentation",
+      "mcp__claude_ai_Linear__update_document"
     ]
   },
   "enableAllProjectMcpServers": false,
