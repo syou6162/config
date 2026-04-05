@@ -185,8 +185,6 @@
       "mcp__claude_ai_Linear__list_users",
       "mcp__claude_ai_Linear__extract_images",
 
-
-
       "mcp__atlassian__getJiraIssue",
       "mcp__atlassian__searchJiraIssuesUsingJql",
       "mcp__atlassian__getTransitionsForJiraIssue",
