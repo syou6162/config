@@ -199,20 +199,15 @@
       "mcp__atlassian__searchAtlassian",
       "mcp__atlassian__fetchAtlassian",
 
-      "Skill(syou6162-plugin:gha-sha-reference)",
-      "Skill(syou6162-plugin:reading-notion)",
-      "Skill(syou6162-plugin:updating-pr-title-and-description)",
-      "Skill(syou6162-plugin:ask-user-choice)",
-      "Skill(syou6162-plugin:requesting-gcloud-bq-auth)",
-      "Skill(syou6162-plugin:semantic-committing)",
-      "Skill(syou6162-plugin:codex-review)",
-      "Skill(syou6162-plugin:codex-plan-review)",
-      "Skill(syou6162-plugin:writing-dev-diary)",
-      "Skill(syou6162-plugin:assembling-dev-team)",
-      "Skill(syou6162-plugin:planning-guardrails)",
-
-      "/times_esa:*",
-      "/syou6162-plugin:*"
+      "Skill(syou6162-agent-skills:gha-sha-reference)",
+      "Skill(syou6162-agent-skills:reading-notion)",
+      "Skill(syou6162-agent-skills:updating-pr-title-and-description)",
+      "Skill(syou6162-agent-skills:requesting-gcloud-bq-auth)",
+      "Skill(syou6162-agent-skills:semantic-committing)",
+      "Skill(syou6162-agent-skills:codex-review)",
+      "Skill(syou6162-agent-skills:codex-plan-review)",
+      "Skill(syou6162-agent-skills:writing-dev-diary)",
+      "Skill(syou6162-agent-skills:planning-guardrails)"
     ],
     "deny": [
       "Grep(*.env)",
