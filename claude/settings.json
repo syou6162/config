@@ -368,11 +368,20 @@
     "pyright-lsp@claude-plugins-official": true,
     "typescript-lsp@claude-plugins-official": true,
     "context7@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true
+    "code-simplifier@claude-plugins-official": true,
+    "syou6162-agent-skills@syou6162-marketplace": true
+  },
+  "extraKnownMarketplaces": {
+    "syou6162-marketplace": {
+      "source": {
+        "source": "github",
+        "repo": "syou6162/agent-skills"
+      }
+    }
   },
   "language": "japanese",
+  "effortLevel": "high",
   "promptSuggestionEnabled": false,
   "plansDirectory": ".claude_work/plans",
-  "voiceEnabled": true,
-  "effortLevel": "high"
+  "voiceEnabled": true
 }
