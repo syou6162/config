@@ -6,9 +6,28 @@ web_search_request = true
 project_doc_fallback_filenames = ["CLAUDE.md"]
 
 notify = ["ntfy", "publish", "--quiet", "--title", "Codex"] 
+personality = "friendly"
 
 [sandbox_workspace_write]
 network_access = true
 
 [features]
 voice_transcription = true
+
+[projects."/Users/yasuhisa.yoshida/10xinc/stailer-hermes-workflows"]
+trust_level = "trusted"
+
+[projects."/Users/yasuhisa.yoshida/10xinc/stailer-hermes"]
+trust_level = "trusted"
+
+[projects."/Users/yasuhisa.yoshida/work/times_esa_talk_cli"]
+trust_level = "trusted"
+
+[projects."/Users/yasuhisa.yoshida/.files"]
+trust_level = "trusted"
+
+[notice.model_migrations]
+"gpt-5.1-codex-mini" = "gpt-5.4"
+
+[plugins."github@openai-curated"]
+enabled = true
