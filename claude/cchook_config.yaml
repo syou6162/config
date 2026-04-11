@@ -85,6 +85,24 @@ PreToolUse:
   - matcher: "Bash"
     conditions:
       - type: command_starts_with
+        value: "find"
+    actions:
+      - type: command
+        exit_status: 0
+        use_stdin: true
+        command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_find
+  - matcher: "Bash"
+    conditions:
+      - type: command_contains
+        value: "xargs"
+    actions:
+      - type: command
+        exit_status: 0
+        use_stdin: true
+        command: uvx --from git+https://github.com/syou6162/cc-pre-tool-use-hook-judge cc-pre-tool-use-hook-judge --builtin validate_xargs
+  - matcher: "Bash"
+    conditions:
+      - type: command_starts_with
         value: "gsutil"
     actions:
       - type: output
