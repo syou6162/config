@@ -229,6 +229,11 @@
       "Bash(gh issue develop:*)",
       "Bash(gh issue edit:*)",
       "Bash(gh issue reopen:*)",
+      
+      "Bash(gh gist create:*)",
+      "Bash(gh gist delete:*)",
+      "Bash(gh gist edit:*)",
+      "Bash(gh gist rename:*)",
 
       "mcp__notion__API-patch-block-children",
       "mcp__notion__API-update-a-block",
