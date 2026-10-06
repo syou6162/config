@@ -32,4 +32,4 @@ function toggleApp(key, modifiers, bundleID)
   end)
 end
 
-toggleApp({"ctrl"}, "i", "com.googlecode.iterm2")
+toggleApp({"ctrl"}, "i", "com.mitchellh.ghostty")
