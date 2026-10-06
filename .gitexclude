@@ -4,6 +4,8 @@ tags
 .claude/commands/cccsc/*
 .claude/tmp/*
 .claude_work/*
+.agent_work/*
+.devin/*
 
 .serena/*
 .spec-workflow/*
@@ -11,3 +13,5 @@ data/*
 
 cccsc-lock.json
 cccsc.json
+
+**/.claude/settings.local.json

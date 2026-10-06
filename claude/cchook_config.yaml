@@ -20,7 +20,7 @@ PreToolUse:
         value: "git add"
     actions:
       - type: output
-        message: "syou6162-plugin:semantic-committingのスキルを使ってください"
+        message: "semantic-committingのスキルを使ってください"
   - matcher: "Bash"
     conditions:
       - type: git_tracked_file_operation
@@ -139,20 +139,6 @@ PostToolUse:
         command: "pre-commit run --files {.tool_input.file_path}"
 
 SessionStart:
-  - matcher: startup
-    conditions:
-      - type: file_exists
-        value: "go.mod"
-    actions:
-      - type: output
-        message: "Golangのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
-  - matcher: startup
-    conditions:
-      - type: file_exists_recursive
-        value: "pyproject.toml"
-    actions:
-      - type: output
-        message: "Pythonのファイルを検索や修正する際は、`Search`や`Read`を使うのではなく、serena mcp(`mcp__serena__read_memory`など)を活用しましょう"
   - matcher: "startup"
     # バグでまだ使えない...
     # ref: https://github.com/anthropics/claude-code/issues/22922
@@ -161,7 +147,7 @@ SessionStart:
     #     value: "plan"
     actions:
       - type: output
-        message: "Planモードで計画を立てる際は必ず`Skill(syou6162-plugin:planning-guardrails)`を活用しましょう"
+        message: "Planモードで計画を立てる際は必ず`Skill(planning-guardrails)`を活用しましょう"
   - matcher: "startup"
     actions:
       - type: command
@@ -193,7 +179,7 @@ UserPromptSubmit:
         message: |-
           ユーザーが開発日誌の参照あるいは更新を求めています。
 
-          必ず`Skill(syou6162-plugin:writing-dev-diary)`のスキルを起動しましょう。
+          必ず`Skill(writing-dev-diary)`のスキルを起動しましょう。
   - conditions:
       - type: prompt_regex
         value: "codex review"
@@ -202,7 +188,7 @@ UserPromptSubmit:
         message: |-
           ユーザーが作業内容をcodexにレビューさせるように求めています。
 
-          必ず`Skill(syou6162-plugin:codex-review)`のスキルを起動しましょう。
+          必ず`Skill(codex-review)`のスキルを起動しましょう。
   - conditions:
       - type: prompt_regex
         value: "comish"
@@ -211,9 +197,9 @@ UserPromptSubmit:
         message: |-
           ユーザーが以下のスキルを順番に行なうことを求めています(`comish`は`commit`のtypoではありません)。`TaskCreate`を使い、タスクとして必ずスキルの定義通り実行してください。
 
-          - Skill(syou6162-plugin:semantic-committing)
+          - Skill(semantic-committing)
             - 意味的に分割したレビューしやすいコミットを行なう
-          - Skill(syou6162-plugin:updating-pr-title-and-description) 
+          - Skill(updating-pr-title-and-description) 
             - Pull Requestのタイトルやdescriptionの更新を指示内容に従って行なう
             - Pull Requestが存在しないときはdraft状態で作成することを忘れないようにする
   - conditions:

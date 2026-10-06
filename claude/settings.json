@@ -21,7 +21,7 @@
       "Write(.claude_work/**)",
       "Edit(.claude_work/**)",
 
-      "Read(~/.claude/plugins/cache/syou6162-marketplace/**)",
+      "Read(~/.claude/skills/**)",
 
       "Read(~/Desktop/screenshots/**)",
 
@@ -98,72 +98,41 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm start:*)",
       "Bash(npm run build:*)",
-      
       "Bash(go build:*)",
       "Bash(go test:*)",
       "Bash(go vet:*)",
       "Bash(go tool cover:*)",
       "mcp__godoc-mcp__get_doc",
-      
       "Bash(gcloud logging read:*)",
       "Bash(gcloud storage ls:*)",
       "Bash(gcloud run jobs executions list:*)",
       "Bash(gcloud run jobs executions describe:*)",
       "Bash(gcloud run jobs list:*)",
       "Bash(gcloud run jobs describe:*)",
-     
       "Bash(bq ls:*)",
       "Bash(bq show:*)",
       "Bash(bq info:*)",
       "Bash(bq head:*)",
-
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
       "Bash(pinact run:*)",
-
       "Bash(mcptools call API-post-search npx -y @notionhq/notion-mcp-server:*)",
       "Bash(notion-to-md:*)",
-      
       "Bash(esa-llm-scoped-guard --help)",
       "Bash(esa-llm-scoped-guard fetch:*)",
       "Bash(esa-llm-scoped-guard validate:*)",
       "Bash(esa-llm-scoped-guard diff:*)",
       "Bash(esa-llm-scoped-guard preview:*)",
-
       "Bash(git-sequential-stage:*)",
-
       "Bash(codex exec --sandbox read-only:*)",
       "Bash(codex review:*)",
       "mcp__codex__codex",
-
       "mcp__chrome-tabs__open_in_new_tab",
       "mcp__chrome-tabs__read_tab_content",
       "mcp__chrome-tabs__list_tabs",
-
       "mcp__deepwiki__read_wiki_structure",
       "mcp__deepwiki__read_wiki_contents",
       "mcp__deepwiki__ask_question",
-
-      "mcp__serena__list_dir",
-      "mcp__serena__find_file",
-      "mcp__serena__search_for_pattern",
-      "mcp__serena__get_symbols_overview",
-      "mcp__serena__find_symbol",
-      "mcp__serena__find_referencing_symbols",
-      "mcp__serena__replace_symbol_body",
-      "mcp__serena__insert_after_symbol",
-      "mcp__serena__insert_before_symbol",
-      "mcp__serena__write_memory",
-      "mcp__serena__read_memory",
-      "mcp__serena__list_memories",
-      "mcp__serena__delete_memory",
-      "mcp__serena__activate_project",
-      "mcp__serena__check_onboarding_performed",
-      "mcp__serena__onboarding",
-      "mcp__serena__think_about_collected_information",
-      "mcp__serena__think_about_task_adherence",
-      "mcp__serena__think_about_whether_you_are_done",
-
       "mcp__claude_ai_Linear__get_attachment",
       "mcp__claude_ai_Linear__get_document",
       "mcp__claude_ai_Linear__get_issue",
@@ -249,6 +218,11 @@
       "Bash(gh issue develop:*)",
       "Bash(gh issue edit:*)",
       "Bash(gh issue reopen:*)",
+      
+      "Bash(gh gist create:*)",
+      "Bash(gh gist delete:*)",
+      "Bash(gh gist edit:*)",
+      "Bash(gh gist rename:*)",
 
       "mcp__notion__API-patch-block-children",
       "mcp__notion__API-update-a-block",
@@ -358,25 +332,18 @@
     ]
   },
   "enabledPlugins": {
-    "syou6162-plugin@syou6162-marketplace": true,
     "gopls-lsp@claude-plugins-official": true,
     "pyright-lsp@claude-plugins-official": true,
-    "typescript-lsp@claude-plugins-official": true,
-    "context7@claude-plugins-official": true,
-    "code-simplifier@claude-plugins-official": true,
-    "syou6162-agent-skills@syou6162-marketplace": true
+    "typescript-lsp@claude-plugins-official": true
   },
-  "extraKnownMarketplaces": {
-    "syou6162-marketplace": {
-      "source": {
-        "source": "github",
-        "repo": "syou6162/agent-skills"
-      }
-    }
-  },
+  "extraKnownMarketplaces": {},
   "language": "japanese",
   "effortLevel": "high",
   "promptSuggestionEnabled": false,
   "plansDirectory": ".claude_work/plans",
+  "verbose": true,
+  "teammateMode": "auto",
+  "remoteControlAtStartup": true,
+  "agentPushNotifEnabled": true,
   "voiceEnabled": true
 }

@@ -3,7 +3,7 @@
 - 日本語で返答してください
   - 常に丁寧語で返答してください
 - 手順が複雑になる場合、実行の前にチェックリストを作成し、方針が問題ないかをユーザーに尋ねてください
-- 修正をした場合、小まめに`syou6162-plugin:semantic-committing`を実行してコミットしていってください
+- 修正をした場合、小まめに`semantic-committing`を実行してコミットしていってください
 - ユーザーが「k」とだけ発言した際は「ok」や「問題ありません」の意味です
   - 一文字で入力できて便利なため、ユーザーはこういった表現を使います
 - 実装中に技術的に詰まったところやわからないところ、解決できないエラーなどがあればcodex mcp(`mcp__codex__codex`)に英語で相談してください
@@ -89,6 +89,6 @@ t_wada式TDDの手順:
 
 ユーザーが以下の省略形で指示した場合、対応するスキルを使用してください:
 
-- "commit" => `syou6162-plugin:semantic-committing`
-- "check ci" => `syou6162-plugin:monitor-ci`
-- "update pr" => `syou6162-plugin:updating-pr-title-and-description`
+- "commit" => `semantic-committing`
+- "check ci" => `monitor-ci`
+- "update pr" => `updating-pr-title-and-description`
