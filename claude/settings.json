@@ -98,52 +98,41 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm start:*)",
       "Bash(npm run build:*)",
-      
       "Bash(go build:*)",
       "Bash(go test:*)",
       "Bash(go vet:*)",
       "Bash(go tool cover:*)",
       "mcp__godoc-mcp__get_doc",
-      
       "Bash(gcloud logging read:*)",
       "Bash(gcloud storage ls:*)",
       "Bash(gcloud run jobs executions list:*)",
       "Bash(gcloud run jobs executions describe:*)",
       "Bash(gcloud run jobs list:*)",
       "Bash(gcloud run jobs describe:*)",
-     
       "Bash(bq ls:*)",
       "Bash(bq show:*)",
       "Bash(bq info:*)",
       "Bash(bq head:*)",
-
       "Bash(terminal-notifier:*)",
       "Bash(ntfy publish:*)",
       "Bash(pinact run:*)",
-
       "Bash(mcptools call API-post-search npx -y @notionhq/notion-mcp-server:*)",
       "Bash(notion-to-md:*)",
-      
       "Bash(esa-llm-scoped-guard --help)",
       "Bash(esa-llm-scoped-guard fetch:*)",
       "Bash(esa-llm-scoped-guard validate:*)",
       "Bash(esa-llm-scoped-guard diff:*)",
       "Bash(esa-llm-scoped-guard preview:*)",
-
       "Bash(git-sequential-stage:*)",
-
       "Bash(codex exec --sandbox read-only:*)",
       "Bash(codex review:*)",
       "mcp__codex__codex",
-
       "mcp__chrome-tabs__open_in_new_tab",
       "mcp__chrome-tabs__read_tab_content",
       "mcp__chrome-tabs__list_tabs",
-
       "mcp__deepwiki__read_wiki_structure",
       "mcp__deepwiki__read_wiki_contents",
       "mcp__deepwiki__ask_question",
-
       "mcp__claude_ai_Linear__get_attachment",
       "mcp__claude_ai_Linear__get_document",
       "mcp__claude_ai_Linear__get_issue",
