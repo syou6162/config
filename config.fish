@@ -13,7 +13,7 @@ set -x TERM xterm-256color
 switch (uname -m)
 case arm64
   status --is-interactive; and eval (/opt/homebrew/bin/brew shellenv)
-  source "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
+  source "/opt/homebrew/Caskroom/gcloud-cli/latest/google-cloud-sdk/path.fish.inc"
   set -x PATH /usr/local/bin $PATH
 case x86_64
   status --is-interactive; and eval (/usr/local/bin/brew shellenv)
