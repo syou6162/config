@@ -54,11 +54,12 @@ abbr --add cc '__fish_disable_bracketed_paste; claude --model opus'
 abbr --add scc '__fish_disable_bracketed_paste; sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)"'
 abbr --add semantic_commit 'sandbox-exec -f ~/.files/sandbox/safe_claude_code.sb -D TARGET_DIR="$PWD" -D HOME_DIR="$HOME" claude --dangerously-skip-permissions --disallowedTools "Bash(gcloud:*),Bash(gh:*),Bash(gsutil:*),Bash(bq:*)" --debug --print "/cccsc:syou6162:claude-code-commands:semantic_commit" --resume'
 
-# fisherが入っていない場合、インストールする
-# また、fisherのプラグインも同様にインストールする
-if not functions -q fisher
-  curl -sL https://git.io/fisher | source && fisher install jorgebucaran/fisher
-  fisher update
+# fisherが入っていない場合のみインストールする
+# status is-interactive 必須: fisher は内部で fish -c を起動するため、
+# ガード無しだと config.fish 経由で無限に再帰インストールする
+if status is-interactive && not functions -q fisher
+  curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source
+  and fisher install jorgebucaran/fisher
 end
 
 function kubeswitch
