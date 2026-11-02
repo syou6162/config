@@ -20,8 +20,8 @@ case x86_64
   source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/path.fish.inc"
 end
 
-status --is-interactive; and . (rbenv init -|psub)
-status --is-interactive; and . (nodenv init -|psub)
+status --is-interactive; and . (rbenv init - --no-rehash|psub)
+status --is-interactive; and . (nodenv init - --no-rehash|psub)
 
 function history-merge --on-event fish_preexec
   history --save
