@@ -43,7 +43,7 @@ set -g theme_display_date no
 set -U theme_display_cmd_duration no
 set -g theme_powerline_fonts no
 
-eval (direnv hook fish)
+direnv hook fish | source
 
 abbr --add update_pr 'claude --model opus --debug --print "/cccsc:syou6162:claude-code-commands:update_pr_title_and_description" --resume'
 
