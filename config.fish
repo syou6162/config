@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/yasuhisa.yoshida/.docker/bin"
+# End of Docker Desktop section.
+
 set -x LC_ALL ja_JP.UTF-8
 set -x LANG ja_JP.UTF-8
 
